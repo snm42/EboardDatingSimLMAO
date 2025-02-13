@@ -29,7 +29,7 @@ label start:
 
     "You are instantly enamored (platonically) with these absolute buffoons of an eboard council."
 
-    m "I guess I should try to get to know them better so I can get a better understanding of the club culture."
+    m "I guess I should try to get to know them better so I can get a better understanding of both the club culture and the campus itself."
 
     "You sit through a whole meeting listening about these 'game jams' and 'Renpy' things."
 
