@@ -1,0 +1,20 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 57, in script
+    jump finalDay
+Exception: Possible infinite loop.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 57, in script
+    jump finalDay
+  File "C:\Users\Samuel\Downloads\renpy-8.1.1-sdk\renpy\execution.py", line 61, in check_infinite_loop
+    raise Exception("Possible infinite loop.")
+Exception: Possible infinite loop.
+
+Windows-10-10.0.26100 AMD64
+Ren'Py 8.3.2.24090902
+DateEboard 1.0
+Wed Feb 12 19:53:06 2025
