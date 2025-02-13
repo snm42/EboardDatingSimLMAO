@@ -209,12 +209,157 @@ label samDay1:
         jump checkDay
 
 label samDay2:
-    # Plan out a full frontal assault on GDS (library breakout room)
-    "goon 2"
+    "You walk into the library, and see Sam furiously drawing something on his iPad."
 
-    # Ending 2 - Snitch on Sam
-    # Locks out of visiting for the rest of the days
-    # Sam is forcibly removed from the library.
+    m "Hey."
+    
+    "He stops writing and looks up at you."
+
+    j "Hey."
+
+    "He waves you down to sit down across from him in the breakout room."
+    "You sit down."
+
+    m "So..."
+    m "You doing alright after that chicken parmesan incident?"
+    m "I was worried you were going to die or something."
+
+    j "Yeah, I'm doing alright."
+    j "Actually, I've never been better!"
+    j "That experience has actually inspired me to make a substantial change in this campus."
+    j "Usually I'm a pretty passive person."
+    j "I don't get riled up by anything, unless someone insults something I'm deeply passionate about."
+    
+    "You see Sam tense up for a bit."
+
+    j "But this?"
+    j "This absolutely sickens me!"
+    j "I can't believe such a terrible thing can be allowed to exist unchecked."
+    j "This dining hall is the lifeline for all these students, and they simply poison them!"
+
+    "Sam holds up his iPad, showing his very atrocious art skills."
+
+    j "As such, I have finally decided to take action."
+    j "Outlined here is my battle plan."
+    j "On this iPad lay the groundwork of my plan to overthrow the dining hall employees and start a rebellion."
+
+    "You take a closer look at the iPad."
+    "Detailed on the screen is the entire layout of the dining hall."
+    "The positions of each employee are drawn clearly on the paper."
+    "All of the furniture and potential obstacles are also detailed."
+    "There are lines drawing the best places to walk through and plant... explosives?"
+    "You can't even tell what the hell he's trying to draw on this paper."
+    "You look back to Sam."
+
+    j "In order to cause change, one must disturb the peace and become noticed."
+
+    m "Are you sure this is a good idea?"
+    m "I mean, you're talking about potentially fighting against the administration!"
+    m "You could get expelled!"
+
+    j "Tsk, tsk, tsk."
+    j "One must take such risks to get things rolling."
+    j "Even if I'm expelled, then my actions will resonate among the students."
+    j "If I'm to fall, another student will take my place and make a lasting change in this godforsaken campus."
+
+    "Oh boy."
+    "This guy has lost it."
+    "Maybe the chicken parmesan has done more damage under the surface."
+    "..."
+    
+    menu:
+        "Should I report Sam to public safety?"
+        "Report him.":
+            "You pull out your phone discreetly and text public safety about a potential terrorist in the library."
+            $ pubSec = True
+        "Feed into his delusions":
+            "You decide against texting public safety."
+            "You think that this could be interesting to watch go down."
+            $ pubSec = False
+    
+    if pubSec:
+        j "Anyways, I'm starving!"
+        j "I've been working on this plan ever since I got out of my capstone meeting."
+        j "Do you wanna come along?"
+
+        "You realize that you need to keep Sam here in order for public safety to come in."
+
+        m "Actually..."
+        m "I had a question regarding your plan."
+        
+        "You decide to just stall Sam by asking stupid questions, and clarifying things on his drawing."
+        "After a while, you see a few public safety people crowding by the entrance."
+
+        m "Oh yeah, sorry for holding you up."
+        m "Let's go grab some food!"
+
+        j "Sure!"
+        j "Lemme just pack my things up and let's head out."
+
+        "Before Sam could finish putting his things in his bag, two people barge into the room and walk towards Sam."
+
+        j "Hey!"
+        j "Watch where you're putting-"
+
+        "The public safety officer hits Sam swiftly in the back of his head, and he stops struggling."
+        "Oh shit."
+        "The two officers look at you."
+
+        "???" "Thanks for the tip."
+        "???" "We'll make sure that he is taken care of."
+
+        "The two of them leave as quickly as they came in, leaving you in the room, alone."
+
+        m "How quaint."
+
+        "You leave the room as well, and exit the library."
+
+        jump checkDay
+    else:
+        m "I think that this plan is pretty well written."
+        m "However..."
+        m "I do think that there are some flaws in the plan."
+        
+        j "Oh really?"
+        j "Where?"
+
+        m "So if you look over here..."
+
+        "Together, you refined the plan on the attack on the dining hall."
+        "Even with the new changes and modifications you made to the plan, somehow you feel that something will go wrong."
+        "After all, this entire thing seems ridiculous to even execute."
+        "Oh well, if anything, Sam's the one who will take the blame."
+
+        j "You are a life saver!"
+        j "I don't think this plan would have come together so nicely without your help!"
+        j "Genuinely, I appreciate all the help you've given me so far."
+
+        "Sam seems to stop for a second and think."
+        "Then he suddenly jumps up."
+
+        j "Now that I think about it, I haven't helped you with anything!"
+        j "I was originally supposed to help you learn about the campus and the club but I was out cold before I could even get to it."
+        j "Was there anything that you needed help with?"
+
+        m "Actually, I remember I wanted to know some easy classes to take for my electives."
+        m "A lot of my classes didn't transfer over nicely, so I lost a lot of credits right there."
+        m "At this point, I really don't want to take more hard classes."
+        m "What are your recommendations?"
+
+        "You look at Sam, expecting an answer."
+        "However, you see him out cold, lying down on top of his iPad."
+        "This time, it looks like he was sleepily happily, however."
+
+        m "I guess he has been working on this for a few hours at this point."
+        m "Some sleep before the actual execution of the plan would help the success rate tremendously."
+        
+        "..."
+
+        m "Not that the success rate is much higher than zero."
+
+        "You leave the room and exit the library."
+        
+        jump checkDay
     
     jump checkDay
 
