@@ -7,7 +7,7 @@ Example: I am available on Wednesday, Friday, and Monday. If the player chooses 
 
 The game takes place over 6 days, Wednesday, Thursday, Friday, Monday, Tuesday, and finally the next Wednesday. On the next wednesday, the ending the player recieves is revealed and they get to see if the eboard members like them or not.
 
-Try to follow the following SIN during your route. Not necessary, but it'd be funnier.
+Try to follow the following SIN during your route. Not necessary, but it'd be funnier. <br>
 Sam - Wrath <br>
 Calvin - Sloth <br>
 Sebastian - Gluttony <br>
