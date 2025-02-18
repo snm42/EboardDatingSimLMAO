@@ -27,3 +27,6 @@ Sebastian - 3 days - [insert availability] <br>
 Alex - 2 days - [insert availability] <br>
 Yaseen - 2 days - [insert availability]
 
+File Structure: <br>
+Within the "game" folder is a script with your name on it. start there. Please put any NEW folders/files under the "game" folder. 
+
