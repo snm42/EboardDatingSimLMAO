@@ -21,9 +21,9 @@ The player fills this final sin, try to make them a bit thirsty for you i guess.
 Player - Lust
 
 This is how many days you guys each get, and when you are avilable. i.e. how many different hangouts you have to make.  Let us know if you want more/less.
-Sam - 3 days - [insert availability]
-Calvin - 3 days - [insert availability]
-Sebastian - 3 days - [insert availability]
-Alex - 2 days - [insert availability]
+Sam - 3 days - [insert availability] <br>
+Calvin - 3 days - [insert availability] <br>
+Sebastian - 3 days - [insert availability] <br>
+Alex - 2 days - [insert availability] <br>
 Yaseen - 2 days - [insert availability]
 
