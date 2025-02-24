@@ -9,7 +9,6 @@ screen my_keys():
     key "joy_dismiss" action NullAction()   
     key "any_K_PAGEUP" action NullAction()  
 
-define c = Character("Calvin", color="00ffc1")
 
 define watched = ""
 
@@ -81,7 +80,25 @@ define stopmore = False
 
 define silence = 0
 
-label cal1:
+define randonext = [
+    "alright, next question.",
+    "next question...",
+    "okay, next one.",
+    "let's see if you can get this one...",
+    "this next one should be free.",
+    "ooooh this one is hard...",
+    "surely you'll know this next one.",
+    "next.",
+    "hmmm...what to ask next...",
+    "uhhhhhhhhhhhhhhhhh",
+    "the next equestion is obvious.",
+    "next question.",
+    "let us proceed to the following question.",
+    "let us proceed.",
+    "lets get to the next one.",
+]
+
+label cal:
     scene dorm 
     show cal neutral at left 
     with dissolve
@@ -201,14 +218,14 @@ label fuckyou:
 
 return
 
-label cal:
+label cal2:
     scene dorm
-    show cal neutral at left
+    show calb neutral happy at left
     with dissolve
 
     c "good to see you again!"
 
-    show cal think at center
+    show calb think at center
     with move
 
     c "guess what we are gonna do today..."
@@ -221,16 +238,16 @@ label cal:
                 c "thats it."
 
                 c "GET OUUUUUUUUT!"
-                show cal forwards at truecenter:
+                show calb forwards at truecenter:
                     ease 0.2 zoom 5 yalign 0.25
                 window hide
                 $ quick_menu = False
                 $ renpy.pause(delay=0.01)
                 return
 
-            show cal forwards 
+            show calb forwards 
             c "i said guess."
-            show cal neutral 
+            show calb neutral 
             $ stopguess += 1
             jump guess
         
@@ -238,16 +255,16 @@ label cal:
             if stopout == 1:
                 jump circus
                 
-            show cal down 
+            show calb down 
             c "nope!"
             c "try again!"
-            show cal neutral 
+            show calb neutral 
 
             $ stopout = 1
             jump guess
 
         "More videos?":
-            show cal neutral
+            show calb neutral
             if stopmore:
                 jump circus
             c "no."
@@ -266,26 +283,26 @@ label cal:
 
 
         "Is it quiz time?":
-            show cal up 
+            show calb up 
             c "that's right!"
-            show cal neutral at left
+            show calb neutral happy
             with ease
             jump cal22
 
         "*remain silent*":
-            show cal neutral
+            show calb neutral
             $ silence += 1
             $ quick_menu = False
             show screen my_keys
             $ renpy.pause(delay=2*silence,hard=True)
-            show cal forwards
+            show calb forwards
             $ renpy.pause(delay=2*silence,hard=True)
-            show cal neutral
+            show calb neutral
             hide screen my_keys
             jump guess
 
 label circus:
-    show cal forwards
+    show calb forwards
     c "you know what you did."
     c "suffer."
     play music "circus.mp3"
@@ -293,7 +310,7 @@ label circus:
     scene clown
     $ quick_menu = False
     show screen my_keys
-    show cal forwards at truecenter:
+    show calb forwards at truecenter:
         ease 154 zoom 5 yalign 0.3
     $ renpy.pause(delay=154,hard=True)
     hide screen my_keys
@@ -304,43 +321,67 @@ label cal22:
     
     c "let's season this place up a bit shall we?"
 
-    show stage behind cal
+    show stage behind calb
     with slidedown
     show mic at left with moveinleft
     
+    show calb think
     c "alright! first question:"
 
-    show cal think
+    show calb mic
     show screen my_keys
     $ quick_menu = False
+
+    c "who is in seben eleben?"
+    menu:
+        "Miku":
+            show calb up
+            c "CORRECT!"
+        "Teto":
+            show calb down
+            c "WRONG!"
+        "Cashier":
+            show calb down
+            c "WRONG!"
+        "Homeless Guy":
+            show calb down
+            c "WRONG!"
+
+    show calb neutral
+    c "next question..."
+
+    show calb mic
 
     c "what was the name of the homeless man's special technique?"
     menu:
         "Purple Hollow":
-            show cal down
+            show calb down
             c "WRONG!"
         "Magenta Marrow":
-            show cal down
+            show calb down
             c "WRONG!"
         "Pink Emptiness":
-            show cal up
+            show calb up
             c "CORRECT!"
             $ quizscore += 1 
         "Pink Nothingness":
-            show cal down
+            show calb down
             c "WRONG!"
 
-    show cal think
+    show calb neutral
+    c "NEXT"
+
+    show calb mic
     
     c "how long do you need to stay in seben eleben simulator to hear miku?"
     $ answer = renpy.input("how many minutes do you need to stay in seben eleben simulator to hear miku?",allow="0123456789")
 
     if answer == "120":
+        show calb up
         c "CORRECT!"
-        show cal up
     else:
+        show calb down
         c "WRONG!"
-        show cal down
 
     c ""
 
