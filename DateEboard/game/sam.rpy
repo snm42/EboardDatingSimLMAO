@@ -30,6 +30,7 @@ label samDay1:
 
     m "That doesn't exactly make me excited to eat anything."
 
+    # IDK pose
     j "Guess you'll have to suck it up."
     j "Anyways, I'll leave the final decision up to you."
     j "Since we're already here in campus center, I guess you can feel free to pick anything that's within 200 feet or so."
@@ -239,7 +240,8 @@ label samDay1:
         jump checkDay
 
 label samDay2:
-    "You walk into the library, and see Sam furiously drawing something on his iPad."
+    "You are walking through Maple hall, entering Sam's dorm after he invited you over."
+    "You walk into the dorm, and see Sam furiously drawing something on his iPad."
 
     m "Hey."
     
@@ -247,7 +249,7 @@ label samDay2:
 
     j "Hey."
 
-    "He waves you down to sit down across from him in the breakout room."
+    "He waves you down to sit down across from him in the living room."
     "You sit down."
 
     m "So..."
@@ -300,7 +302,7 @@ label samDay2:
     menu:
         "Should I report Sam to public safety?"
         "Report him.":
-            "You pull out your phone discreetly and text public safety about a potential terrorist in the library."
+            "You pull out your phone discreetly and text public safety about a potential terrorist in the dorm."
             $ pubSec = True
         "Feed into his delusions":
             "You decide against texting public safety."
@@ -342,7 +344,7 @@ label samDay2:
 
         m "How quaint."
 
-        "You leave the room as well, and exit the library."
+        "You leave the room as well, and exit his dorm."
 
         jump checkDay
     else:
