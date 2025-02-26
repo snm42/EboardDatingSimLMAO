@@ -1,20 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 57, in script
-    jump finalDay
-Exception: Possible infinite loop.
+  File "game/seb.rpy", line 22, in script call
+    call samplescreen
+  File "game/seb.rpy", line 22, in script call
+    call samplescreen
+ScriptError: could not find label 'samplescreen'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 57, in script
-    jump finalDay
-  File "C:\Users\Samuel\Downloads\renpy-8.1.1-sdk\renpy\execution.py", line 61, in check_infinite_loop
-    raise Exception("Possible infinite loop.")
-Exception: Possible infinite loop.
+  File "game/seb.rpy", line 22, in script call
+    call samplescreen
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ast.py", line 1420, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/seb.rpy", line 22, in script call
+    call samplescreen
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'samplescreen'.
 
-Windows-10-10.0.26100 AMD64
-Ren'Py 8.3.2.24090902
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.4.24120703
 DateEboard 1.0
-Wed Feb 12 19:53:06 2025
+Wed Feb 26 15:46:54 2025
