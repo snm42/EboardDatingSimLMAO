@@ -19,9 +19,9 @@ label start:
     "Despite this, you muster the courage to step into the large room that lay right in front of you."
 
     # Edit this part to say what y'all want.
-    "???" "Hello everyone, and welcome to the first meeting of IGDA in the spring semester!"
-    a "My name is Alex and I am still your president!"
-    a "And here are the goons, continuing from last semester!"
+    "???" "Hello everybody, welcome to the first meeting of IGDA in the spring semester!"
+    a "My name is Alex and remarkably I'm still  your president."
+    a "Goons. Introduce yourselves."
     s "I am Sebastian."
     c "I am Calvin."
     y "I am Yaseen."
