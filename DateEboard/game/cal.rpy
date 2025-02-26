@@ -3,7 +3,7 @@ screen my_keys():
     key "K_ESCAPE" action NullAction()
     key "mouseup_3" action NullAction()
     key "mousedown_4" action NullAction()
-    key "K_RETURN" action NullAction()
+    key "K_jump checkDay" action NullAction()
     key "K_SPACE" action NullAction()
     key "K_KP_ENTER" action NullAction()
     key "joy_dismiss" action NullAction()   
@@ -153,7 +153,8 @@ label reels:
                 pause
 
                 c "get out."
-                return
+                jump checkDay
+
 
 
 
@@ -205,7 +206,7 @@ label reels:
         c "see ya."
 
 
-    return
+    jump checkDay
 
 
 label fuckyou:
@@ -216,7 +217,7 @@ label fuckyou:
 
     c "please leave."
 
-return
+jump checkDay
 
 label cal2:
     scene dorm
@@ -243,7 +244,7 @@ label cal2:
                 window hide
                 $ quick_menu = False
                 $ renpy.pause(delay=0.01)
-                return
+                jump checkDay
 
             show calb forwards 
             c "i said guess."
@@ -386,4 +387,4 @@ label cal22:
     c ""
 
 
-    return
+    jump checkDay
