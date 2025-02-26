@@ -98,7 +98,19 @@ define randonext = [
     "lets get to the next one.",
 ]
 
+define calDaysPicked = 0
+
 label cal:
+    $ calDaysPicked +=1
+    if calDaysPicked == 1:
+        jump calDay1
+    if calDaysPicked == 2:
+        jump calDay2
+    if calDaysPicked == 3:
+        jump calDay3
+
+
+label calDay1:
     scene dorm 
     show cal neutral at left 
     with dissolve
@@ -219,7 +231,7 @@ label fuckyou:
 
 jump checkDay
 
-label cal2:
+label calDay2:
     scene dorm
     show calb neutral happy at left
     with dissolve
@@ -349,7 +361,8 @@ label cal22:
             c "WRONG!"
 
     show calb neutral
-    c "next question..."
+    $ nexttext = renpy.random.choice(randonext)
+    c "[nexttext]"
 
     show calb mic
 
@@ -370,7 +383,8 @@ label cal22:
             c "WRONG!"
 
     show calb neutral
-    c "NEXT"
+    $ nexttext = renpy.random.choice(randonext)
+    c "[nexttext]"
 
     show calb mic
     
@@ -384,7 +398,8 @@ label cal22:
         show calb down
         c "WRONG!"
 
-    c ""
+    $ nexttext = renpy.random.choice(randonext)
+    c "[nexttext]"
 
 
     jump checkDay
