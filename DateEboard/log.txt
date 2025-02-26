@@ -1,37 +1,36 @@
-2025-02-13 02:09:31 UTC
+2025-02-24 19:36:49 UTC
 Windows-10-10.0.26100
 Ren'Py 8.3.2.24090902
 
-Early init took 0.07s
-Loading error handling took 0.03s
-Loading script took 0.18s
-Loading save slot metadata took 0.03s
+Early init took 0.28s
+Loading error handling took 0.10s
+Loading script took 0.37s
+Loading save slot metadata took 0.12s
 Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Running init code took 0.17s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.08s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Samuel\\AppData\\Roaming/RenPy/backups\\DateEboard':
-Dump and make backups took 0.05s
+Dump and make backups took 0.18s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
+Initial gc took 0.12s
+DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.32s
+Creating interface object took 0.95s
 Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.08s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.20s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.00s
 Running _start took 0.00s
-Interface start took 0.17s
+Interface start took 0.82s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -41,11 +40,5 @@ Vendor: "b'NVIDIA Corporation'"
 Renderer: b'NVIDIA GeForce RTX 2070 Super/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 560.81'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1009) drawable=(1920, 1009)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1009) drawable=(1920, 1009)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1383, 778) drawable=(1383, 778)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1009) drawable=(1920, 1009)
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
