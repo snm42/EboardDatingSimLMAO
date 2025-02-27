@@ -1,9 +1,12 @@
+init python:
+    import random
+
+
 screen my_keys():
     #Dismiss keys
     key "K_ESCAPE" action NullAction()
     key "mouseup_3" action NullAction()
     key "mousedown_4" action NullAction()
-    key "K_jump checkDay" action NullAction()
     key "K_SPACE" action NullAction()
     key "K_KP_ENTER" action NullAction()
     key "joy_dismiss" action NullAction()   
@@ -22,7 +25,7 @@ define score = 0
 
 define skipamt = 0
 
-define quizscore = 0
+define right = False
 
 define likes = {
     "images/reel1.webm": 0,
@@ -100,6 +103,9 @@ define randonext = [
 
 define calDaysPicked = 0
 
+define wrongs = 0
+
+
 label cal:
     $ calDaysPicked +=1
     if calDaysPicked == 1:
@@ -141,9 +147,9 @@ label reelstart:
 
 label reels:
     while count < 45:
-        $ reel = "images/reel" + str(renpy.random.randint(1, 45)) + ".webm"
+        $ reel = "images/reel" + str(random.randint(1, 45)) + ".webm"
         while reel in watched:
-            $ reel = "images/reel" + str(renpy.random.randint(1, 45)) + ".webm"
+            $ reel = "images/reel" + str(random.randint(1, 45)) + ".webm"
 
         if renpy.movie_cutscene(reel):
             $ skipamt = skipamt + 1
@@ -229,7 +235,7 @@ label fuckyou:
 
     c "please leave."
 
-jump checkDay
+    jump checkDay
 
 label calDay2:
     scene dorm
@@ -248,6 +254,7 @@ label calDay2:
         "I don't know, what?":
 
             if stopguess > 3:
+                show calb neutral mad
                 c "thats it."
 
                 c "GET OUUUUUUUUT!"
@@ -327,6 +334,7 @@ label circus:
         ease 154 zoom 5 yalign 0.3
     $ renpy.pause(delay=154,hard=True)
     hide screen my_keys
+    jump checkDay
 
 
 
@@ -337,69 +345,149 @@ label cal22:
     show stage behind calb
     with slidedown
     show mic at left with moveinleft
-    
-    show calb think
-    c "alright! first question:"
 
-    show calb mic
+    c "oh yeah, no save scumming for you!"
+
     show screen my_keys
     $ quick_menu = False
-
-    c "who is in seben eleben?"
-    menu:
-        "Miku":
-            show calb up
-            c "CORRECT!"
-        "Teto":
-            show calb down
-            c "WRONG!"
-        "Cashier":
-            show calb down
-            c "WRONG!"
-        "Homeless Guy":
-            show calb down
-            c "WRONG!"
-
-    show calb neutral
-    $ nexttext = renpy.random.choice(randonext)
-    c "[nexttext]"
-
-    show calb mic
-
-    c "what was the name of the homeless man's special technique?"
-    menu:
-        "Purple Hollow":
-            show calb down
-            c "WRONG!"
-        "Magenta Marrow":
-            show calb down
-            c "WRONG!"
-        "Pink Emptiness":
-            show calb up
-            c "CORRECT!"
-            $ quizscore += 1 
-        "Pink Nothingness":
-            show calb down
-            c "WRONG!"
-
-    show calb neutral
-    $ nexttext = renpy.random.choice(randonext)
-    c "[nexttext]"
-
-    show calb mic
     
-    c "how long do you need to stay in seben eleben simulator to hear miku?"
-    $ answer = renpy.input("how many minutes do you need to stay in seben eleben simulator to hear miku?",allow="0123456789")
+    # list of all possible questions
+    # it consist of dictionaries, that describe each question:
+    # key "question" has value of a question, key "category" makes sense for bot, key "answer" is a list of answers, that are lists [answer itself, right/wrong]
+    # the order of this keys is not matter
+    $ q_list = [
+    {"question": "who is in seben eleben?",
+    "type": "multi",
+    "answer": [ ["Miku", "right"], ["teto", "wrong"], ["Cashier", "wrong"], ["Homeless Guy", "wrong"] ]}, 
 
-    if answer == "120":
-        show calb up
-        c "CORRECT!"
-    else:
-        show calb down
-        c "WRONG!"
+    {"question": "what is the name of the Homeless Guy's technique?",
+    "type": "multi",
+    "answer": [ ["Pink Emptiness", "right"], ["Purple Hollow", "wrong"], ["Magenta Marrow", "wrong"], ["Pink Nothingness", "wrong"] ]}, 
 
-    $ nexttext = renpy.random.choice(randonext)
-    c "[nexttext]"
+    {"question": "about how many minutes do you need to stay to hear miku in seben eleben simulator?",
+    "type": "enter",
+    "answer": [ ["2", "right"]]},
 
 
+    ]
+   
+    # game variables
+    #####
+    
+
+    $ wrong_answers = 0     # amount of wrong answers
+    $ quiz_length = 3       # number of questions in one game
+    $ q_to_ask = []         # list of questions to ask in one game
+   
+    # let's choose some questions to play with
+    while len(q_to_ask) < quiz_length:        # will work until we'll get enough questions for quiz
+        $ a = random.choice(q_list)    # randomly pick a question from a list of all questions
+        if a not in q_to_ask:                 # this question will be added only if we don't have it yet
+            $ q_to_ask.append(a)
+
+    label quize_game:                             # game loop
+        if -1 <= wrong_answers <= 1:
+            show calb neutral
+        elif wrong_answers < -1:
+            show calb neutral happy
+        elif wrong_answers > 3:
+            show calb forwards
+        elif wrong_answers > 1:
+            show calb neutral mad
+
+
+        $ a = random.choice(q_to_ask)      # randomly pick the question from a list
+        $ q_to_ask.remove(a)                     # remove it from list to not to ask it twice
+        
+        # ugly part... next variables are necessary to fill menu
+        $ question = a["question"]
+
+        c "[question]"
+        if a["type"] == "multi":
+            $ huh = [0,1,2,3]
+            $ random.shuffle(huh)
+            $ answ_0 = a["answer"][huh[0]][0]
+            $ answ_1 = a["answer"][huh[1]][0]
+            $ answ_2 = a["answer"][huh[2]][0]
+            $ answ_3 = a["answer"][huh[3]][0]
+
+            $ cor_1 = a["answer"][huh[0]][1]
+            $ cor_2 = a["answer"][huh[1]][1]
+            $ cor_3 = a["answer"][huh[2]][1]
+            $ cor_4 = a["answer"][huh[3]][1]
+            jump multi
+
+        else:
+            jump type
+    
+        menu multi:
+            c "[question]"
+            "[answ_0][cor_1]":
+                if a["answer"][huh[0]][1] == "right":
+                    show calb up        # checks the description of question if it's the right one
+                    "CORRECT!"
+                    $ wrong_answers -=1
+                else:
+                    show calb down
+                    "WRONG!"
+                    $ wrong_answers +=1
+            "[answ_1][cor_2]":
+                if a["answer"][huh[1]][1]  == "right":
+                    show calb up 
+                    "CORRECT!"
+                    $ wrong_answers -=1
+                else:
+                    show calb down
+                    "WRONG!"
+                    $ wrong_answers +=1
+            "[answ_2][cor_3]":
+                if a["answer"][huh[2]][1]  == "right":
+                    show calb up 
+                    "CORRECT!"
+                    $ wrong_answers -=1
+                else:
+                    show calb down
+                    "WRONG!"
+                    $ wrong_answers +=1
+            "[answ_3][cor_4]":
+                if a["answer"][huh[3]][1]  == "right":
+                    show calb up 
+                    "CORRECT!"
+                    $ wrong_answers -=1
+                else:
+                    show calb down
+                    "WRONG!"
+                    $ wrong_answers +=1
+
+
+        $ quiz_length -= 1
+        if quiz_length > 0:
+            jump quize_game
+        else:
+            jump quizEND
+
+        label type:
+            if quiz_length <= 0:
+                jump quizEND
+            c "[question]"
+            $ typed = renpy.input("[question]",allow="0123456789")
+            if typed == a["answer"][0][0]:
+                show calb up 
+                "CORRECT!"
+                $ wrong_answers -=1
+            else:
+                show calb down
+                "WRONG!"
+                $ wrong_answers +=1
+            $ quiz_length -= 1
+            if quiz_length > 0:     
+                jump quize_game
+
+
+    label quizEND:
+        c "wow, you made it!"
+        c "you really are a true calvin fan."
+   
+    $ quick_menu = True
+    hide screen my_keys
     jump checkDay

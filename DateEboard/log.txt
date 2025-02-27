@@ -1,16 +1,132 @@
-2025-02-26 20:31:48 UTC
+2025-02-27 00:32:29 UTC
 Windows-10-10.0.22631
 Ren'Py 8.3.4.24120703
 
 Early init took 0.07s
-Loading error handling took 0.03s
-Loading script took 0.29s
-Loading save slot metadata took 0.04s
+Loading error handling took 0.40s
+Loading script took 2.49s
+Loading save slot metadata took 0.20s
 Loading persistent took 0.00s
-Running init code took 0.16s
-Loading analysis data took 0.01s
+
+File "game/cal.rpy", line 405: Line is indented, but the preceding say menuitem statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "[answ_0]":
+    ^
+
+File "game/cal.rpy", line 355: invalid syntax
+        "type"; "multi",
+               ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 49.15s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/cal.rpy", line 405: Line is indented, but the preceding say menuitem statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "[answ_0]":
+    ^
+
+File "game/cal.rpy", line 355: invalid syntax
+        "type"; "multi",
+               ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 50.12s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/cal.rpy", line 405: Line is indented, but the preceding say menuitem statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "[answ_0]":
+    ^
+
+File "game/cal.rpy", line 355: invalid syntax
+        "type"; "multi",
+               ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 53.01s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/cal.rpy", line 405: Line is indented, but the preceding say menuitem statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "[answ_0]":
+    ^
+
+File "game/cal.rpy", line 355: invalid syntax
+        "type"; "multi",
+               ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 59.70s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.30s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.14s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
 Dump and make backups took 0.05s
@@ -20,7 +136,234 @@ Initial gc took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.03s
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1879, 1057) drawable=(1879, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 705.81s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/cal.rpy", line 446: reached end of line when expecting ':'.
+    if answer == a["answer"][0][1]
+                                  ^
+
+File "game/cal.rpy", line 449: expected statement.
+    else:
+        ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 736.09s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/cal.rpy", line 446: reached end of line when expecting ':'.
+    if typed == a["answer"][0][1]
+                                 ^
+
+File "game/cal.rpy", line 449: expected statement.
+    else:
+        ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 743.81s
+Loading error handling took 0.03s
+Loading script took 0.19s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 409, in script
+    menu multi:
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 1625, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 134, in menu
+    rv = renpy.store.menu(new_items)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 424, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 1015, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2059, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2192, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 409, in script
+    menu multi:
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 963.11s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.04s
 Build styles took 0.00s
@@ -28,8 +371,1556 @@ Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
 Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 1625, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 134, in menu
+    rv = renpy.store.menu(new_items)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 424, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 1015, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2059, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2192, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 978.46s
+Loading error handling took 0.02s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/cal.rpy", line 405: expected menuitem
+    $ cor_1 = a["answer"][huh[0]][1]
+    ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 992.14s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 1625, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 134, in menu
+    rv = renpy.store.menu(new_items)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 424, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 1015, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2059, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2192, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 1009.01s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 1625, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 134, in menu
+    rv = renpy.store.menu(new_items)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 424, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 1015, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2059, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2192, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 1032.25s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 1625, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 134, in menu
+    rv = renpy.store.menu(new_items)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 424, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 1015, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2059, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2192, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 1041.38s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 1625, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 134, in menu
+    rv = renpy.store.menu(new_items)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\menuexports.py", line 424, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ui.py", line 1015, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2059, in __init__
+    self.set_text(text, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\text\text.py", line 2192, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 408, in script
+    menu multi:
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 1055.28s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1067.76s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 409, in script
+    c "[question][cor_1]"
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 2579, in execute
+    Say.execute(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1440, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 409, in script
+    c "[question][cor_1]"
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 1077.02s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 409, in script
+    c "[cor_1]"
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 2579, in execute
+    Say.execute(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1440, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 409, in script
+    c "[cor_1]"
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 1201.22s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 409, in script
+    c "[cor_1]"
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 2579, in execute
+    Say.execute(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1440, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 409, in script
+    c "[cor_1]"
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 1204.45s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 409, in script
+    c "[cor_1]"
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 2579, in execute
+    Say.execute(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1440, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 409, in script
+    c "[cor_1]"
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 1216.86s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/cal.rpy", line 409, in script
+    c "[cor_1]"
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 2579, in execute
+    Say.execute(self)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 621, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1440, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1354, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\character.py", line 1334, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+NameError: name 'cor_1' is not defined
+
+While running game code:
+  File "game/cal.rpy", line 409, in script
+    c "[cor_1]"
+NameError: name 'cor_1' is not defined
+Resetting cache.
+Early init took 1229.23s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1238.58s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1264.57s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1337.91s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1564.17s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1679.91s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1813.37s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1880.29s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.05s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1901.74s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1974.94s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2127.05s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+
+File "game/cal.rpy", line 468: if statement expects a non-empty block.
+    if quiz_length <= 0:
+                        ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2146.79s
+Loading error handling took 0.01s
+Loading script took 0.15s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\calch\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon(TM) Graphics'
+Version: b'4.6.0 Compatibility Profile Context 23.11.1.231020'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1057) drawable=(1920, 1057)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2156.05s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Dump and make backups took 0.04s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Interface start took 0.06s
 
