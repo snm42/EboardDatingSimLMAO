@@ -76,6 +76,7 @@ define likes = {
     "images/reel43.webm": 1,
     "images/reel44.webm": 0,
     "images/reel45.webm": 1,
+    "images/reel46.webm": 1,
 }
 
 define stopguess = 0
@@ -155,6 +156,8 @@ label calDay1:
 
 label reelstart:
 
+    show screen my_keys
+
     show cal phone hold at left
 
     c "alright! here's the first one."
@@ -167,10 +170,10 @@ label reelstart:
     jump reels
 
 label reels:
-    while count < 45:
-        $ reel = "images/reel" + str(random.randint(1, 45)) + ".webm"
+    while count < 46:
+        $ reel = "images/reel" + str(random.randint(1, 46)) + ".webm"
         while reel in watched:
-            $ reel = "images/reel" + str(random.randint(1, 45)) + ".webm"
+            $ reel = "images/reel" + str(random.randint(1, 46)) + ".webm"
 
         if renpy.movie_cutscene(reel):
             $ skipamt = skipamt + 1
@@ -184,7 +187,6 @@ label reels:
                 c "pay attention."
             else:
                 $ quick_menu = False
-                show screen my_keys
                 window hide
                 pause
                 show cal forwards at truecenter:
@@ -196,8 +198,6 @@ label reels:
                 hide screen my_keys
                 $ quick_menu = True
                 jump checkDay
-
-
 
 
             jump reels
@@ -372,9 +372,11 @@ label circus:
     window hide
     scene clown
     show calb forwards at truecenter:
-        ease 154 zoom 5 yalign 0.3
-    $ renpy.pause(delay=154,hard=True)
+        ease 150 zoom 5 yalign 0.3
+    $ renpy.pause(delay=150,hard=True)
+    $ quick_menu = True
     hide screen my_keys
+    stop music fadeout 1.0
     jump checkDay
 
 
@@ -409,9 +411,9 @@ label cal22:
     "type": "multi",
     "answer": [ ["Pink Emptiness", "right"], ["Purple Hollow", "wrong"], ["Magenta Marrow", "wrong"], ["Pink Nothingness", "wrong"] ]}, 
 
-    {"question": "about how many minutes do you need to stay to hear miku in seben eleben simulator?",
+    {"question": "about how many seconds do you need to stay to hear miku in seben eleben simulator?",
     "type": "enter",
-    "answer": [ ["2", "right"]]},
+    "answer": [ ["120", "right"]]},
 
     {"question": "what is the 7th game that i have made?",
     "type": "multi",
@@ -426,7 +428,7 @@ label cal22:
     "answer": [ ["Engineer", "right"], ["Alex", "wrong"], ["Miku", "wrong"], ["Sebastian", "wrong"] ]},
 
     {"question": "what is the amount of french men in FRANCE DEFANCE?",
-    "type": "type",
+    "type": "enter",
     "answer": [ ["4", "right"]]},
 
     {"question": "who is June's husband?",
@@ -464,6 +466,63 @@ label cal22:
     {"question": "what's the difference between Skybeam and Skybeam+?",
     "type": "multi",
     "answer": [ ["A day/night cycle.", "right"], ["new poem mechanics.", "wrong"], ["10 new poems.", "wrong"], ["less grass.", "wrong"] ]},
+    
+    {"question": 'how many bags of garbage are there in "im really constructive."?',
+    "type": "enter",
+    "answer": [ ["7", "right"]]},
+
+    {"question": 'what shape is the green in "im really constructive."?',
+    "type": "multi",
+    "answer": [ ["cylinder", "right"],["spheres", "wrong"],["triangular prism", "wrong"], ["rectangles", "wrong"]]},
+
+    {"question": 'how many times can you use the hydration lamp in "im really thirsty."?',
+    "type": "enter",
+    "answer": [ ["2", "right"]]},
+
+    {"question": 'which option in Petit Dej reveals a good memory?',
+    "type": "multi",
+    "answer": [ ["Parfait", "right"],["Orange Juice", "wrong"],["Fruit", "wrong"], ["Omelette", "wrong"]]},
+
+    {"question": 'on what page does June smack you in The Quest for Ummagumma?',
+    "type": "enter",
+    "answer": [ ["82", "right"]]},
+
+    {"question": 'how many unique colors does the level in bobl use?',
+    "type": "enter",
+    "answer": [ ["13", "right"]]},
+
+    {"question": 'where is the homeless man in "im really constructive."?',
+    "type": "multi",
+    "answer": [ ["At the top", "right"],["Behind the trash", "wrong"],["Inside the cage", "wrong"], ["Next to the pillar", "wrong"]]},
+
+    {"question": 'how many seconds do you have to stay in seben eleben to quit the game?',
+    "type": "enter",
+    "answer": [ ["180", "right"]]},
+
+    {"question": 'how many combinations of people are there in Bad Barista?',
+    "type": "enter",
+    "answer": [ ["9", "right"]]},
+
+    {"question": 'if you get a poem score of -18 in Skybeam+, what is the title of the poem?',
+    "type": "multi",
+    "answer": [ ["Killed Skills", "right"], ["just not right", "wrong"], ["Insomnia", "wrong"], ["All over", "wrong"]]},
+
+    {"question": 'if you get a poem score of -18 in Skybeam, what is the title of the poem?',
+    "type": "multi",
+    "answer": [ ["just not right", "right"], ["Killed Skills", "wrong"], ["Insomnia", "wrong"], ["All over", "wrong"]]},
+
+    {"question": 'what is the image in the pause menu of FRANCE DEFANCE?',
+    "type": "multi",
+    "answer": [ ["Nissan S-Cargo", "right"], ["Le Fishe", "wrong"], ["Spy TF2", "wrong"], ["Nissan Escargo", "wrong"]]},
+
+    {"question": 'where are the models in igbl from?',
+    "type": "multi",
+    "answer": [ ["Roblox", "right"], ["Thingiverse", "wrong"], ["Sketchfab", "wrong"], ["TurboSquid", "wrong"]]},
+
+    {"question": 'what sound does Alex make when GIVE in GIVE THANKS?',
+    "type": "multi",
+    "answer": [ ["Lego Yoda Death Sound", "right"], ["Half-Life Scientist Scream", "wrong"], ["Hey all, Scott here!", "wrong"], ["Tom Scott Scream", "wrong"]]},
+
     ]
    
     # game variables
@@ -471,7 +530,7 @@ label cal22:
     
 
     $ wrong_answers = 0     # amount of wrong answers
-    $ quiz_length = 3       # number of questions in one game
+    $ quiz_length = 30      # number of questions in one game
     $ q_to_ask = []         # list of questions to ask in one game
 
     $ time = 10
@@ -614,9 +673,13 @@ label cal22:
 
     label quizEND:
         hide screen countdown
+        show calb yiik
+        c "holy crap, you actually made it!"
+        "if you actually made it here, please tell me how long this took, i'm curious."
         show calb neutral happy
-        c "wow, you made it!"
         c "you really are a true calvin fan."
+        c "you're the best, i can't wait to hang out with you again."
+        c "see ya!"
 
         hide screen my_keys
         $ quick_menu = True
@@ -624,9 +687,18 @@ label cal22:
 
 
     label loser:
-        show calb neutral mad
-        c "..."
-        c ""
+        if mood == 1:
+            show calb neutral mad
+            c "..."
+            c "you come crawling back to me and all you do is disappoint."
+            c "are you really that desperate?"
+            c "just go."
+        else:
+            show calb neutral
+            c "welp...you tried."
+            c "study harder next time, okay?"
+            c "i'll see you next time."
+            c "bye."
         hide screen my_keys
         $ quick_menu = True
         jump checkDay
@@ -635,3 +707,6 @@ label cal22:
     hide screen my_keys
     jump checkDay
 
+
+label calDay3:
+    
