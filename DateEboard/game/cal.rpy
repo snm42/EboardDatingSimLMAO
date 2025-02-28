@@ -11,6 +11,9 @@ screen my_keys():
     key "K_KP_ENTER" action NullAction()
     key "joy_dismiss" action NullAction()   
     key "any_K_PAGEUP" action NullAction()  
+    key "K_TAB" action NullAction()  
+    key "K_LCTRL" action NullAction()
+    key "K_RCTRL" action NullAction()
 
 
 define watched = ""
@@ -25,7 +28,7 @@ define score = 0
 
 define skipamt = 0
 
-define right = False
+define mood = 0
 
 define likes = {
     "images/reel1.webm": 0,
@@ -103,8 +106,26 @@ define randonext = [
 
 define calDaysPicked = 0
 
-define wrongs = 0
+define nexttext = 0
 
+transform alpha_dissolve:
+    alpha 0.0
+    linear 0.5 alpha 1.0
+    on hide:
+        linear 0.5 alpha 0
+    # This is to fade the bar in and out, and is only required once in your script
+
+screen countdown:
+    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+    bar value time range timer_range xalign 0.5 yalign 0.1 xmaximum 300 at alpha_dissolve # This is the timer bar.
+
+init:
+    $ timer_range = 0
+    $ timer_jump = 0
+
+# time = the time the timer takes to count down to 0.
+# timer_range = a number matching time (bar only)
+# timer_jump = the label to jump to when time runs out
 
 label cal:
     $ calDaysPicked +=1
@@ -162,15 +183,18 @@ label reels:
 
                 c "pay attention."
             else:
+                $ quick_menu = False
+                show screen my_keys
                 window hide
                 pause
                 show cal forwards at truecenter:
                     ease 0.2 zoom 5 yalign 0.25
                 window hide
-                $ quick_menu = False
                 pause
-
                 c "get out."
+                $ mood = 1
+                hide screen my_keys
+                $ quick_menu = True
                 jump checkDay
 
 
@@ -202,7 +226,9 @@ label reels:
         
         $ count = count + 1
 
-    c "aw my phone died..."
+    show cal horrified
+
+    c "NOO MY PHONE DIED!"
 
     show cal neutral at center
 
@@ -211,7 +237,7 @@ label reels:
     if score >= 36:
         c "you've got a good sense of humor."
         c "i'm glad you enjoyed them."
-        c "let's add eachother on IGsDAgram later!"
+        c "let's add eachother on IGsDAgram next time!"
 
         show cal up at center
 
@@ -222,6 +248,7 @@ label reels:
         c "please get a better sense of humor."
 
         c "see ya."
+        $ mood = 1
 
 
     jump checkDay
@@ -235,19 +262,32 @@ label fuckyou:
 
     c "please leave."
 
+    $ mood = 1
+
     jump checkDay
 
 label calDay2:
     scene dorm
-    show calb neutral happy at left
-    with dissolve
 
-    c "good to see you again!"
+    if mood == 0:
+        show calb neutral happy at left
+        with dissolve
+        c "good to see you again!"
+        
+        show calb think at center
+        with move
+        c "guess what we are gonna do today..." 
+    else:
+        show calb neutral mad at left
+        with dissolve
+        c "yo."
+        c "i'm surprised you asked to hang again."
+        c "i'm gonna give you another chance to redeem yourself."
+        show calb neutral mad at center
+        with move
+        c "try to guess what we are doing today."
+    
 
-    show calb think at center
-    with move
-
-    c "guess what we are gonna do today..."
     
 
     menu guess:
@@ -319,17 +359,18 @@ label calDay2:
             $ renpy.pause(delay=2*silence,hard=True)
             show calb neutral
             hide screen my_keys
+            $ quick_menu = True
             jump guess
 
 label circus:
+    $ quick_menu = False
+    show screen my_keys
     show calb forwards
     c "you know what you did."
     c "suffer."
     play music "circus.mp3"
     window hide
     scene clown
-    $ quick_menu = False
-    show screen my_keys
     show calb forwards at truecenter:
         ease 154 zoom 5 yalign 0.3
     $ renpy.pause(delay=154,hard=True)
@@ -346,10 +387,14 @@ label cal22:
     with slidedown
     show mic at left with moveinleft
 
-    c "oh yeah, no save scumming for you!"
-
     show screen my_keys
     $ quick_menu = False
+
+    c "oh yeah, no save scumming or pausing for you!"
+
+    c "i hope you got something to take notes on, because you only have 10 seconds to answer each question."
+
+    c "lets get this party started."
     
     # list of all possible questions
     # it consist of dictionaries, that describe each question:
@@ -358,7 +403,7 @@ label cal22:
     $ q_list = [
     {"question": "who is in seben eleben?",
     "type": "multi",
-    "answer": [ ["Miku", "right"], ["teto", "wrong"], ["Cashier", "wrong"], ["Homeless Guy", "wrong"] ]}, 
+    "answer": [ ["Miku", "right"], ["Teto", "wrong"], ["Cashier", "wrong"], ["Homeless Guy", "wrong"] ]}, 
 
     {"question": "what is the name of the Homeless Guy's technique?",
     "type": "multi",
@@ -368,7 +413,57 @@ label cal22:
     "type": "enter",
     "answer": [ ["2", "right"]]},
 
+    {"question": "what is the 7th game that i have made?",
+    "type": "multi",
+    "answer": [ ["igbl", "right"], ["igdl", "wrong"], ["Skybeam+", "wrong"], ["Petit Dej", "wrong"] ]},
 
+    {"question": "how many endings does Petit Dej have?",
+    "type": "enter",
+    "answer": [ ["3", "right"]]},
+
+    {"question": "who is the fifth character in GIVE THANKS?",
+    "type": "multi",
+    "answer": [ ["Engineer", "right"], ["Alex", "wrong"], ["Miku", "wrong"], ["Sebastian", "wrong"] ]},
+
+    {"question": "what is the amount of french men in FRANCE DEFANCE?",
+    "type": "type",
+    "answer": [ ["4", "right"]]},
+
+    {"question": "who is June's husband?",
+    "type": "multi",
+    "answer": [ ["Mark", "right"], ["Me", "wrong"], ["Mars", "wrong"], ["Jake", "wrong"] ]},
+
+    {"question": "what is June looking for?",
+    "type": "multi",
+    "answer": [ ["Ummagumma", "right"], ["Pink Floyd", "wrong"], ["Love", "wrong"], ["A CD", "wrong"] ]},
+
+    {"question": "what is the 3rd ending called in The Quest for Ummagumma?",
+    "type": "multi",
+    "answer": [ ["Touch Grass", "right"], ["Gave Up", "wrong"], ["Parry", "wrong"], ["Bad", "wrong"] ]},
+
+    {"question": "which line is at the top of igbl's 1st minigame?",
+    "type": "multi",
+    "answer": [ ["FINISH THE ESSAY!!!!", "right"], ["FINISH THE ESSAY!!!", "wrong"], ["FEED YOURSELF!!!", "wrong"], ["FEED YOURSLEF!!!", "wrong"] ]},
+
+    {"question": 'how is "coffee" spelled in Bad Barista?',
+    "type": "multi",
+    "answer": [ ["coughee", "right"], ["cofee", "wrong"], ["koughee", "wrong"], ["cuofee", "wrong"] ]},
+
+    {"question": 'which game jam was "im really thirsty." made for?',
+    "type": "multi",
+    "answer": [ ["GMTK", "right"], ["Global Game Jam", "wrong"], ["October Game Jam", "wrong"], ["Godot Plug n Play", "wrong"] ]},
+
+    {"question": 'why is the cashier present in "im really constructive."?',
+    "type": "multi",
+    "answer": [ ["he needs a side job.", "right"], ["it is a sequel to im really thirsty.", "wrong"], ["he likes construction.", "wrong"], ["he wanted to get another job.", "wrong"] ]},
+
+    {"question": 'why does bobl need access to your mic?',
+    "type": "multi",
+    "answer": [ ["to blow it away.", "right"], ["to record you.", "wrong"], ["to blow the bobl.", "wrong"], ["to pop the bobl.", "wrong"] ]},
+
+    {"question": "what's the difference between Skybeam and Skybeam+?",
+    "type": "multi",
+    "answer": [ ["A day/night cycle.", "right"], ["new poem mechanics.", "wrong"], ["10 new poems.", "wrong"], ["less grass.", "wrong"] ]},
     ]
    
     # game variables
@@ -378,6 +473,11 @@ label cal22:
     $ wrong_answers = 0     # amount of wrong answers
     $ quiz_length = 3       # number of questions in one game
     $ q_to_ask = []         # list of questions to ask in one game
+
+    $ time = 10
+    $ timer_range = 10
+    $ timer_jump = 'loser'
+    
    
     # let's choose some questions to play with
     while len(q_to_ask) < quiz_length:        # will work until we'll get enough questions for quiz
@@ -386,15 +486,6 @@ label cal22:
             $ q_to_ask.append(a)
 
     label quize_game:                             # game loop
-        if -1 <= wrong_answers <= 1:
-            show calb neutral
-        elif wrong_answers < -1:
-            show calb neutral happy
-        elif wrong_answers > 3:
-            show calb forwards
-        elif wrong_answers > 1:
-            show calb neutral mad
-
 
         $ a = random.choice(q_to_ask)      # randomly pick the question from a list
         $ q_to_ask.remove(a)                     # remove it from list to not to ask it twice
@@ -402,7 +493,8 @@ label cal22:
         # ugly part... next variables are necessary to fill menu
         $ question = a["question"]
 
-        c "[question]"
+        show calb mic 
+        show screen countdown
         if a["type"] == "multi":
             $ huh = [0,1,2,3]
             $ random.shuffle(huh)
@@ -410,61 +502,80 @@ label cal22:
             $ answ_1 = a["answer"][huh[1]][0]
             $ answ_2 = a["answer"][huh[2]][0]
             $ answ_3 = a["answer"][huh[3]][0]
-
-            $ cor_1 = a["answer"][huh[0]][1]
-            $ cor_2 = a["answer"][huh[1]][1]
-            $ cor_3 = a["answer"][huh[2]][1]
-            $ cor_4 = a["answer"][huh[3]][1]
             jump multi
 
         else:
             jump type
-    
+
+
         menu multi:
             c "[question]"
-            "[answ_0][cor_1]":
+            "[answ_0]":
                 if a["answer"][huh[0]][1] == "right":
-                    show calb up        # checks the description of question if it's the right one
+                    $ time += 5
+                    show calb up        
                     "CORRECT!"
                     $ wrong_answers -=1
                 else:
+                    $ time += 2
                     show calb down
                     "WRONG!"
                     $ wrong_answers +=1
-            "[answ_1][cor_2]":
+            "[answ_1]":
                 if a["answer"][huh[1]][1]  == "right":
+                    $ time += 5
                     show calb up 
                     "CORRECT!"
                     $ wrong_answers -=1
                 else:
+                    $ time += 2
                     show calb down
                     "WRONG!"
                     $ wrong_answers +=1
-            "[answ_2][cor_3]":
+            "[answ_2]":
                 if a["answer"][huh[2]][1]  == "right":
+                    $ time += 5
                     show calb up 
                     "CORRECT!"
                     $ wrong_answers -=1
                 else:
+                    $ time += 2
                     show calb down
                     "WRONG!"
                     $ wrong_answers +=1
-            "[answ_3][cor_4]":
+            "[answ_3]":
                 if a["answer"][huh[3]][1]  == "right":
+                    $ time += 5
                     show calb up 
                     "CORRECT!"
                     $ wrong_answers -=1
                 else:
+                    $ time += 2
                     show calb down
                     "WRONG!"
                     $ wrong_answers +=1
-
 
         $ quiz_length -= 1
+        if -1 <= wrong_answers <= 1:
+            show calb neutral
+        elif wrong_answers < -1:
+            show calb neutral happy
+        elif wrong_answers > 3:
+            show calb forwards
+            hide screen countdown
+            pause
+            jump loser
+        elif wrong_answers > 1:
+            show calb neutral mad
         if quiz_length > 0:
+            $ nexttext = random.choice(randonext)
+
+            c "[nexttext]"
             jump quize_game
         else:
             jump quizEND
+
+        
 
         label type:
             if quiz_length <= 0:
@@ -472,22 +583,55 @@ label cal22:
             c "[question]"
             $ typed = renpy.input("[question]",allow="0123456789")
             if typed == a["answer"][0][0]:
+                $ time += 5
                 show calb up 
                 "CORRECT!"
                 $ wrong_answers -=1
             else:
+                $ time += 2
                 show calb down
                 "WRONG!"
                 $ wrong_answers +=1
             $ quiz_length -= 1
+            if -1 <= wrong_answers <= 1:
+                show calb neutral
+            elif wrong_answers < -1:
+                show calb neutral happy
+            elif wrong_answers > 3:
+                show calb forwards
+                hide screen countdown
+                pause
+                jump loser
+            elif wrong_answers > 1:
+                show calb neutral mad
             if quiz_length > 0:     
+                $ nexttext = random.choice(randonext)
+                c "[nexttext]"
                 jump quize_game
+            else:
+                jump quizEND
 
 
     label quizEND:
+        hide screen countdown
+        show calb neutral happy
         c "wow, you made it!"
         c "you really are a true calvin fan."
+
+        hide screen my_keys
+        $ quick_menu = True
+        jump checkDay
+
+
+    label loser:
+        show calb neutral mad
+        c "..."
+        c ""
+        hide screen my_keys
+        $ quick_menu = True
+        jump checkDay
    
     $ quick_menu = True
     hide screen my_keys
     jump checkDay
+
