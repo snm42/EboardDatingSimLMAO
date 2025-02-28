@@ -1,11 +1,23 @@
 default samDaysPicked = 0
 default samEnd = "none"
-
+default shoo = ""
+default diningHall = True
+default pubSec = False
 transform real:
     center
     zoom 0.3
 
 label sam:
+    if not diningHall:
+        "..."
+        "Honestly, I don't think I want to see him after that display at Taco Bell."
+        "I should probably just spend the day relaxing."
+        jump checkDay
+    if pubSec:
+        "..."
+        "Honestly, I probably shouldn't see this guy after ratting him out to public safety."
+        "I should probably avoid seeing him if possible."
+        jump checkDay
     $ samDaysPicked += 1
     if samDaysPicked == 1:
         jump samDay1
@@ -30,7 +42,7 @@ label samDay1:
 
     m "That doesn't exactly make me excited to eat anything."
 
-    # IDK pose
+    show sam idk at real
     j "Guess you'll have to suck it up."
     j "Anyways, I'll leave the final decision up to you."
     j "Since we're already here in campus center, I guess you can feel free to pick anything that's within 200 feet or so."
@@ -240,10 +252,17 @@ label samDay1:
         jump checkDay
 
 label samDay2:
+    scene bg maple
     "You are walking through Maple hall, entering Sam's dorm after he invited you over."
     "You walk into the dorm, and see Sam furiously drawing something on his iPad."
 
+    scene bg sam dorm
+
+    show sam normal at real
+
     m "Hey."
+
+    show sam stare at real
     
     "He stops writing and looks up at you."
 
@@ -252,22 +271,31 @@ label samDay2:
     "He waves you down to sit down across from him in the living room."
     "You sit down."
 
+    show sam normal at real
+
     m "So..."
     m "You doing alright after that chicken parmesan incident?"
     m "I was worried you were going to die or something."
 
+    show sam good at real
+
     j "Yeah, I'm doing alright."
     j "Actually, I've never been better!"
+
+    show sam normal at real
     j "That experience has actually inspired me to make a substantial change in this campus."
     j "Usually I'm a pretty passive person."
     j "I don't get riled up by anything, unless someone insults something I'm deeply passionate about."
     
     "You see Sam tense up for a bit."
 
+    show sam angy at real
     j "But this?"
     j "This absolutely sickens me!"
     j "I can't believe such a terrible thing can be allowed to exist unchecked."
     j "This dining hall is the lifeline for all these students, and they simply poison them!"
+
+    show sam ipad at real
 
     "Sam holds up his iPad, showing his very atrocious art skills."
 
@@ -277,12 +305,13 @@ label samDay2:
 
     "You take a closer look at the iPad."
     "Detailed on the screen is the entire layout of the dining hall."
-    "The positions of each employee are drawn clearly on the paper."
+    "The positions of each employee are drawn clearly on the screen."
     "All of the furniture and potential obstacles are also detailed."
     "There are lines drawing the best places to walk through and plant... explosives?"
-    "You can't even tell what the hell he's trying to draw on this paper."
+    "You can't even tell what the hell he's trying to draw on this screen."
     "You look back to Sam."
 
+    show sam normal at real
     j "In order to cause change, one must disturb the peace and become noticed."
 
     m "Are you sure this is a good idea?"
@@ -310,6 +339,7 @@ label samDay2:
             $ pubSec = False
     
     if pubSec:
+        show sam shocked at real
         j "Anyways, I'm starving!"
         j "I've been working on this plan ever since I got out of my capstone meeting."
         j "Do you wanna come along?"
@@ -319,21 +349,26 @@ label samDay2:
         m "Actually..."
         m "I had a question regarding your plan."
         
+        show sam normal at real
         "You decide to just stall Sam by asking stupid questions, and clarifying things on his drawing."
         "After a while, you see a few public safety people crowding by the entrance."
 
         m "Oh yeah, sorry for holding you up."
+        
         m "Let's go grab some food!"
-
+        show sam good at real
         j "Sure!"
         j "Lemme just pack my things up and let's head out."
-
+        show sam normal at real
         "Before Sam could finish putting his things in his bag, two people barge into the room and walk towards Sam."
 
+        show sam angy at real
         j "Hey!"
         j "Watch where you're putting-"
 
+
         "The public safety officer hits Sam swiftly in the back of his head, and he stops struggling."
+        hide sam angy
         "Oh shit."
         "The two officers look at you."
 
@@ -356,20 +391,24 @@ label samDay2:
         j "Where?"
 
         m "So if you look over here..."
-
+        show sam ipad at real
         "Together, you refined the plan on the attack on the dining hall."
         "Even with the new changes and modifications you made to the plan, somehow you feel that something will go wrong."
         "After all, this entire thing seems ridiculous to even execute."
         "Oh well, if anything, Sam's the one who will take the blame."
 
+        show sam good at real
         j "You are a life saver!"
         j "I don't think this plan would have come together so nicely without your help!"
         j "Genuinely, I appreciate all the help you've given me so far."
 
+        show sam normal at real
         "Sam seems to stop for a second and think."
+        show sam shocked at real
         "Then he suddenly jumps up."
 
         j "Now that I think about it, I haven't helped you with anything!"
+        show sam normal at real
         j "I was originally supposed to help you learn about the campus and the club but I was out cold before I could even get to it."
         j "Was there anything that you needed help with?"
 
@@ -378,6 +417,7 @@ label samDay2:
         m "At this point, I really don't want to take more hard classes."
         m "What are your recommendations?"
 
+        hide sam normal
         "You look at Sam, expecting an answer."
         "However, you see him out cold, lying down on top of his iPad."
         "This time, it looks like he was sleepily happily, however."
@@ -389,17 +429,19 @@ label samDay2:
 
         m "Not that the success rate is much higher than zero."
 
-        "You leave the room and exit the library."
+        "You leave the room and exit the dorm."
 
         jump checkDay
     
     jump checkDay
 
 label samDay3:
+    scene bg gds
     "..."
 
     "???" "Today's the day!"
 
+    show sam normal at real
     "You turn around and see Sam walking towards you."
     "He seems oddly excited for what seems to be a grand attempt at a terrorist attack."
     "Note: This is a work of fiction."
@@ -408,7 +450,9 @@ label samDay3:
     m "Hey."
     m "How are you feeling for today?"
 
+    show sam good at real
     j "Never better!"
+    show sam normal at real
     j "In fact, all that sleep I got the other day helped me really lock in."
     j "I've been running through the plan all day, just to make sure that everything will work out."
 
@@ -421,12 +465,15 @@ label samDay3:
     j "Well, the main idea is to just destroy all of the equipment and furniture in the dining hall."
     j "By causing a forced renovation, the administration will have to pay attention to the dining hall for once."
     j "And maybe then they'll see the sorry state of affairs within."
+    show sam good at real
     j "Surely there's no way that nothing will come out of this!"
+    show sam normal at real
 
-    m "Uh-huh"
+    m "Uh-huh."
     m "Well, I'll be here for moral support."
     m "You can handle this by yourself, right?"
 
+    show sam good at real
     j "Of course!"
     
     "You see him walk past the counter and deeper into the food section."
@@ -440,6 +487,7 @@ label samDay3:
 
     "You follow Sam further into the food hall, where he is standing in front of the chicken parmesan."
 
+    show sam angy at real
     j "Take this!"
     
     "You see Sam raise his fist in the air, fully intending to flip the tray and spill the food everywhere."
@@ -448,8 +496,10 @@ label samDay3:
     m "Look out!"
     m "It's a public safety officer!"
 
+    show sam shocked at real
     j "Oh shit!"
 
+    show sam normal at real
     "You see Sam break free from the officer's grasp and back away."
 
     "Officer" "We've been tracking your moves ever since you drafted up that attack plan."
@@ -493,6 +543,26 @@ label samDay3:
     jump rockPaperScissors
 
 label samDay3Death:
+    show sam rock at real
+    "Sam and Officer" "Rock..."
+    show sam up at real
+    "..."
+    show sam rock at real
+    "Sam and Officer" "Paper..."
+    show sam up at real
+    "..."
+    show sam rock at real
+    "Sam and Officer" "Scissors..."
+    show sam up at real
+    "..."
+    "Sam and Officer" "Shoot!"
+    if shoo == 'R':
+        show sam rock at real
+    elif shoo == 'P':
+        show sam paper at real
+    else:
+        show sam scissors at real
+    # Cue gun
     "You see Sam sprawled out on the ground, bleeding out pretty severely."
 
     m "Oh shoot, I thought you would have had him in the bag."
@@ -522,6 +592,7 @@ label samEnding:
     jump checkDay
 
 label rockPaperScissors:
+    show sam rock at real
     j "Quick, what should I pick?"
 
     m "Uhh..."
@@ -529,10 +600,10 @@ label rockPaperScissors:
     menu:
         m "You should do..."
         "Rock":
-            jump samDay3Death
+            $ shoo = "R"
         "Paper":
-            jump samDay3Death
+            $ shoo = "P"
         "Scissors":
-            jump samDay3Death
+            $ shoo = "S"
         
     jump samDay3Death

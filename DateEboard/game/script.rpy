@@ -14,6 +14,9 @@ default day = 0
 # This is where the game starts. Feel free to edit your lines as needed.
 
 label start:
+    # This is for the action editor
+    camera:
+        perspective True
     "You find yourself walking to GITC 3700, to attend your first IGDA general body meeting!"
     "As a new transfer student, you worry that it'll be hard to find a fun and exciting club that will accept you."
     "Despite this, you muster the courage to step into the large room that lay right in front of you."
@@ -42,6 +45,7 @@ label start:
 # Each day will have different eboard members available to spend the day with.
 
 label checkDay:
+    scene bg default
     $ day += 1
     if day == 1:
         jump pickSomeoneDay1
