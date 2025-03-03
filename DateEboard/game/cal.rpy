@@ -31,7 +31,7 @@ define skipamt = 0
 define mood = 0
 
 define likes = {
-    "images/reel1.webm": 0,
+    "images/reel1.webm": 1,
     "images/reel2.webm": 1,
     "images/reel3.webm": 1,
     "images/reel4.webm": 1,
@@ -77,6 +77,20 @@ define likes = {
     "images/reel44.webm": 0,
     "images/reel45.webm": 1,
     "images/reel46.webm": 1,
+    "images/reel47.webm": 1,
+    "images/reel48.webm": 1,
+    "images/reel49.webm": 0,
+    "images/reel50.webm": 1,
+    "images/reel51.webm": 0,
+    "images/reel52.webm": 0,
+    "images/reel53.webm": 1,
+    "images/reel54.webm": 1,
+    "images/reel55.webm": 0,
+    "images/reel56.webm": 1,
+    "images/reel57.webm": 1,
+    "images/reel58.webm": 1,
+    "images/reel59.webm": 0,
+    "images/reel60.webm": 1,
 }
 
 define stopguess = 0
@@ -98,11 +112,18 @@ define randonext = [
     "next.",
     "hmmm...what to ask next...",
     "uhhhhhhhhhhhhhhhhh",
-    "the next equestion is obvious.",
+    "the next question is obvious.",
     "next question.",
     "let us proceed to the following question.",
     "let us proceed.",
-    "lets get to the next one.",
+    "let's get to the next one.",
+    "hrmmmmm...",
+    "this one is quite simple.",
+    "if you don't know this one, then you're just stupid.",
+    "i don't know if you can get this one...",
+    "NEXT QUESTION!",
+    "please get this one right.",
+    "if you get this next one wrong, it's not gonna look good."
 ]
 
 define calDaysPicked = 0
@@ -170,10 +191,10 @@ label reelstart:
     jump reels
 
 label reels:
-    while count < 46:
-        $ reel = "images/reel" + str(random.randint(1, 46)) + ".webm"
+    while count < 60:
+        $ reel = "images/reel" + str(random.randint(1, 60)) + ".webm"
         while reel in watched:
-            $ reel = "images/reel" + str(random.randint(1, 46)) + ".webm"
+            $ reel = "images/reel" + str(random.randint(1, 60)) + ".webm"
 
         if renpy.movie_cutscene(reel):
             $ skipamt = skipamt + 1
@@ -234,7 +255,7 @@ label reels:
 
     c "oh well, thanks for hanging out with me."
 
-    if score >= 36:
+    if score >= 48:
         c "you've got a good sense of humor."
         c "i'm glad you enjoyed them."
         c "let's add eachother on IGsDAgram next time!"
@@ -243,7 +264,7 @@ label reels:
 
         c "alright, i'll see you around!"
 
-    elif score < 36:
+    elif score < 48:
         c "you've got a weird taste in videos..."
         c "please get a better sense of humor."
 
@@ -347,6 +368,7 @@ label calDay2:
             c "that's right!"
             show calb neutral happy
             with ease
+            c "let's see just how much you know about my games."
             jump cal22
 
         "*remain silent*":
@@ -437,7 +459,7 @@ label cal22:
 
     {"question": "what is June looking for?",
     "type": "multi",
-    "answer": [ ["Ummagumma", "right"], ["Pink Floyd", "wrong"], ["Love", "wrong"], ["A CD", "wrong"] ]},
+    "answer": [ ["Ummagumma", "right"], ["Pink Floyd", "wrong"], ["Love", "wrong"], ["A Vinyl", "wrong"] ]},
 
     {"question": "what is the 3rd ending called in The Quest for Ummagumma?",
     "type": "multi",
@@ -449,7 +471,7 @@ label cal22:
 
     {"question": 'how is "coffee" spelled in Bad Barista?',
     "type": "multi",
-    "answer": [ ["coughee", "right"], ["cofee", "wrong"], ["koughee", "wrong"], ["cuofee", "wrong"] ]},
+    "answer": [ ["coughee", "right"], ["cofi", "wrong"], ["koughee", "wrong"], ["cuofi", "wrong"] ]},
 
     {"question": 'which game jam was "im really thirsty." made for?',
     "type": "multi",
@@ -473,7 +495,7 @@ label cal22:
 
     {"question": 'what shape is the green in "im really constructive."?',
     "type": "multi",
-    "answer": [ ["cylinder", "right"],["spheres", "wrong"],["triangular prism", "wrong"], ["rectangles", "wrong"]]},
+    "answer": [ ["cylinder", "right"],["sphere", "wrong"],["circle", "wrong"], ["rectangle", "wrong"]]},
 
     {"question": 'how many times can you use the hydration lamp in "im really thirsty."?',
     "type": "enter",
@@ -536,6 +558,8 @@ label cal22:
     $ time = 10
     $ timer_range = 10
     $ timer_jump = 'loser'
+
+    $ perfect = True
     
    
     # let's choose some questions to play with
@@ -613,8 +637,12 @@ label cal22:
                     show calb down
                     "WRONG!"
                     $ wrong_answers +=1
+        if time > 10:
+            $ time = 10
 
         $ quiz_length -= 1
+        if wrong_answers == 1:
+            $ perfect = False
         if -1 <= wrong_answers <= 1:
             show calb neutral
         elif wrong_answers < -1:
@@ -626,6 +654,8 @@ label cal22:
             jump loser
         elif wrong_answers > 1:
             show calb neutral mad
+
+        
         if quiz_length > 0:
             $ nexttext = random.choice(randonext)
 
@@ -651,7 +681,11 @@ label cal22:
                 show calb down
                 "WRONG!"
                 $ wrong_answers +=1
+            if time > 10:
+                $ time = 10
             $ quiz_length -= 1
+            if wrong_answers == 1:
+                $ perfect = False
             if -1 <= wrong_answers <= 1:
                 show calb neutral
             elif wrong_answers < -1:
@@ -673,9 +707,83 @@ label cal22:
 
     label quizEND:
         hide screen countdown
+        show calb neutral
+        c "congrats on making it through the quiz."
+        c "now it's time for the real challenge."
+        c "i got some homework thats due tomorrow."
+        c "mind helping me out?"
+        show fakehw at left:
+            yalign 0.5
+        show fakeeqnsheet at right:
+            yalign 0.45
+        c "good luck."
+        pause
+        
+        $ hwscore = 0
+
+        $ typed = renpy.input("Question 1:",allow="0123456789.")
+        if typed == "0.553":
+            $ hwscore +=1
+        $ typed = renpy.input("Question 2A:",allow="0123456789.")
+        if typed == "0.5":
+            $ hwscore +=1
+        $ typed = renpy.input("Question 2B:",allow="0123456789.")
+        if typed == "0.429":
+            $ hwscore +=1
+        $ typed = renpy.input("Question 2C:",allow="0123456789.")
+        if typed == "0.9":
+            $ hwscore +=1
+        $ typed = renpy.input("Question 2D:",allow="0123456789.")
+        if typed == "1.667":
+            $ hwscore +=1
+        $ typed = renpy.input("Question 3A.1:",allow="qwertyuiopasdfghjklzxcvbnm")
+        if typed == "flammable":
+            $ hwscore +=1
+        $ typed = renpy.input("Question 3A.2:",allow="qwertyuiopasdfghjklzxcvbnm")
+        if typed == "toxic":
+            $ hwscore +=1
+        $ typed = renpy.input("Question 3A.3:",allow="qwertyuiopasdfghjklzxcvbnm ")
+        if typed == "health hazard":
+            $ hwscore +=1
+        menu:
+            "Question 3B:"
+            "higher":
+                $ hwscore +=1
+            "lower":
+                pass
+        
+        hide fakehw
+        hide fakeeqnsheet
+        c "alright, let me check your work."
+        if hwscore == 9:
+            show calb yiik
+            c "wow, you did this HW perfectly!"
+            show calb forwards
+            c "that's suspicious."
+            pause
+            show calb neutral happy
+            c "eh it don't matta you got it done and that's all i care about."
+        elif hwscore > 7:
+            $ perfect = False
+            c "good enough. that's enough to pass"
+            c "thanks for the help!"
+        else:
+            show calb neutral mad
+            c "...did you even try?"
+            c "all that effort just to fall flat here."
+            c "pick a better major next time..."
+            jump loser
+
+    
         show calb yiik
         c "holy crap, you actually made it!"
-        "if you actually made it here, please tell me how long this took, i'm curious."
+        if perfect:
+            show calb neutral happy
+            c "you didn't even make a single mistake!"
+            c "you really did do your research huh..."
+            show calb up
+            c "thanks for putting so much dedication to learning and playing my games."
+        "if you actually made it here, please tell me how long this took and what kind of notes you took to pass, i'm curious."
         show calb neutral happy
         c "you really are a true calvin fan."
         c "you're the best, i can't wait to hang out with you again."
@@ -697,7 +805,7 @@ label cal22:
             show calb neutral
             c "welp...you tried."
             c "study harder next time, okay?"
-            c "i'll see you next time."
+            c "i'll see you around."
             c "bye."
         hide screen my_keys
         $ quick_menu = True
