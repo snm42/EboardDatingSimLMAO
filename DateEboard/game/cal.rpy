@@ -769,6 +769,7 @@ label cal22:
             c "thanks for the help!"
         else:
             show calb neutral mad
+            $ perfect = False
             c "...did you even try?"
             c "all that effort just to fall flat here."
             c "pick a better major next time..."
@@ -815,6 +816,18 @@ label cal22:
     hide screen my_keys
     jump checkDay
 
+screen input_screen():
+    window:
+        has vbox
+
+        text "Enter your name."
+        input default "Joseph P. Blow, ESQ."
 
 label calDay3:
+    c "po-em"
+    show screen input_screen
+    
+    c "wirte poem"
+    c"please write good:"
+
     
