@@ -792,7 +792,7 @@ label cal22:
         hide fakehw
         hide fakeeqnsheet
         c "alright, let me check your work."
-        if hwscore == 9:
+        if hwscore == 10:
             show calb yiik
             c "wow, you did this HW perfectly!"
             show calb forwards
@@ -800,10 +800,12 @@ label cal22:
             pause
             show calb neutral happy
             c "eh it don't matta you got it done and that's all i care about."
-        elif hwscore > 7:
+        elif hwscore >= 8:
             $ perfect = False
             $ perfectquiz = False
-            c "good enough. that's enough to pass"
+            c "good enough. that's enough to get a B."
+            c "always remember: B's get degrees, C's get disease."
+            c "and A's get ice cream or something idk"
             c "thanks for the help!"
         else:
             show calb neutral mad
@@ -821,8 +823,10 @@ label cal22:
             show calb neutral happy
             c "you didn't even make a single mistake!"
             c "you really did do your research huh..."
+            show calb think
+            c "or maybe this is your hundreth attempt and you finally did everything perfectly."
             show calb up
-            c "thanks for putting so much dedication to learning and playing my games."
+            c "regardless, thanks for putting so much dedication to learning and playing my games."
         "if you actually made it here, please tell me how long this took and what kind of notes you took to pass, i'm curious."
         show calb neutral happy
         c "you really are a true calvin fan."
