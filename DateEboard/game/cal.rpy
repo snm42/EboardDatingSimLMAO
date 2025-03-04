@@ -91,6 +91,10 @@ define likes = {
     "images/reel58.webm": 1,
     "images/reel59.webm": 0,
     "images/reel60.webm": 1,
+    "images/reel61.webm": 0,
+    "images/reel62.webm": 0,
+    "images/reel63.webm": 1,
+    "images/reel64.webm": 1,
 }
 
 define stopguess = 0
@@ -99,7 +103,7 @@ define stopout = 0
 
 define stopmore = False
 
-define silence = 0
+define silence = 0.0
 
 define randonext = [
     "alright, next question.",
@@ -130,6 +134,10 @@ define calDaysPicked = 0
 
 define nexttext = 0
 
+define reelNum = len(likes)
+
+$ rewind = False
+
 $ perfect = True
 
 transform alpha_dissolve:
@@ -143,18 +151,10 @@ screen countdown:
     timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
     bar value time range timer_range xalign 0.5 yalign 0.1 xmaximum 300 at alpha_dissolve # This is the timer bar.
 
-init:
-    $ timer_range = 0
-    $ timer_jump = 0
-
-# time = the time the timer takes to count down to 0.
-# timer_range = a number matching time (bar only)
-# timer_jump = the label to jump to when time runs out
-
 label cal:
     $ calDaysPicked +=1
     if calDaysPicked == 1:
-        jump calDay1
+        jump calDay3
     if calDaysPicked == 2:
         jump calDay2
     if calDaysPicked == 3:
@@ -179,6 +179,10 @@ label calDay1:
 
 label reelstart:
 
+    $ _skipping = False
+
+    $ quick_menu = False
+
     show screen my_keys
 
     show cal phone hold at left
@@ -193,7 +197,7 @@ label reelstart:
     jump reels
 
 label reels:
-    while count < 60:
+    while count < reelNum:
         $ reel = "images/reel" + str(random.randint(1, 60)) + ".webm"
         while reel in watched:
             $ reel = "images/reel" + str(random.randint(1, 60)) + ".webm"
@@ -217,9 +221,11 @@ label reels:
                 window hide
                 pause
                 c "get out."
-                $ mood = 1
+                $ mood += 1
                 hide screen my_keys
                 $ quick_menu = True
+                $ _skipping = True
+
                 jump checkDay
 
 
@@ -251,20 +257,25 @@ label reels:
 
     show cal horrified
 
+    $ quick_menu = True
+
     c "NOO MY PHONE DIED!"
 
     show cal neutral at center
 
     c "oh well, thanks for hanging out with me."
 
-    if score == 60:
+    if score == reelNum:
+        show cal surprised
         c "woah...you liked and hated those reels the exact same as me!"
+        show cal phone hold
         c "your sense of humor is truly top notch."
         show cal up
         c "let's play some games together sometime!"
+        c "oh, and add me on IGsDAgram!"
         c "seeya!"
 
-    if 48 <= score < 60:
+    elif 0.8*reelNum <= score < reelNum:
         $ perfect = False
         c "you've got a good sense of humor."
         c "i'm glad you enjoyed them."
@@ -274,15 +285,15 @@ label reels:
 
         c "alright, i'll see you around!"
 
-    elif score < 48:
+    elif score < 0.8*reelNum:
         $ perfect = False
         c "you've got a weird taste in videos..."
         c "please get a better sense of humor."
 
         c "see ya."
-        $ mood = 1
-
-
+        $ mood += 1
+    $ _skipping = True
+    hide screen my_keys
     jump checkDay
 
 
@@ -294,7 +305,7 @@ label fuckyou:
 
     c "please leave."
 
-    $ mood = 1
+    $ mood += 1
 
     jump checkDay
 
@@ -324,17 +335,17 @@ label calDay2:
 
     menu guess:
         "I don't know, what?":
-
             if stopguess > 3:
+                $ quick_menu = False
                 show calb neutral mad
                 c "thats it."
-
                 c "GET OUUUUUUUUT!"
                 show calb forwards at truecenter:
                     ease 0.2 zoom 5 yalign 0.25
                 window hide
-                $ quick_menu = False
                 $ renpy.pause(delay=0.01)
+                $ mood += 1
+                $ quick_menu = True
                 jump checkDay
 
             show calb forwards 
@@ -345,6 +356,7 @@ label calDay2:
         
         "Are we gonna go somewhere?":
             if stopout == 1:
+                $ mood += 1
                 jump circus
                 
             show calb down 
@@ -359,12 +371,29 @@ label calDay2:
             show calb neutral
             if stopmore:
                 jump circus
+
+            if rewind:
+                $ quick_menu = False
+                show screen my_keys
+                show calb neutral mad
+                c "you really are addicted to short form media huh?"
+                c "what are you, an ipad kid?"
+                c "or maybe you are just trying to avoid my quiz."
+                c "well you know what."
+                show calb down
+                c "too bad!"
+                jump cal22
+
             c "no."
             c "i mean unless you want to i guess."
             $ stopmore = True
             menu:
                 "i want to rewind time":
+                    $ calDaysPicked = 1
+                    $ rewind = True
                     c "its your playthrough i guess..."
+                    $ mood += 1
+                    hide calb
                     show cal phone hold at left 
                     with ease
                     jump reelstart
@@ -386,9 +415,9 @@ label calDay2:
             $ silence += 1
             $ quick_menu = False
             show screen my_keys
-            $ renpy.pause(delay=2*silence,hard=True)
+            $ renpy.pause(delay=1.5**silence,hard=True)
             show calb forwards
-            $ renpy.pause(delay=2*silence,hard=True)
+            $ renpy.pause(delay=1.5**silence,hard=True)
             show calb neutral
             hide screen my_keys
             $ quick_menu = True
@@ -429,6 +458,8 @@ label cal22:
     c "i hope you got something to take notes on, because you only have 10 seconds to answer each question."
 
     c "lets get this party started."
+
+    play music "gameshow.ogg"
     
     # list of all possible questions
     # it consist of dictionaries, that describe each question:
@@ -745,6 +776,7 @@ label cal22:
     label quizEND:
         hide screen countdown
         show calb neutral
+        stop music fadeout 1.0
         c "congrats on making it through the quiz."
         c "now it's time for the real challenge."
         c "i got some homework thats due tomorrow."
@@ -754,6 +786,7 @@ label cal22:
         show fakeeqnsheet at right:
             yalign 0.45
         c "good luck."
+        window hide
         pause
         
         $ hwscore = 0
@@ -839,7 +872,8 @@ label cal22:
 
 
     label loser:
-        if mood == 1:
+        stop music fadeout 1.0
+        if mood >= 1:
             show calb neutral mad
             c "..."
             c "you come crawling back to me and all you do is disappoint."
@@ -871,11 +905,12 @@ screen input_screen():
         xysize (720,840)
         xalign 0.5
         yalign 0.1
-        add Input(length=800, default="write poem", changed=name_func, copypaste=True, multiline=True, pixelwidth=720)
+        add Input(length=800, changed=name_func, copypaste=True, multiline=True, pixelwidth=720)
 
 label calDay3:
     c "po-em"
     show screen input_screen
+    scene ckb
     c "wirte poem"
     c "[poem]"
     c "did that work"
