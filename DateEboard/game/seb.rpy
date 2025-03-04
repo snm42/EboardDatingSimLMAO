@@ -329,7 +329,7 @@ label dollartreeoutside:
     jump dollartreeinside
 
 label dollartreeinside:
-    scene gds
+    scene dollatreeinside
     show sebcheekysmile
     with dissolve
     s "YOOOO NO WAY!"
@@ -360,7 +360,7 @@ label dollartreeinside:
     call screen tierlist
 
 label posttierlist:
-    scene gds
+    scene dollatreeinside
     show sebneutral
     show sebpenhauer at left
 
@@ -397,10 +397,58 @@ label posttierlist:
     if drink_ratings['redbull'] == "ftier":
         $ sebScore += 1
     s "..."
-    s "sooo you got [sebScore] right"
-    s "okay bye"
+    
+    if not drink_ratings['redbull'] == "ftier":
+        hide sebpenhauer
+        hide sebneutral
+        show sebdeadass
+        s "..."
+        s "So about your opinion on red bull"
+        s "I see you gave it [drink_ratings['redbull']]"
+        s "I have one thing to say to you"
+        hide sebdeadass
+        scene lightning
+        show sebkiller
+        s "Your taste is nothing"
+        s "It serves zero purpose"
+        s "You should reconsider your taste NOW"
+        s "And give somebody else a piece of that oxygen in the ozone layer that's covered up so we can breathe inside this blue trap bubble"
+        s "Cuz what are you here for?"
+        s "To worship redbull?"
+        s "Throw that shit out NOW!"
+        s "I mean that with a HUNDRED percent"
+        s "with a THOUSAND percent"
+        jump checkDay
+    elif sebScore < 5:
+        s "Sooo you share [sebScore] opinions with me"
+        s "I'm gonna be honest"
+        s "Your opinions are trashier than the villager CGI in the Minecraft movie"
+        s "Yeah I don't think I want you picking my energy drinks for me"
+        s "Bye"
+        $ sebMood -= 10
+        jump checkDay
+    elif sebScore < 11:
+        s "Sooo you share [sebScore] opinions with me"
+        s "You have some pretty good takes honestly"
+        s "I trust you with drink decisions, let's go grab some energy drinks"
+        s "Whaddya say Arthur?"
+        "The greatest of follies is to sacrifice health for any other kind of happiness."
+        hide sebneutral
+        show sebcheekysmile
+        s "Haha you said it best bud"
+        $ sebMood += 10
+        jump checkDay
+    elif sebScore == 11:
+        hide sebneutral
+        show sebcheekysmile
+        s "WOW"
+        s "Yeah we are literally the same person, 11/11"
+        s "Okay yeah let's uh make ou- I mean get some energy drinks"
+        s "Whaddya say Arthur?"
+        "Great men are like eagles, and build their nest on some lofty solitude,"
+        s "Haha you said it best bud"
+        jump checkDay
     jump checkDay
-
 
 label sebDay2:
     scene dorm

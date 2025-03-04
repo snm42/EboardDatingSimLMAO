@@ -1,37 +1,37 @@
-2025-03-04 20:39:19 UTC
+2025-03-04 21:02:14 UTC
 Windows-10-10.0.22631
 Ren'Py 8.3.4.24120703
 
-Early init took 0.06s
-Loading error handling took 0.02s
-Loading script took 0.24s
-Loading save slot metadata took 0.03s
+Early init took 0.53s
+Loading error handling took 0.03s
+Loading script took 2.60s
+Loading save slot metadata took 0.11s
 Loading persistent took 0.00s
-Running init code took 0.04s
-Loading analysis data took 0.01s
+Running init code took 0.10s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
+Reloading save slot metadata took 0.04s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\basti\\AppData\\Roaming/RenPy/backups\\DateEboard':
-Dump and make backups took 0.03s
+Dump and make backups took 0.07s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.03s
+Initial gc took 0.05s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
+Creating interface object took 0.02s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.06s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.03s
+Load screen analysis took 0.01s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.04s
 Running _start took 0.00s
-Interface start took 1.05s
+Interface start took 0.64s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -45,84 +45,10 @@ Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/seb.rpy", line 345, in script
-    if drink_ratings['celsius mango'] == "btier":
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ast.py", line 1849, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/seb.rpy", line 345, in <module>
-    if drink_ratings['celsius mango'] == "btier":
-KeyError: 'celsius mango'
-
-While running game code:
-  File "game/seb.rpy", line 345, in script
-    if drink_ratings['celsius mango'] == "btier":
-  File "game/seb.rpy", line 345, in <module>
-    if drink_ratings['celsius mango'] == "btier":
-KeyError: 'celsius mango'
 Resetting cache.
-Early init took 533.61s
+Early init took 91.86s
 Loading error handling took 0.03s
-Loading script took 0.16s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-
-File "game/seb.rpy", line 106: invalid syntax
-            "venom black": "ftier"
-                          ^
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Interface start took 0.40s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Intel'"
-Renderer: b'Intel(R) Iris(R) Xe Graphics'
-Version: b'4.6.0 - Build 31.0.101.5186'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 537.00s
-Loading error handling took 0.02s
-Loading script took 0.09s
-Loading save slot metadata took 0.02s
-Loading persistent took 0.00s
-
-File "game/seb.rpy", line 106: invalid syntax
-            "venom black": "ftier"
-                          ^
-DPI scale factor: 1.500000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Interface start took 0.37s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Intel'"
-Renderer: b'Intel(R) Iris(R) Xe Graphics'
-Version: b'4.6.0 - Build 31.0.101.5186'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 547.29s
-Loading error handling took 0.02s
-Loading script took 0.12s
+Loading script took 0.17s
 Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
 Running init code took 0.03s
@@ -134,7 +60,51 @@ Backing up script files to 'C:\\Users\\basti\\AppData\\Roaming/RenPy/backups\\Da
 Dump and make backups took 0.03s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc took 0.04s
+Initial gc took 0.05s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.18s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Iris(R) Xe Graphics'
+Version: b'4.6.0 - Build 31.0.101.5186'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1046) drawable=(1920, 1046)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 156.27s
+Loading error handling took 0.01s
+Loading script took 0.12s
+Loading save slot metadata took 0.02s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\basti\\AppData\\Roaming/RenPy/backups\\DateEboard':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
@@ -144,12 +114,12 @@ Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
-Interface start took 0.32s
+Interface start took 0.31s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
