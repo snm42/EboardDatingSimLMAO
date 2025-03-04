@@ -103,7 +103,7 @@ define stopout = 0
 
 define stopmore = False
 
-define silence = 0
+define silence = 0.0
 
 define randonext = [
     "alright, next question.",
@@ -392,9 +392,9 @@ label calDay2:
             $ silence += 1
             $ quick_menu = False
             show screen my_keys
-            $ renpy.pause(delay=2*silence,hard=True)
+            $ renpy.pause(delay=1.5**silence,hard=True)
             show calb forwards
-            $ renpy.pause(delay=2*silence,hard=True)
+            $ renpy.pause(delay=1.5**silence,hard=True)
             show calb neutral
             hide screen my_keys
             $ quick_menu = True
@@ -435,6 +435,8 @@ label cal22:
     c "i hope you got something to take notes on, because you only have 10 seconds to answer each question."
 
     c "lets get this party started."
+
+    play music "gameshow.ogg"
     
     # list of all possible questions
     # it consist of dictionaries, that describe each question:
@@ -751,6 +753,7 @@ label cal22:
     label quizEND:
         hide screen countdown
         show calb neutral
+        stop music fadeout 1.0
         c "congrats on making it through the quiz."
         c "now it's time for the real challenge."
         c "i got some homework thats due tomorrow."
@@ -846,6 +849,7 @@ label cal22:
 
 
     label loser:
+        stop music fadeout 1.0
         if mood == 1:
             show calb neutral mad
             c "..."
