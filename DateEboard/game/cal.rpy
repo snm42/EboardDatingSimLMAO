@@ -91,6 +91,10 @@ define likes = {
     "images/reel58.webm": 1,
     "images/reel59.webm": 0,
     "images/reel60.webm": 1,
+    "images/reel61.webm": 0,
+    "images/reel62.webm": 0,
+    "images/reel63.webm": 1,
+    "images/reel64.webm": 1,
 }
 
 define stopguess = 0
@@ -193,7 +197,7 @@ label reelstart:
     jump reels
 
 label reels:
-    while count < 60:
+    while count < 64:
         $ reel = "images/reel" + str(random.randint(1, 60)) + ".webm"
         while reel in watched:
             $ reel = "images/reel" + str(random.randint(1, 60)) + ".webm"
@@ -217,7 +221,7 @@ label reels:
                 window hide
                 pause
                 c "get out."
-                $ mood = 1
+                $ mood += 1
                 hide screen my_keys
                 $ quick_menu = True
                 jump checkDay
@@ -280,7 +284,7 @@ label reels:
         c "please get a better sense of humor."
 
         c "see ya."
-        $ mood = 1
+        $ mood += 1
 
 
     jump checkDay
@@ -294,7 +298,7 @@ label fuckyou:
 
     c "please leave."
 
-    $ mood = 1
+    $ mood += 1
 
     jump checkDay
 
@@ -335,6 +339,7 @@ label calDay2:
                 window hide
                 $ quick_menu = False
                 $ renpy.pause(delay=0.01)
+                $ mood += 1
                 jump checkDay
 
             show calb forwards 
@@ -345,6 +350,7 @@ label calDay2:
         
         "Are we gonna go somewhere?":
             if stopout == 1:
+                $ mood += 1
                 jump circus
                 
             show calb down 
@@ -754,6 +760,7 @@ label cal22:
         show fakeeqnsheet at right:
             yalign 0.45
         c "good luck."
+        window hide
         pause
         
         $ hwscore = 0
