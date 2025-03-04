@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/cal.rpy", line 468: if statement expects a non-empty block.
-    if quiz_length <= 0:
-                        ^
+File "game/cal.rpy", line 825: expected a keyword argument, colon, or end of line.
+    input(default="write poem", changed=fuck)
+         ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Wed Feb 26 20:07:56 2025
+Mon Mar  3 16:10:35 2025

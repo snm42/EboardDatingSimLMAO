@@ -130,6 +130,8 @@ define calDaysPicked = 0
 
 define nexttext = 0
 
+$ perfect = True
+
 transform alpha_dissolve:
     alpha 0.0
     linear 0.5 alpha 1.0
@@ -255,7 +257,15 @@ label reels:
 
     c "oh well, thanks for hanging out with me."
 
-    if score >= 48:
+    if score == 60:
+        c "woah...you liked and hated those reels the exact same as me!"
+        c "your sense of humor is truly top notch."
+        show cal up
+        c "let's play some games together sometime!"
+        c "seeya!"
+
+    if 48 <= score < 60:
+        $ perfect = False
         c "you've got a good sense of humor."
         c "i'm glad you enjoyed them."
         c "let's add eachother on IGsDAgram next time!"
@@ -265,6 +275,7 @@ label reels:
         c "alright, i'll see you around!"
 
     elif score < 48:
+        $ perfect = False
         c "you've got a weird taste in videos..."
         c "please get a better sense of humor."
 
@@ -360,7 +371,6 @@ label calDay2:
                 "nah i'm good.":
                     c "alright, then guess again!"
                     jump guess
-                
 
 
         "Is it quiz time?":
@@ -545,6 +555,30 @@ label cal22:
     "type": "multi",
     "answer": [ ["Lego Yoda Death Sound", "right"], ["Half-Life Scientist Scream", "wrong"], ["Hey all, Scott here!", "wrong"], ["Tom Scott Scream", "wrong"]]},
 
+    {"question": 'in Skybeam, what score gives you the poem "Restless"?',
+    "type": "enter",
+    "answer": [ ["5", "right"]]},
+
+    {"question": 'in Skybeam+, what score gives you the poem "pi"?',
+    "type": "enter",
+    "answer": [ ["12", "right"]]},
+
+    {"question": 'what color is the cashier?',
+    "type": "multi",
+    "answer": [ ["Green", "right"], ["Yellow", "wrong"], ["Blue", "wrong"], ["Brown", "wrong"]]},
+
+    {"question": 'what color is the sirup in Bad Barista?',
+    "type": "multi",
+    "answer": [ ["Orange", "right"], ["Green", "wrong"], ["Tan", "wrong"], ["Brown", "wrong"]]},
+
+    {"question": 'what do the ratios in Bad Barista add up to?',
+    "type": "enter",
+    "answer": [ ["1000", "right"]]},
+
+    {"question": 'what was The Quest for Ummagumma made in?',
+    "type": "multi",
+    "answer": [ ["Google Slides", "right"], ["Power Point", "wrong"], ["Godot", "wrong"], ["MS Paint", "wrong"]]},
+
     ]
    
     # game variables
@@ -552,15 +586,16 @@ label cal22:
     
 
     $ wrong_answers = 0     # amount of wrong answers
-    $ quiz_length = 30      # number of questions in one game
+    $ quiz_length = 36      # number of questions in one game
     $ q_to_ask = []         # list of questions to ask in one game
 
     $ time = 10
     $ timer_range = 10
     $ timer_jump = 'loser'
-
-    $ perfect = True
     
+    $ wrongdeath = 0
+
+    $ perfectquiz = True
    
     # let's choose some questions to play with
     while len(q_to_ask) < quiz_length:        # will work until we'll get enough questions for quiz
@@ -600,10 +635,10 @@ label cal22:
                     "CORRECT!"
                     $ wrong_answers -=1
                 else:
-                    $ time += 2
                     show calb down
                     "WRONG!"
                     $ wrong_answers +=1
+                    $ wrongdeath +=1
             "[answ_1]":
                 if a["answer"][huh[1]][1]  == "right":
                     $ time += 5
@@ -611,10 +646,10 @@ label cal22:
                     "CORRECT!"
                     $ wrong_answers -=1
                 else:
-                    $ time += 2
                     show calb down
                     "WRONG!"
                     $ wrong_answers +=1
+                    $ wrongdeath +=1
             "[answ_2]":
                 if a["answer"][huh[2]][1]  == "right":
                     $ time += 5
@@ -622,10 +657,10 @@ label cal22:
                     "CORRECT!"
                     $ wrong_answers -=1
                 else:
-                    $ time += 2
                     show calb down
                     "WRONG!"
                     $ wrong_answers +=1
+                    $ wrongdeath +=1
             "[answ_3]":
                 if a["answer"][huh[3]][1]  == "right":
                     $ time += 5
@@ -633,16 +668,17 @@ label cal22:
                     "CORRECT!"
                     $ wrong_answers -=1
                 else:
-                    $ time += 2
                     show calb down
                     "WRONG!"
                     $ wrong_answers +=1
+                    $ wrongdeath +=1
         if time > 10:
             $ time = 10
 
         $ quiz_length -= 1
         if wrong_answers == 1:
             $ perfect = False
+            $ perfectquiz = False
         if -1 <= wrong_answers <= 1:
             show calb neutral
         elif wrong_answers < -1:
@@ -670,33 +706,34 @@ label cal22:
             if quiz_length <= 0:
                 jump quizEND
             c "[question]"
-            $ typed = renpy.input("[question]",allow="0123456789")
+            $ typed = renpy.input("[question]",allow="-0123456789")
             if typed == a["answer"][0][0]:
                 $ time += 5
                 show calb up 
                 "CORRECT!"
                 $ wrong_answers -=1
             else:
-                $ time += 2
                 show calb down
                 "WRONG!"
                 $ wrong_answers +=1
+                $ wrongdeath +=1
             if time > 10:
                 $ time = 10
             $ quiz_length -= 1
             if wrong_answers == 1:
                 $ perfect = False
+                $ perfectquiz = False
             if -1 <= wrong_answers <= 1:
                 show calb neutral
             elif wrong_answers < -1:
                 show calb neutral happy
-            elif wrong_answers > 3:
+            elif wrong_answers > 1:
+                show calb neutral mad
+            if wrongdeath > 3:
                 show calb forwards
                 hide screen countdown
                 pause
                 jump loser
-            elif wrong_answers > 1:
-                show calb neutral mad
             if quiz_length > 0:     
                 $ nexttext = random.choice(randonext)
                 c "[nexttext]"
@@ -721,19 +758,19 @@ label cal22:
         
         $ hwscore = 0
 
-        $ typed = renpy.input("Question 1:",allow="0123456789.")
+        $ typed = renpy.input("Question 1:",allow="-0123456789.")
         if typed == "0.553":
             $ hwscore +=1
-        $ typed = renpy.input("Question 2A:",allow="0123456789.")
+        $ typed = renpy.input("Question 2A:",allow="-0123456789.")
         if typed == "0.5":
             $ hwscore +=1
-        $ typed = renpy.input("Question 2B:",allow="0123456789.")
+        $ typed = renpy.input("Question 2B:",allow="-0123456789.")
         if typed == "0.429":
             $ hwscore +=1
-        $ typed = renpy.input("Question 2C:",allow="0123456789.")
+        $ typed = renpy.input("Question 2C:",allow="-0123456789.")
         if typed == "0.9":
             $ hwscore +=1
-        $ typed = renpy.input("Question 2D:",allow="0123456789.")
+        $ typed = renpy.input("Question 2D:",allow="-0123456789.")
         if typed == "1.667":
             $ hwscore +=1
         $ typed = renpy.input("Question 3A.1:",allow="qwertyuiopasdfghjklzxcvbnm")
@@ -765,11 +802,13 @@ label cal22:
             c "eh it don't matta you got it done and that's all i care about."
         elif hwscore > 7:
             $ perfect = False
+            $ perfectquiz = False
             c "good enough. that's enough to pass"
             c "thanks for the help!"
         else:
             show calb neutral mad
             $ perfect = False
+            $ perfectquiz = False
             c "...did you even try?"
             c "all that effort just to fall flat here."
             c "pick a better major next time..."
@@ -778,7 +817,7 @@ label cal22:
     
         show calb yiik
         c "holy crap, you actually made it!"
-        if perfect:
+        if perfectquiz:
             show calb neutral happy
             c "you didn't even make a single mistake!"
             c "you really did do your research huh..."
@@ -816,18 +855,26 @@ label cal22:
     hide screen my_keys
     jump checkDay
 
-screen input_screen():
-    window:
-        has vbox
 
-        text "Enter your name."
-        input default "Joseph P. Blow, ESQ."
+default poem = " "
+
+init python:
+    def name_func(newstring):
+        store.poem = newstring
+
+screen input_screen():
+    frame:
+        xysize (720,840)
+        xalign 0.5
+        yalign 0.1
+        add Input(length=800, default="write poem", changed=name_func, copypaste=True, multiline=True, pixelwidth=720)
 
 label calDay3:
     c "po-em"
     show screen input_screen
-    
     c "wirte poem"
-    c"please write good:"
+    c "[poem]"
+    c "did that work"
+    c ""
 
     
