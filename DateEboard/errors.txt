@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/cal.rpy", line 304: end of line expected.
-    show stage behind cal neutral
-                          ^
+File "game/cal.rpy", line 825: expected a keyword argument, colon, or end of line.
+    input(default="write poem", changed=fuck)
+         ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Sun Feb 23 17:36:36 2025
+Mon Mar  3 16:10:35 2025

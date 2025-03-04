@@ -2,7 +2,7 @@
 
 define a = Character("Alex")
 define s = Character("Sebastian")
-define c = Character("Calvin")
+define c = Character("Calvin", color="#33FFCC")
 define y = Character("Yaseen")
 define j = Character("Sam")
 define m = Character("Me")
