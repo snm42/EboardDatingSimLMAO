@@ -782,12 +782,12 @@ label cal22:
         $ typed = renpy.input("Question 3A.3:",allow="qwertyuiopasdfghjklzxcvbnm ")
         if typed == "health hazard":
             $ hwscore +=1
-        menu:
-            "Question 3B:"
-            "higher":
-                $ hwscore +=1
-            "lower":
-                pass
+        $ typed = renpy.input("Question 3B:",allow="-0123456789.")
+        if typed == "2":
+            $ hwscore +=1
+        $ typed = renpy.input("Question 3B:",allow="qwertyuiopasdfghjklzxcvbnm ")
+        if typed == "use no water":
+            $ hwscore +=1
         
         hide fakehw
         hide fakeeqnsheet
