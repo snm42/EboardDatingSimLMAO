@@ -193,13 +193,13 @@ init python:
             vwallrender = renpy.render(self.vwall, width, height, st, at)
             bgrender = renpy.render(self.background, width, height, st, at)
             
-            r.blit(bgrender, (0, 0))
-            r.blit(hwallrender, (0, 0))
-            r.blit(hwallrender, (0, 992))
-            r.blit(vwallrender, (0, 0))
-            r.blit(vwallrender, (992, 0))
+            r.blit(bgrender, (0 + 512, 0))
+            r.blit(hwallrender, (0 + 512, 0))
+            r.blit(hwallrender, (0 + 512, 992))
+            r.blit(vwallrender, (0 + 512, 0))
+            r.blit(vwallrender, (992 + 512, 0))
 
-            r.blit(thing, (0, 0))
+            r.blit(thing, (512, 0))
             newhead = (self.snake[0][0] + self.direction[0], self.snake[0][1] + self.direction[1])
             
             for point in self.snake:
@@ -228,11 +228,11 @@ init python:
                 bar_amount = 1024
             bar = Solid("#FF0000", xsize=32, ysize=bar_amount)
             bar_render = renpy.render(bar, width, height, st, at)
-            r.blit(bar_render, (992 + 32, 0))
+            r.blit(bar_render, ( 512 + 992 + 32, 0))
 
             for point in self.snake:
-                r.blit(thing, (32 * point[0] + 32, 32 * point[1] + 32))
-            r.blit(applerender, (32 * self.apple[0] + 32, 32 * self.apple[1] + 32))
+                r.blit(thing, (32 * point[0] + 32 + 512, 32 * point[1] + 32))
+            r.blit(applerender, (32 * self.apple[0] + 32 + 512, 32 * self.apple[1] + 32))
 
             self.input_in = False
             self.active_time += 0.04
@@ -429,7 +429,7 @@ screen tierlist:
 label seb:
     $ sebDaysPicked += 1
     if sebDaysPicked == 1:
-        jump sebDay1
+        jump sebDay3
     elif sebDaysPicked == 2:
         jump sebDay2
     else:
@@ -681,6 +681,7 @@ label posttierlist:
     jump checkDay
 
 label sebDay2:
+    stop music
     "Time to meet with Sebastian again"
     "I hope he didn't actually stay up for 48 hours straight"
     "Then again... all those energy drinks we bought"
@@ -837,6 +838,7 @@ label sebDay2:
     jump checkDay
 
 label sebDay3:
+    stop music
     scene njit
     show sebneutral
     with dissolve
@@ -856,12 +858,14 @@ label sebDay3:
     jump sebKaraoke
 
 label sebKaraoke:
-    scene laurel
+    stop music
+    scene kupftopins
     show bigmoistcheeky
     with slidedown
 
     pause
 
+    
     s "You ready for karaoke?"
 
     menu:
@@ -876,14 +880,17 @@ label sebKaraoke:
     hide bigmoistcheeky
     with dissolve
 
+    image karaoke_movie = Movie(play="images/sebsprite/sankeeater.webm", stop_music=True)
+    show karaoke_movie
     call screen samplescreen
+    hide karaoke_movie
 
     if snek.lose:
         show bigmoistsad
         s "What? You egg?"
         s "You suck ass, be better"
         $ sebMood -= 30
-    elif snek.score < 100:
+    elif snek.score < 50:
         show bigmoistneutral
         s "..."
         hide bigmoistneutral
@@ -905,8 +912,11 @@ label sebKaraoke:
         s "Bro brought the Beef Wellington to the Sunday afternoon cookout"
         $ sebMood += 20
 
-    s "Lemme take you back to my place"
-    s "I want to show you something"
+    scene black
+    with dissolve
+
+    s "Alrighty well"
+    s "Let's head back to my place, I got something to show you"
     jump sebEnding
 
 label sebEnding:
