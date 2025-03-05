@@ -162,11 +162,11 @@ label cal:
 
 
 label calDay1:
-    scene tier2
+    scene dorm
     show cal neutral at left 
     with dissolve
 
-    c "yo. how's it going?"
+    c "yo. how's it going? [reelNum]"
 
     c "i was just scrolling on social media, wanna watch some with me?"
 
@@ -198,9 +198,9 @@ label reelstart:
 
 label reels:
     while count < reelNum:
-        $ reel = "images/reel" + str(random.randint(1, 60)) + ".webm"
+        $ reel = "images/reel" + str(random.randint(1, reelNum)) + ".webm"
         while reel in watched:
-            $ reel = "images/reel" + str(random.randint(1, 60)) + ".webm"
+            $ reel = "images/reel" + str(random.randint(1, reelNum)) + ".webm"
 
         if renpy.movie_cutscene(reel):
             $ skipamt = skipamt + 1
@@ -254,6 +254,7 @@ label reels:
         c "alright, here is the next one."
         
         $ count = count + 1
+    
 
     show cal horrified
 
@@ -617,7 +618,7 @@ label cal22:
     
 
     $ wrong_answers = 0     # amount of wrong answers
-    $ quiz_length = 36      # number of questions in one game
+    $ quiz_length = len(q_list)      # number of questions in one game
     $ q_to_ask = []         # list of questions to ask in one game
 
     $ time = 10
@@ -893,11 +894,28 @@ label cal22:
     hide screen my_keys
     jump checkDay
 
+
+define pulls = 0
+
 label calDay3:
-    show tier2
+    scene dorm
     c "hello."
     c "hide and seek."
     c "i hide, you seek."
     c "cya later loser"
+
+    "man what the fuck."
+    "guess i gotta get started."
+
+    menu:
+        "laundry":
+            jump laundry
+        "stairs":
+            jump stairs
+
+
+
+
+
     jump checkDay
     
