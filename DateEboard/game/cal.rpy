@@ -154,7 +154,7 @@ screen countdown:
 label cal:
     $ calDaysPicked +=1
     if calDaysPicked == 1:
-        jump calDay1
+        jump calDay3
     if calDaysPicked == 2:
         jump calDay2
     if calDaysPicked == 3:
@@ -628,6 +628,7 @@ label cal22:
     $ wrongdeath = 0
 
     $ perfectquiz = True
+    $ perfectHW = True
    
     # let's choose some questions to play with
     while len(q_to_ask) < quiz_length:        # will work until we'll get enough questions for quiz
@@ -754,7 +755,7 @@ label cal22:
             $ quiz_length -= 1
             if wrong_answers == 1:
                 $ perfect = False
-                $ perfectquiz = False
+                $ perfectHW = False
             if -1 <= wrong_answers <= 1:
                 show calb neutral
             elif wrong_answers < -1:
@@ -896,22 +897,257 @@ label cal22:
 
 
 define pulls = 0
+define gacha = random.randint(1,100)
+
+define winner = False
+
+default laundry = False
+default stairs = False
+default oak = False
+default police = False
+default oldpdeck = False
+default pcmall = False
+default of1 = False
+default of2 = False
+default of3 = False
+default of4 = False
+default of5 = False
+default of6 = False
+default of7 = False
+default of8 = False
+
+
 
 label calDay3:
+    show screen my_keys
+    $ quick_menu = False
     scene dorm
+    show calb neutral
     c "hello."
     c "hide and seek."
     c "i hide, you seek."
     c "cya later loser"
+    hide calb
 
     "man what the fuck."
     "guess i gotta get started."
 
-    menu:
-        "laundry":
+    scene laurelin
+
+    "where to check first..."
+
+    menu dorm:
+        "Laundromat" if not laundry:
+            "maybe he went to do his laundry"
+            "let's take the elevator down."
+            $ laundry = True
             jump laundry
-        "stairs":
+        "The Stairs" if not stairs:
+            $ stairs = True
             jump stairs
+        "The Stage":
+            "i wonder if he went back to the stage..."
+            jump stage
+        "Leave":
+            jump laurelout
+
+
+label stairs:
+    scene laurelstair
+    "let's check if he just hid in the stairs."
+    if gacha == 1:
+        show calb neutral mad at center
+        "you thought this was a good hiding spot?"
+        c "man fuck you, what kinda person takes the stairs."
+        "me."
+        c "you got me there."
+        c "whatever, congrats on finding me."
+        if pulls == 0:
+            $ winner = True
+        jump checkDay
+    elif pulls == 80:
+        show calb neutral happy at center
+        c "well well well look who it is."
+        "go fuck yourself."
+        c "hey, not my fault you got a skill issue."
+        jump checkDay
+    else:
+        "damn he isn't here."
+        "what a stupid choice i made."
+        $ pulls += 1
+        jump dorm
+
+label laundry:
+    scene laundry
+    if gacha == 1:
+        if pulls == 0:
+            $ winner = True
+        show calb neutral at center
+        "oh so you just went to do your laundry"
+        show calb neutral happy
+        c "yep, it's free laundry week yknow."
+        "so real."
+        show calb up
+        c "thanks for playin and congrats on finding me."
+        jump checkDay
+    elif pulls == 80:
+        show calb neutral at center
+        c "man what took you so long?"
+        "who the hell hides in the laundry?"
+        show calb up
+        c "me. I was doing it."
+        show calb neutral
+        c "but i finished like 2 hours ago bro."
+        c "i was just watching more videos here waiting for you."
+        "man i'm outta here."
+        c "see ya."
+        jump checkDay
+    else:
+        "he isn't here."
+        "not doing laundry on free laundry week?"
+        "guess he has better things to do."
+        jump dorm
+
+label stage:
+    scene stage
+    if gacha == 1:
+        if pulls == 0:
+            $ winner = True
+        c "this place look familiar?"
+        "yep, it sure does."
+        if wrongdeath <= 3:
+            c "i still can't believe you made it through that."
+            c "i gotta congratulate you again."
+        elif perfectquiz:
+            c "brings me back to when you perfected my quiz."
+            c "36 whole questions and you got them all right."
+            c "truly GOATed you are."
+        else:
+            c "i sure hope you've studied more since then."
+            c "i expect better from you."
+        
+        if perfectHW:
+            
+        
+        elif hwscore >= 8:
+            c "i'm also impressed you managed to get that ChemE HW right."
+            c "pretty insane, especially if you ain't a ChemE major."
+            c "congratulations on that as well."
+        else:
+            c "you also need to study ChemE more."
+            c "i don't care if it's not your major, learn it."
+            c "it comes into handy more than you'd expect."
+        
+
+
+
+label laurelout:
+    scene laurel
+    "alright where could he have gone..."
+    menu laurel:
+        "Go Back to Laurel":
+            "maybe i missed something in laurel."
+            scene laurelin
+            jump dorm
+        "Oak Hall" if not oak:
+            $ oak = True
+            "he probably went to visit Oak Hall for something."
+            jump oak
+        "NJIT Police" if not police:
+            $ police = True
+            "is he fucking reporting me to the police?"
+            jump police
+        "Old Parking Deck" if not oldpdeck:
+            $ oldpdeck = True
+            "did he go take pictures in the old parking deck?"
+            jump oldpdeck
+        "PC Mall" if not pcmall:
+            $ pcmall = True
+        "Keep Going":
+            "he probbaly went to hide further than this."
+            jump between
+
+label oak:
+    scene oak
+    "alright your hiding days are over."
+    "(you check the entirety of Oak Hall)"
+    "fuck he isn't here."
+    "oh right...he doesn't have friends that live in Oak."
+    "i'm so stupid for trying to look here."
+    jump laurel
+
+label police:
+    scene police
+    "he better not be reporting me as a stalker or something."
+    "(you briefly check inside the police station)"
+    "he isn't here."
+    "why would he even go here..."
+    "why did i check this spot?"
+    jump laurel
+
+label oldpdeck:
+    scene parkold2
+    "oh god this place has 8 fucking floors."
+    "where to look first..."
+    menu opdeck:
+        "Floor 1" if not of1:
+            $ of1 = True
+            "okay maybe he went to the bottom of the old parking deck."
+            jump of1
+        "Floor 2":
+            $ of2 = True
+            jump of2
+        "Floor 3":
+            $ of3 = True
+            jump of3
+        "Floor 4":
+            $ of4 = True
+            jump of4
+        "Floor 5":
+            $ of5 = True
+            jump of5
+        "Floor 6":
+            $ of6 = True
+            jump of6
+        "Floor 7":
+            $ of7 = True
+            jump of7
+        "Floor 8":
+            $ of8 = True
+            jump of8
+        "Leave":
+            "nah theres no way he went in this old thing."
+            scene laurel
+            jump laurel
+
+label of1:
+    scene parkold1
+    if gacha == 1:
+        if pulls == 0:
+            $ winner = True
+        show calb neutral happy at center
+        c "hey, ya found me!"
+        c "I was just looking "
+        
+        jump checkDay
+    elif pulls == 80:
+        show calb neutral happy at center
+        c "well well well look who it is."
+        "go fuck yourself."
+        c "hey, not my fault you got a skill issue."
+        jump checkDay
+    else:
+        "damn he isn't here."
+        "what a stupid choice i made."
+        $ pulls += 1
+        jump dorm
+
+
+
+
+label between:
+    pass
+
 
 
 

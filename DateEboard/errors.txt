@@ -2,13 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/cal.rpy", line 916: expected statement.
-    bitch
-         ^
+File "game/cal.rpy", line 1029: if statement expects a non-empty block.
+    if perfectHW:
+                 ^
 
-File "game/cal.rpy", line 918: expected statement.
-    bitch
-         ^
+File "game/cal.rpy", line 1032: expected statement.
+    elif hwscore >= 8:
+                 ^
+
+File "game/cal.rpy", line 1036: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Tue Mar  4 22:00:05 2025
+Wed Mar  5 00:11:57 2025

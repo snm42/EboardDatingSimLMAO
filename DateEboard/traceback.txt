@@ -1,28 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/seb.rpy", line 345, in script
-    if drink_ratings['celsius mango'] == "btier":
-  File "game/seb.rpy", line 345, in <module>
-    if drink_ratings['celsius mango'] == "btier":
-KeyError: 'celsius mango'
+  File "game/cal.rpy", line 956, in script
+    jump dorm
+ScriptError: could not find label 'dorm'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/seb.rpy", line 345, in script
-    if drink_ratings['celsius mango'] == "btier":
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ast.py", line 1849, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/seb.rpy", line 345, in <module>
-    if drink_ratings['celsius mango'] == "btier":
-KeyError: 'celsius mango'
+  File "game/cal.rpy", line 956, in script
+    jump dorm
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'dorm'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.4.24120703
 DateEboard 1.0
-Tue Mar  4 15:40:06 2025
+Tue Mar  4 23:31:53 2025
