@@ -154,7 +154,7 @@ screen countdown:
 label cal:
     $ calDaysPicked +=1
     if calDaysPicked == 1:
-        jump calDay3
+        jump calDay1
     if calDaysPicked == 2:
         jump calDay2
     if calDaysPicked == 3:
@@ -162,7 +162,7 @@ label cal:
 
 
 label calDay1:
-    scene dorm 
+    scene tier2
     show cal neutral at left 
     with dissolve
 
@@ -893,27 +893,11 @@ label cal22:
     hide screen my_keys
     jump checkDay
 
-
-default poem = " "
-
-init python:
-    def name_func(newstring):
-        store.poem = newstring
-
-screen input_screen():
-    frame:
-        xysize (720,840)
-        xalign 0.5
-        yalign 0.1
-        add Input(length=800, changed=name_func, copypaste=True, multiline=True, pixelwidth=720)
-
 label calDay3:
-    c "po-em"
-    show screen input_screen
-    scene ckb
-    c "wirte poem"
-    c "[poem]"
-    c "did that work"
-    c ""
-
+    show tier2
+    c "hello."
+    c "hide and seek."
+    c "i hide, you seek."
+    c "cya later loser"
+    jump checkDay
     

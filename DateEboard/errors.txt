@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/seb.rpy", line 106: invalid syntax
-            "venom black": "ftier"
-                          ^
+File "game/seb.rpy", line 684: expected statement.
+    drawgame.__init__()
+                       ^
+
+File "game/seb.rpy", line 698: expected statement.
+    drawgame.__init__()
+                       ^
+
+File "game/seb.rpy", line 710: expected statement.
+    drawgame.__init__()
+                       ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Tue Mar  4 15:48:16 2025
+Wed Mar  5 00:03:35 2025

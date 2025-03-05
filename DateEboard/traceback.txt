@@ -1,28 +1,44 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/seb.rpy", line 345, in script
-    if drink_ratings['celsius mango'] == "btier":
-  File "game/seb.rpy", line 345, in <module>
-    if drink_ratings['celsius mango'] == "btier":
-KeyError: 'celsius mango'
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "game/seb.rpy", line 274, in execute_default
+    default drawgame = DrawMe()
+  File "game/seb.rpy", line 274, in <module>
+    default drawgame = DrawMe()
+  File "game/seb.rpy", line 86, in __init__
+    self.prompt = Image(path_list[self.randindex])
+IndexError: list index out of range
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/seb.rpy", line 345, in script
-    if drink_ratings['celsius mango'] == "btier":
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ast.py", line 1849, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
+    i.execute_default(start)
+  File "game/seb.rpy", line 274, in execute_default
+    default drawgame = DrawMe()
   File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/seb.rpy", line 345, in <module>
-    if drink_ratings['celsius mango'] == "btier":
-KeyError: 'celsius mango'
+  File "game/seb.rpy", line 274, in <module>
+    default drawgame = DrawMe()
+  File "game/seb.rpy", line 86, in __init__
+    self.prompt = Image(path_list[self.randindex])
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\revertable.py", line 214, in __getitem__
+    rv = list.__getitem__(self, index)
+IndexError: list index out of range
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.4.24120703
 DateEboard 1.0
-Tue Mar  4 15:40:06 2025
+Tue Mar  4 23:58:40 2025

@@ -69,6 +69,9 @@ label pickSomeoneDay1:
         "Sebastian":
             "I decide to call up Sebastian."
             jump seb
+        "Alex":
+            "I decide to visit Alex."
+            jump ale
         "Test":
             "I decide to test the code."
             jump test
@@ -99,6 +102,9 @@ label pickSomeoneDay3:
         "Yaseen":
             "I decide to find Yaseen."
             jump yas
+        "Alex":
+            "I decide to visit Alex."
+            jump ale
         "Test":
             "I decide to test the code."
             jump test
@@ -135,6 +141,9 @@ label pickSomeoneDay5:
         "Yaseen":
             "I decide to find Yaseen."
             jump yas
+        "Alex":
+            "I decide to visit Alex."
+            jump ale
         "Test":
             "I decide to test the code."
             jump test
