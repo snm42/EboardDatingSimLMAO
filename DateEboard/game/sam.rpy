@@ -632,7 +632,9 @@ label samDay3Death:
     m "..."
     m "womp womp"
 
-    jump checkDay
+    "The End"
+
+    return
 
 label samEnding:
     scene black

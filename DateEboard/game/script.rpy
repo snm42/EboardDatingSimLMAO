@@ -148,22 +148,13 @@ label pickSomeoneDay5:
     return
 
 label finalDay:
-    "Finally, it's been a whole week of getting to know the eboard."
-    menu:
-        "Who should I spend my final day with?"
-        "Calvin":
-            "I decide to DM Calvin."
-            jump cal
-        "Sebastian":
-            "I decide to call up Sebastian."
-            jump seb
-        "Yaseen":
-            "I decide to find Yaseen."
-            jump yas
-        "Alex":
-            "I decide to visit Alex."
-            jump ale
-        "Sam":
-            "I decide to see Sam."
-            jump sam
+    m "Finally, it's been a whole week of getting to know the eboard."
+    "..."
+    m "These sure are some of the eboard members of all time."
+    "."
+    ".."
+    "..."
+    m "Wait, is this the bad ending where I don't see anyone's story to their finish?"
+
+    "The End"
     return
