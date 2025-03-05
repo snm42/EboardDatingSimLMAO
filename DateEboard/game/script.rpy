@@ -1,11 +1,12 @@
 ﻿# This is for dialogue shortcuts
 
-define a = Character("Alex")
+define a = Character("Alex", color="#a33ea3")
 define s = Character("Sebastian")
 define c = Character("Calvin", color="#33FFCC")
 define y = Character("Yaseen")
 define j = Character("Sam")
 define m = Character("Me")
+define p = Character("Player", color="FFFFFF")
 
 # This is for variables as needed
 

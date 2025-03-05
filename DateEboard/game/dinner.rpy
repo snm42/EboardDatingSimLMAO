@@ -288,9 +288,9 @@ label pathologic:
                                     a "Why are you giving me that look?"
                                     a "Do not ascribe a more important role to me than the one I have been assigned from the very beginning."
                                     a "I'll fail a bigger role. The mask isn't expressive enough.\""
-    m "Pathologic."
+    p "Pathologic."
     a "Yep."
-    m "You're plagiarizing it?"
+    p "You're plagiarizing it?"
     show alex dinner questioning
     a "What? No, no!"
     show alex dinner point
@@ -326,11 +326,11 @@ label pathologic:
     show alex dinner neutral
     a "Goodbye."
     scene black
-    "I went home."
-    "And I looked at my games."
-    "I stared at screenshots and videos."
-    "And there wasn't some area..."
-    "there wasn't some character..."
-    "...that wasn't connected to some memory in my mind."
+    p "I went home."
+    p "And I looked at my games."
+    p "I stared at screenshots and videos."
+    p "And there wasn't some area..."
+    p "there wasn't some character..."
+    p "...that wasn't connected to some memory in my mind."
     "The End"
     return
