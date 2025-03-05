@@ -188,9 +188,56 @@ label myDinnerWithAlex:
             show alex dinner neutral
             a "Clever."
             a "Yeah, I guess maybe once or twice."
+            show alex dinner contemplation
+            a "A game did change my life."
+            a "I only make games because of Fumito Ueda. Because of Shadow of the Colossus."
+            show alex dinner looking away
+            a "I played that game a funny way. I would ignore the main quest and just wander around the world with the horse."
+            a "I'd wander for hours. I'd cover every inch of that forgotten land, and yet I'd still find something new."
+            show alex dinner neutral
+            a "It's funny. There's no side quests in that game. No enemies or NPCs in that overworld. Just geometry."
+            a "Blank empty geometry."
+            show alex dinner looking away
+            a "And it's the most engaging game world I've ever been in."
         "Of course.":
-            m "People make connections all the time"
-            "If all of gaming was Genshin Impact, I'd say throw it all away. It'd be rubbish. The world would be better off not having it."
+            m "People make connections all the time. With all games."
+            show alex dinner looking away
+            a "I don't know about all games. Some are pretty bad."
+            m "Well, all kinds of games, maybe."
+    show alex dinner looking away
+    a "This weighs on me sometimes. You heard what I said about phones and distraction. Where do games fit into this?"
+    a "What if games are just another drop of distraction to the pile? What if games actually DO melt our brains?"
+    a "When I look at my Nintendo Switch playtimes, I notice that all the games with the most hours were the ones I enjoyed least."
+    show alex dinner questioning
+    a "How'd that happen? Why do I have hundreds of hours in games I don't even like? And I'm not the only one like that."
+    a "They're so much rhetoric now about \"engaging gameplay loops.\" About making games \"you just can't put down!\""
+    show alex dinner looking away
+    a "Why would that be valuable? That sounds evil."
+    a "It's a way to extract players for every ounce of attention and money you can."
+    a "How often is it that we play games we don't even like just because we're trapped in their dopamine loop?"
+    a "It's cheap, bush-league game design."
+    show alex dinner disgusted
+    a "I spit on that."
+    show alex dinner looking away
+    a "I wish that I spent more time as a kid drawing. Or playing an instrument. Doing something creative. Or just running around outside."
+    a "Instead of playing games I didn't even like."
+    show alex dinner neutral
+    a "Games have such a bad reputation amongst older people. Some of that is warranted."
+    a "They don't know the games that changed my life. And the ones they see? Well, they won't change anybody's lives."
+    show alex dinner disgusted
+    a "If all of gaming was Fortnite, I'd say throw it all away. It'd be rubbish. The world would be better off not having it."
+    m "Why not let people enjoy it, even if you don't like it?"
+    m "Does everything need to be high art?"
+    m "Why not consume junk?"
+    show alex dinner questioning
+    a "I consume junk too. No one's above it. But you need nutrition too."
+    a "We yell at those who eat only Doritos and drink only Mountain Dew. Why not yell at those who consume merely slop too?"
+    show alex dinner looking away
+    a "Gamers are unique in that regard. So many of them play only games. They do nothing else. Outside their games, they have no hobbies, no passions, no life."
+    show alex dinner questioning
+    a "It's a diet of pure junk. What kind of inner life can that nurture? I see it all the time. Just look at this campus."
+    show alex dinner contemplation
+    a "It gets me worried."
     show alex dinner questioning
     a "I watched Andrei Tarkovsky's Stalker. It was incredible. I was absorbed to the screen. I could not look away, not for a moment."
     show alex dinner neutral
