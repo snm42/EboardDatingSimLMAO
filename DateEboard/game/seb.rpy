@@ -139,7 +139,9 @@ init python:
                 if (renpy.map_event(ev, 'drag_activate')):
                     row = y // 100
                     col = x // 100
-                    if (self.state[row][col] == 1):
+                    if row >= 10 or col >= 10:
+                        pass
+                    elif (self.state[row][col] == 1):
                         self.state[row][col] = 0
                     else:
                         self.state[row][col] = 1
@@ -429,7 +431,7 @@ screen tierlist:
 label seb:
     $ sebDaysPicked += 1
     if sebDaysPicked == 1:
-        jump sebDay3
+        jump sebDay1
     elif sebDaysPicked == 2:
         jump sebDay2
     else:
@@ -453,7 +455,7 @@ label sebDay1:
             hide sebneutral
             show sebcheekysmile
             $ sebMood += 10
-            ""
+            pause
             hide sebcheekysmile
             show sebneutral
         "Sup loser":
@@ -682,7 +684,7 @@ label posttierlist:
 
 label sebDay2:
     stop music
-    "Time to meet with Sebastian again"
+    "I've been meaning to meet with Sebastian again"
     "I hope he didn't actually stay up for 48 hours straight"
     "Then again... all those energy drinks we bought"
     scene honorgreen
@@ -737,6 +739,8 @@ label sebDay2:
             s "I mean what?"
             s "Anyway"
             $ sebMood -= 10
+            show gothsebforward
+            hide gothsebdisappointed
         "I-It... it's beautiful *sniffles*":
             s "Yeah it's pretty good right?"
             $ sebMood += 10
