@@ -162,7 +162,7 @@ label cal:
 
 
 label calDay1:
-    scene dorm 
+    scene tier2
     show cal neutral at left 
     with dissolve
 
@@ -894,6 +894,7 @@ label cal22:
     jump checkDay
 
 label calDay3:
+    show tier2
     c "hello."
     c "hide and seek."
     c "i hide, you seek."
