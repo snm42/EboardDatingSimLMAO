@@ -241,6 +241,11 @@ label reels:
 
         c "did you like that one?"
 
+        if random.randint(1,64) == 1:
+            if yasDaysPicked >=1:
+                show seen at left
+                c "did it just get colder in here or is that just me..."
+
         menu:
             "yeah!":
                 $ liked = 1
@@ -656,6 +661,12 @@ label cal22:
 
         show calb mic 
         show screen countdown
+        if yasDaysPicked >= 1:
+            if random.randint(1,64) == 1:
+                show seen at right
+                c "don't mind him."
+                c "FOCUS!"
+                
         if a["type"] == "multi":
             $ huh = [0,1,2,3]
             $ random.shuffle(huh)
@@ -667,6 +678,7 @@ label cal22:
 
         else:
             jump type
+
 
 
         menu multi:
@@ -2022,6 +2034,10 @@ define ven=False
 
 label honor:
     scene honorfront
+    if yasDaysPicked >= 1:
+        show seen
+        m "oh god i'm hallucinating"
+        m "the trauma is coming back..."
     m "no way."
     menu honorf:
         "Go into Honor's" if not hin:
