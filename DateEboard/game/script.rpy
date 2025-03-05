@@ -86,10 +86,6 @@ label pickSomeoneDay1:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label pickSomeoneDay2:
@@ -101,10 +97,9 @@ label pickSomeoneDay2:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
+        "Yaseen":
+            "I decide to find Yaseen."
+            jump yas
     return
 
 label pickSomeoneDay3:
@@ -119,10 +114,6 @@ label pickSomeoneDay3:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label pickSomeoneDay4:
@@ -137,10 +128,6 @@ label pickSomeoneDay4:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label pickSomeoneDay5:
@@ -158,14 +145,16 @@ label pickSomeoneDay5:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label finalDay:
-    # This will go through each member and sequentially show your respective endings. I'll fix the ordering later.
-    jump testEnding
+    m "Finally, it's been a whole week of getting to know the eboard."
+    "..."
+    m "These sure are some of the eboard members of all time."
+    "."
+    ".."
+    "..."
+    m "Wait, is this the bad ending where I don't see anyone's story to their finish?"
 
+    "The End"
     return
