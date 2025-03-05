@@ -72,6 +72,8 @@ label checkDay:
 
 
 label pickSomeoneDay1:
+    "Today is Wednesday."
+    "I think Yaseen has a midterm to get to today."
     menu:
         "Who should I hit up today?"
         "Calvin":
@@ -89,6 +91,8 @@ label pickSomeoneDay1:
     return
 
 label pickSomeoneDay2:
+    "Today is Thursday."
+    "I don't think Sam or Sebastian are free today."
     menu:
         "Who should I hit up today?"
         "Calvin":
@@ -103,6 +107,8 @@ label pickSomeoneDay2:
     return
 
 label pickSomeoneDay3:
+    "Today is Friday."
+    "I think Sebastian and Calvin went home for the weekend."
     menu:
         "Who should I hit up today?"
         "Sam":
@@ -117,6 +123,8 @@ label pickSomeoneDay3:
     return
 
 label pickSomeoneDay4:
+    "Today is Monday."
+    "I don't think Calvin and Yaseen are present to talk."
     menu:
         "Who should I hit up today?"
         "Sam":
@@ -131,6 +139,8 @@ label pickSomeoneDay4:
     return
 
 label pickSomeoneDay5:
+    "Today is Tuesday."
+    "I don't think Sam's available to talk today."
     menu:
         "Who should I hit up today?"
         "Calvin":
