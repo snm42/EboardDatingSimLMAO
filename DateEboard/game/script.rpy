@@ -15,6 +15,7 @@ default day = 0
 
 label start:
     scene gitc3
+    play music "Kevin MacLeod - Monkeys Spinning Monkeys.mp3" if_changed
     camera:
         perspective True
     "You find yourself walking to GITC 3700, to attend your first IGDA general body meeting!"
@@ -51,6 +52,8 @@ label start:
 # Each day will have different eboard members available to spend the day with.
 
 label checkDay:
+    scene gitc3
+    play music "Kevin MacLeod - Monkeys Spinning Monkeys.mp3" if_changed
     $ day += 1
     if day == 1:
         jump pickSomeoneDay1

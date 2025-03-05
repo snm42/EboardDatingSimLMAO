@@ -27,6 +27,7 @@ label sam:
         jump samDay3
 
 label samDay1:
+    play music "Kevin MacLeod - Rollin at 5 - 210 - full.mp3"
     scene njit
     "..."
 
@@ -72,7 +73,9 @@ label samDay1:
     if not diningHall:
         j "Real."
 
-        "You walk together with Sam to the Taco Bell."
+        scene cstore
+        show sam normal at real
+        "You walk together with Sam to the Taco Bell (depicted as Cstore)."
         "You both order food and sit down in the general seating area located a little behind the place."
 
         j "God I love Taco Bell."
@@ -161,7 +164,7 @@ label samDay1:
         m "A what?"
 
         hide sam normal
-        scene gds
+        scene gds3
         "You walk together with Sam to the dining hall, and use one of your very limited guest swipes."
 
         show sam shocked at real
@@ -254,6 +257,7 @@ label samDay1:
         jump checkDay
 
 label samDay2:
+    play music "Kevin MacLeod - Rollin at 5 - 210 - full.mp3"
     scene maple
     "You are walking through Maple hall, entering Sam's dorm after he invited you over."
     "You walk into the dorm, and see Sam furiously drawing something on his iPad."
@@ -438,6 +442,7 @@ label samDay2:
     jump checkDay
 
 label samDay3:
+    play music "Kevin MacLeod - Rollin at 5 - 210 - full.mp3"
     scene gds
     "..."
 
@@ -593,7 +598,14 @@ label samDay3Death:
     jump checkDay
 
 label samEnding:
-    jump checkDay
+    scene black
+    "Wait, isn't he dead?"
+
+    "Oh well."
+
+    "Guess I get the bad ending."
+
+    return
 
 label rockPaperScissors:
     show sam rock at real
