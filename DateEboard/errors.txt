@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/seb.rpy", line 939: expected statement.
-    renpy.movie_cutscene("images/sebsprite/meatgrinder.mp4")
-                                                            ^
+File "game/seb.rpy", line 561: reached end of line when expecting ':'.
+    if yasDaysPicked > 0
+                        ^
+
+File "game/seb.rpy", line 566: expected statement.
+    else:
+        ^
+
+File "game/seb.rpy", line 601: reached end of line when expecting ':'.
+    if yasDaysPicked > 0
+                        ^
+
+File "game/seb.rpy", line 606: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 8.3.4.24120703
-Wed Mar  5 01:31:02 2025
+Wed Mar  5 13:56:30 2025

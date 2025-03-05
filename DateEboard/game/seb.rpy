@@ -439,9 +439,15 @@ label seb:
 
 label sebDay1:
     stop music
-    scene gitc3
-    show sebneutral
-    with dissolve
+    if yasDaysPicked > 0:
+        scene gitc3
+        show sebneutral
+        show seen at right
+        with dissolve
+    else:
+        scene gitc3
+        show sebneutral
+        with dissolve
     
     pause
 
@@ -480,9 +486,15 @@ label sebDay1:
 
 
 label dollartreeoutside:
-    scene dollatree
-    show sebneutral
-    with slidedown
+    if yasDaysPicked > 0:
+        scene dollatree
+        show sebneutral
+        show seen at right
+        with slidedown
+    else:
+        scene dollatree
+        show sebneutral
+        with slidedown
     s "Damn, that was a 20 minute walk"
     menu:
         "This was your idea dawg":
@@ -546,9 +558,15 @@ label dollartreeoutside:
     jump dollartreeinside
 
 label dollartreeinside:
-    scene dollatreeinside
-    show sebcheekysmile
-    with dissolve
+    if yasDaysPicked > 0:
+        scene dollatreeinside
+        show sebcheekysmile
+        show seen at right
+        with dissolve
+    else:
+        scene dollatreeinside
+        show sebcheekysmile
+        with dissolve
     pause
     s "YOOOO NO WAY!"
     menu:
@@ -580,9 +598,15 @@ label dollartreeinside:
     call screen tierlist
 
 label posttierlist:
-    scene dollatreeinside
-    show sebneutral
-    show sebpenhauer at left
+    if yasDaysPicked > 0:
+        scene dollatreeinside
+        show sebneutral
+        show seen at right
+        show sebpenhauer at left
+    else:
+        scene dollatreeinside
+        show sebneutral
+        show sebpenhauer at left
 
     if drink_ratings['celsius green'] == "stier":
         $ sebScore += 1
@@ -622,6 +646,7 @@ label posttierlist:
         hide sebpenhauer
         hide sebneutral
         show sebdeadass
+        stop music
         s "..."
         s "So about your opinion on red bull"
         s "I see you gave it [drink_ratings['redbull']]"
@@ -630,8 +655,10 @@ label posttierlist:
         scene lightning
         show sebkiller
         with light
+        play music "Kevin MacLeod - Killers.mp3"
         play sound thunder
         s "Your taste is nothing"
+        play sound vineboom
         s "It serves zero purpose"
         play sound vineboom
         s "You should reconsider your taste NOW"
@@ -648,6 +675,7 @@ label posttierlist:
         play sound vineboom
         s "With a THOUSAND percent"
         $ sebMood -= 100
+        stop music
         jump checkDay
     elif sebScore < 5:
         s "Sooo you share [sebScore] opinions with me"
@@ -687,9 +715,14 @@ label sebDay2:
     "I've been meaning to meet with Sebastian again"
     "I hope he didn't actually stay up for 48 hours straight"
     "Then again... all those energy drinks we bought"
-    scene honorgreen
-    show gothsebside
-    with dissolve
+    if yasDaysPicked > 0:
+        scene honorgreen
+        show gothsebside
+        show seen at right
+        with dissolve
+    else:
+        scene honorgreen
+        show gothsebside
     pause
     "Speak of the devil"
     s "Yo je ne suis pas"
@@ -842,12 +875,19 @@ label sebDay2:
     jump checkDay
 
 label sebDay3:
+    "I wonder what Sebastian is up to today?"    
     stop music
-    scene njit
-    show sebneutral
-    with dissolve
+    if yasDaysPicked > 0:
+        scene njit
+        show sebneutral
+        show seen at right
+        with dissolve
+    else:
+        scene njit
+        show sebneutral
+        with dissolve
     s "Hey"
-    s "So what are we doing today?"
+    s "You wanna do something today?"
     menu:
         "I wanna go home":
             s "Oh okay"
@@ -858,17 +898,22 @@ label sebDay3:
             $ sebMood += 5
         "I dunno, what do you want to do?":
             s "I was thinking karaoke"
-    s "I live at Laurel, pull up!"
+    s "Pull up to the pub!"
     jump sebKaraoke
 
 label sebKaraoke:
     stop music
-    scene kupftopins
-    show bigmoistcheeky
-    with slidedown
+    if yasDaysPicked > 0:
+        scene pub
+        show seen at right
+        show bigmoistcheeky
+        with slidedown
+    else:
+        scene kupftopins
+        show bigmoistcheeky
+        with slidedown
 
     pause
-
     
     s "You ready for karaoke?"
 
