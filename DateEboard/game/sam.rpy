@@ -632,6 +632,18 @@ label samDay3Death:
     m "..."
     m "womp womp"
 
+    show sec neutral at center
+    "Officer" "Don't think you're in the clear either."
+    "Officer" "You are an accomplice to his crimes!"
+    "Officer" "Eat this!"
+
+    scene black
+    play sound "gun.mp3"
+    "Bang!"
+    "You slowly feel your body go numb as you bleed out in front of Tiernan Lecture Hall 1."
+    "..."
+    "I guess the game was rigged from the start."
+
     "The End"
 
     return
