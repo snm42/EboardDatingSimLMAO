@@ -1027,7 +1027,10 @@ label stage:
             c "i expect better from you."
         
         if perfectHW:
-            
+            c "there's no way you completed that HW perfectly without cheating."
+            c "or maybe it wasn't your first time seeing it, hehe."
+            c "either wya, great job."
+            c "wouldn't have made it without ya."
         
         elif hwscore >= 8:
             c "i'm also impressed you managed to get that ChemE HW right."
