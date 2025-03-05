@@ -174,6 +174,7 @@ init python:
             self.height = 1024
 
             self.lose = False
+            self.done = False
 
             self.active_time = 0
             self.score = 0
@@ -216,7 +217,16 @@ init python:
                 else:
                     self.snake.pop()
                     self.snake.insert(0, newhead)
+            else:
+                self.done = True
 
+
+            bar_amount = round((self.time / 185.0) * 1024)
+            if bar_amount > 1024:
+                bar_amount = 1024
+            bar = Solid("#FF0000", xsize=32, ysize=bar_amount)
+            bar_render = renpy.render(bar, width, height, st, at)
+            r.blit(bar_render, (992 + 32, 0))
 
             for point in self.snake:
                 r.blit(thing, (32 * point[0] + 32, 32 * point[1] + 32))
@@ -240,7 +250,7 @@ init python:
             elif (renpy.map_event(ev, 'focus_down') and self.direction[1] != -1):
                 self.direction = (0, 1)
             
-            if self.lose:
+            if self.lose or self.done:
                 return 1
 
             # Pass the event to our child.
@@ -409,7 +419,7 @@ screen tierlist:
 label seb:
     $ sebDaysPicked += 1
     if sebDaysPicked == 1:
-        jump sebDay1
+        jump sebDay3
     elif sebDaysPicked == 2:
         jump sebDay2
     else:
@@ -419,23 +429,30 @@ label sebDay1:
     scene gitc3
     show sebneutral
     with dissolve
+    
+    pause
+
+    "This Sebastian guy seems chill"
+    "I should get to know him"
+
     s "Yo what's good"
     s "I'm Ch- Sebastian"
     menu:
         "You look like Charlie moistcr1tikal":
             hide sebneutral
             show sebcheekysmile
-            $ sebMood += 20
+            $ sebMood += 10
             ""
             hide sebcheekysmile
             show sebneutral
         "Sup loser":
-            s "Damn... didn't have to remind me bro"
-            $ sebMood -= 20
+            s "Damn..."
+            s "You didn't have to remind me bro"
+            $ sebMood -= 10
         "Nothing much, you?":
             s "Meh meh"
     
-    s "Anyway I got some errands to run if you wanna come with"
+    s "Anyway I got some errands to run"
     s "Wanna hit the Dollar Tree?"
             
     menu:
@@ -443,6 +460,7 @@ label sebDay1:
             jump dollartreeoutside
         "Nah":
             s "Okay"
+            s "..."
             s "..."
             s "Bye loser"
             jump checkDay
@@ -466,12 +484,34 @@ label dollartreeoutside:
         "Yeah bro, idk why 7/11 gotta be so far":
             s "It is what it is"
     
+    "*eagull noises*"
+    hide sebneutral
+    show sebdafoe
+    s "Whoa what was that?"
+    
+    menu:
+        "A bird?":
+            hide sebdafoe
+            show sebneutral
+            s "Yeah probably"
+        "A plane?":
+            hide sebdafoe
+            show sebneutral
+            s "Nah that looked like a bird"
+        "Somebody playing Bloons TD 6 on high def?":
+            hide sebdafoe
+            show sebcheekysmile
+            s "Haha nice, those guys' laptops are always taking off in class"
+            hide sebcheekysmile
+            show sebneutral
+
     s "Anyway I'm sure you're wondering why we're here"
 
     menu:
         "No":
             s "Okay"
-            s "Well I don't care if you're gonna be an ass about it, I'll just tell you anyway"
+            s "Well"
+            s "I don't care if you're gonna be an ass about it, I'll just tell you anyway"
             $ sebMood -= 2
         "Yeah what's going on?":
             s "So here's the situation dawg"
@@ -496,15 +536,16 @@ label dollartreeinside:
     scene dollatreeinside
     show sebcheekysmile
     with dissolve
+    pause
     s "YOOOO NO WAY!"
     menu:
         "What what what's happening?":
-            s "Chat you're not gonna believe this"
+            s "Chat you're not gonna believe who I just saw at the energy drink aisle"
     hide sebcheekysmile
     show sebpoint at right
     s "It's Arthur Schopenhauer!"
     show sebpenhauer at left
-    "Talent hits a target no one else can hit. Genius hits a target no one else can see"
+    fraudpenhauer "Talent hits a target no one else can hit. Genius hits a target no one else can see"
     hide sebpoint
     show sebcheekysmile
     s "Yo Arthur, what are your opinions on energy drinks?"
@@ -513,7 +554,9 @@ label dollartreeinside:
     s "How bout you? Got any opinions on energy drinks?"
     menu:
         "Not particularly":
-            s "Welp, I don't care, make one now"
+            hide sebcheekysmile
+            show sebneutral
+            s "Welp, I don't care, form one now"
         "Yeah I got a few":
             s "Sweet, I'd be curious to hear what you think"
     s "I got a tierlist, I will judge you based on your opinions"
@@ -586,6 +629,8 @@ label posttierlist:
         jump checkDay
     elif sebScore < 5:
         s "Sooo you share [sebScore] opinions with me"
+        hide sebneutral
+        show sebdeadass
         s "I'm gonna be honest"
         s "Your opinions are trashier than the villager CGI in the Minecraft movie"
         s "Yeah I don't think I want you picking my energy drinks for me"
@@ -627,13 +672,15 @@ label sebDay2:
     s "Yo je ne suis pas"
     menu:
         "What?":
-            s "Nevermind"
+            s "Don't worry about it"
+            s "I just got tired of seeing Duolingo bird's fat cheeks on my notification bar every morning"
         "Je mange l'orange":
             s "Ah j'ai un enfant de poisson"
             $ sebMood += 5
         "Yo":
             s "Yo"
-    s "I have a gift for you"
+    s "Anyway"
+    s "I made something for you"
     menu:
         "Oh?":
             hide gothsebside
@@ -662,6 +709,8 @@ label sebDay2:
 
     menu:
         "What the fuck was that?":
+            hide gothsebforward
+            show gothsebdisappointed
             s "..."
             s "Soon"
             s "I mean what?"
@@ -689,6 +738,8 @@ label sebDay2:
     s "..."
 
     if drawgame.score < 90:
+        hide gothsebforward
+        show gothsebdisgust
         s "Wow, you suck"
         s "Be better"
         $ sebMood -= 5
@@ -706,6 +757,8 @@ label sebDay2:
     call screen drawgamescreen
 
     if drawgame.score < 90:
+        hide gothsebforward
+        show gothsebdisgust
         s "Beginner's luck I guess"
         s "Be better"
         $ sebMood -= 5
@@ -725,6 +778,8 @@ label sebDay2:
     s "..."
 
     if drawgame.score < 90:
+        hide gothsebforward
+        show gothsebdisgust
         s "Damn, I really thought"
         s "Be better"
         $ sebMood -= 5
@@ -747,8 +802,7 @@ label sebDay2:
 
     menu:
         "I mean they're okayyy":
-            s "Like, this is art Mr. White"
-            s "I'm losing it like I did when the popcorners ad came up last year's Superbowl"
+            s "Nah this is art Mr. White"
         "Yeah I'm pretty goated":
             s "No kidding"
             s "I'm feeling like the day my Moby Huge arrived at my doorstep"
@@ -760,9 +814,32 @@ label sebDay2:
     jump checkDay
 
 label sebDay3:
+    scene njit
+    show sebneutral
+    with dissolve
+    s "Hey"
+    s "So what are we doing today?"
+    menu:
+        "I wanna go home":
+            s "Oh okay"
+            s "Bye"
+            jump checkDay
+        "Karaoke?":
+            s "Hah! Just what I was thinking"
+            $ sebMood += 5
+        "I dunno, what do you want to do?"
+            s "I was thinking karaoke"
+    s "I live at Laurel, pull up!"
+    jump sebKaraoke
+
+label sebKaraoke:
+    scene laurel
     show bigmoistcheeky
-    s "Hey wanna go out for some karaoke?"
+    with slidedown
+
     hide bigmoistcheeky
+    with dissolve
+
     call screen samplescreen
 
     if snek.lose:
@@ -770,7 +847,7 @@ label sebDay3:
         s "What? You egg?"
         s "You suck ass, be better"
         $ sebMood -= 30
-    elif snek.score < 30:
+    elif snek.score < 100:
         show bigmoistneutral
         s "..."
         hide bigmoistneutral
@@ -786,13 +863,22 @@ label sebDay3:
         s "..."
         hide bigmoistneutral
         show bigmoistcheeky
-        s "Zamn!"
+        s "Damn!"
         s "Not half bad!"
-        s "You cooked that harder than Gordon Ramsay on Kitchen Nightmares"
-        s "Bro brought the Beef Wellington to the Super Bowl cookout"
+        s "You cooked so hard you took me to flavortown!"
+        s "Bro brought the Beef Wellington to the Sunday afternoon cookout"
         $ sebMood += 20
 
-    jump checkDay
+    s "Lemme take you back to my place"
+    s "I want to show you something"
+    jump sebEnding
 
 label sebEnding:
+    scene laurelin
+    show bigmoistneutral
+    with dissolve
+    pause
+    s "..."
+    s "You know, it's been an interesting past few days"
+    s ""
     

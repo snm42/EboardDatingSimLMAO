@@ -1,6 +1,7 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
+<<<<<<< HEAD
   File "renpy/common/00start.rpy", line 193, in script
     python:
   File "renpy/common/00start.rpy", line 194, in <module>
@@ -12,10 +13,16 @@ While running game code:
   File "game/seb.rpy", line 86, in __init__
     self.prompt = Image(path_list[self.randindex])
 IndexError: list index out of range
+=======
+  File "game/cal.rpy", line 956, in script
+    jump dorm
+ScriptError: could not find label 'dorm'.
+>>>>>>> 1129567efea5c9e499f409d005d83be5cc2526ee
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+<<<<<<< HEAD
   File "renpy/common/00start.rpy", line 193, in script
     python:
   File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
@@ -37,8 +44,21 @@ Full traceback:
   File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\revertable.py", line 214, in __getitem__
     rv = list.__getitem__(self, index)
 IndexError: list index out of range
+=======
+  File "game/cal.rpy", line 956, in script
+    jump dorm
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 1705, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'dorm'.
+>>>>>>> 1129567efea5c9e499f409d005d83be5cc2526ee
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.4.24120703
 DateEboard 1.0
+<<<<<<< HEAD
 Tue Mar  4 23:58:40 2025
+=======
+Tue Mar  4 23:31:53 2025
+>>>>>>> 1129567efea5c9e499f409d005d83be5cc2526ee
