@@ -1,6 +1,7 @@
 define aleDaysPicked = 0
 
 label ale:
+    stop music
     $ aleDaysPicked +=1
     if aleDaysPicked == 1:
         jump aleDay1
@@ -23,7 +24,7 @@ label aleDay1:
     a "Hey."
     m "Funny running into you."
     show alex smirk at left
-    a "Funny like a Woody Allen move or funny like a Woody Allen marriage?"
+    a "Funny like a Woody Allen movie or funny like a Woody Allen marriage?"
     m "Huh..?"
     show alex neutral at left
     m "I sent you some messages. Did you see them?"

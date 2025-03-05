@@ -178,6 +178,8 @@ init python:
 
             self.active_time = 0
             self.score = 0
+
+            self.input_in = False
             
             return
 
@@ -221,7 +223,7 @@ init python:
                 self.done = True
 
 
-            bar_amount = round((self.time / 185.0) * 1024)
+            bar_amount = round((self.active_time / 185.0) * 1024)
             if bar_amount > 1024:
                 bar_amount = 1024
             bar = Solid("#FF0000", xsize=32, ysize=bar_amount)
@@ -232,6 +234,7 @@ init python:
                 r.blit(thing, (32 * point[0] + 32, 32 * point[1] + 32))
             r.blit(applerender, (32 * self.apple[0] + 32, 32 * self.apple[1] + 32))
 
+            self.input_in = False
             self.active_time += 0.04
             renpy.redraw(self, 0.04)
             return r
@@ -241,14 +244,18 @@ init python:
             # Compute the distance between the center of this displayable and
             # the mouse pointer. The mouse pointer is supplied in x and y,
             # relative to the upper-left corner of the displayable.
-            if (renpy.map_event(ev, 'focus_left') and self.direction[0] != 1):
+            if (renpy.map_event(ev, 'focus_left') and self.direction[0] != 1 and not self.input_in):
                 self.direction = (-1, 0)
-            elif (renpy.map_event(ev, 'focus_right') and self.direction[0] != -1):
+                self.input_in = True
+            elif (renpy.map_event(ev, 'focus_right') and self.direction[0] != -1 and not self.input_in):
                 self.direction = (1, 0)
-            elif (renpy.map_event(ev, 'focus_up') and self.direction[1] != 1):
+                self.input_in = True
+            elif (renpy.map_event(ev, 'focus_up') and self.direction[1] != 1 and not self.input_in):
                 self.direction = (0, -1)
-            elif (renpy.map_event(ev, 'focus_down') and self.direction[1] != -1):
+                self.input_in = True
+            elif (renpy.map_event(ev, 'focus_down') and self.direction[1] != -1 and not self.input_in):
                 self.direction = (0, 1)
+                self.input_in = True
             
             if self.lose or self.done:
                 return 1
@@ -275,6 +282,9 @@ init python:
             return
 
         drink_ratings[drags[0].drag_name] = drop.drag_name
+
+init:
+    define light = Fade(.25, 0.0, .75, color="#fff")
 
 default snek = SnekEater()
 default sebDaysPicked = 0
@@ -419,13 +429,14 @@ screen tierlist:
 label seb:
     $ sebDaysPicked += 1
     if sebDaysPicked == 1:
-        jump sebDay3
+        jump sebDay1
     elif sebDaysPicked == 2:
         jump sebDay2
     else:
         jump sebDay3
 
 label sebDay1:
+    stop music
     scene gitc3
     show sebneutral
     with dissolve
@@ -616,14 +627,23 @@ label posttierlist:
         hide sebdeadass
         scene lightning
         show sebkiller
+        with light
+        play sound thunder
         s "Your taste is nothing"
         s "It serves zero purpose"
+        play sound vineboom
         s "You should reconsider your taste NOW"
+        play sound vineboom
         s "And give somebody else a piece of that caffeine in the redbull can that's covered up so we don't have to drink that utter trash"
+        play sound vineboom
         s "Cuz what are you here for?"
+        play sound vineboom
         s "To worship redbull?"
+        play sound vineboom
         s "Throw that shit out NOW!"
+        play sound vineboom
         s "I mean that with a HUNDRED percent"
+        play sound vineboom
         s "With a THOUSAND percent"
         $ sebMood -= 100
         jump checkDay
@@ -725,6 +745,7 @@ label sebDay2:
 
     menu:
         "Nah":
+            stop music
             s "Okay"
             s "Bye"
             $ sebMood -= 20
@@ -738,6 +759,7 @@ label sebDay2:
     s "..."
 
     if drawgame.score < 90:
+        stop music
         hide gothsebforward
         show gothsebdisgust
         s "Wow, you suck"
@@ -757,9 +779,10 @@ label sebDay2:
     call screen drawgamescreen
 
     if drawgame.score < 90:
+        stop music
         hide gothsebforward
         show gothsebdisgust
-        s "Beginner's luck I guess"
+        s "Guess last time was just a fluke"
         s "Be better"
         $ sebMood -= 5
         jump checkDay
@@ -778,6 +801,7 @@ label sebDay2:
     s "..."
 
     if drawgame.score < 90:
+        stop music
         hide gothsebforward
         show gothsebdisgust
         s "Damn, I really thought"
@@ -786,7 +810,6 @@ label sebDay2:
         jump checkDay
     elif drawgame.score == 100:
         s "DAMN! That's perfect!"
-        s "Do it again"
         $ sebMood += 10
         $ perfect_drawings += 1
     else:
@@ -827,7 +850,7 @@ label sebDay3:
         "Karaoke?":
             s "Hah! Just what I was thinking"
             $ sebMood += 5
-        "I dunno, what do you want to do?"
+        "I dunno, what do you want to do?":
             s "I was thinking karaoke"
     s "I live at Laurel, pull up!"
     jump sebKaraoke
@@ -836,6 +859,19 @@ label sebKaraoke:
     scene laurel
     show bigmoistcheeky
     with slidedown
+
+    pause
+
+    s "You ready for karaoke?"
+
+    menu:
+        "Not really":
+            s "Oh come on! It'll be fun"
+            s "Here's one of my personal favorites, trust me, you'll love it"
+        "AYE AYE CAPTAIN":
+            s "I CAN'T HEAR YOU"
+            s "sorry"
+            s "Okay let's do this! I got just the song in mind"
 
     hide bigmoistcheeky
     with dissolve
@@ -874,11 +910,83 @@ label sebKaraoke:
     jump sebEnding
 
 label sebEnding:
+    stop music
     scene laurelin
     show bigmoistneutral
     with dissolve
     pause
     s "..."
-    s "You know, it's been an interesting past few days"
-    s ""
+    if sebMood >= 0:
+        stop music
+        s "You know, it's been an interesting past few days"
+        s "I know I'm not normally as eloquent as my fellow e-board members but I can be verbose when I need to be"
+        s "And I'll be honest with you, I think the conversation we're about to have calls for a more serious tone"
+        s "So I've been thinking a lot"
+        s "About the time we've spent together"
+        s "It's made me realize something important"
+        s "I need to get away from my computer and..."
+        s "Well..."
+        s "Live more"
+        s "I need to take myself away from the hustle bustle that makes every second feel like a dull, rhythmic step along the march of time"
+        s "I need to get out and feel the warmth of the summer sun on my skin"
+        s "And feel the cool breeze brush against the hair on my arms and legs and tickle me gently"
+        s "I need to hear the chatter and laughter of people I love and care about"
+        s "I need to take risks, and stumble and fall and get hurt and get back up again"
+        s "I need to live my life like there's no tomorrow, I want to live every day with no regrets"
+        s "I need to spin myself into a cocoon because while I might now be an ugly ugly caterpillar"
+        s "In time I can transform myself into a beautiful beautiful butterfly"
+        s "Thank you"
+        s "For showing me this"
+        s "But man let me tell you"
+        s "I'm tired, oh so tired"
+        s "I feel the kind of fatigue that sits in the deepest seat of my soul"
+        s "It's sunk itself into my heart like a starving parasite feeding off any semblance of hope or happiness I might have"
+        s "And I have found no remedy in my time on this planet"
+        s "No amount of caffeine will take this burden away from me"
+        scene black
+        show bigmoistneutral
+        with dissolve
+        s "But that's where you come in"
+        s "You"
+        s "So full of color and life"
+        s "The more I've gotten to know you, the more I find myself desiring this thing that you have"
+        s "This..."
+        s "This spirit"
+        s "I've been thinking to myself"
+        s "How can I capture this?"
+        s "Your vivacious, beating heart?"
+        s "And then I realized"
+        s "The answer has been standing right in front of me"
+        s "It's a beautiful thing"
+        s "How life"
+        s "Always"
+        hide bigmoistneutral
+        with dissolve
+        s "Finds a way"
+        pause
+        "..."
+        "..."
+        ".."
+        "."
+        $ renpy.movie_cutscene("images/sebsprite/meatgrinder.webm")
+        pause
+        $ renpy.movie_cutscene("images/sebsprite/goodending.webm")
+        show youdrink
+        "You got the good ending! Probably..."
+    else:
+        s "I'm gonna be honest with you"
+        hide bigmoistneutral
+        show bigmoistsad
+        s "You're kinda lame"
+        s "Sorry not sorry"
+        hide bigmoistsad
+        show bigmoiststreaming
+        s "Anyway I gotta get back to streaming"
+        s "That's all"
+        s "See ya"
+        "Damn, you got the bad ending"
+        "I don't even know how that's possible"
+        show evilsebastian
+        "Do better next time"
+    
     

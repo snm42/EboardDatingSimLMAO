@@ -1,64 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-<<<<<<< HEAD
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-  File "game/seb.rpy", line 274, in execute_default
-    default drawgame = DrawMe()
-  File "game/seb.rpy", line 274, in <module>
-    default drawgame = DrawMe()
-  File "game/seb.rpy", line 86, in __init__
-    self.prompt = Image(path_list[self.randindex])
-IndexError: list index out of range
-=======
-  File "game/cal.rpy", line 956, in script
-    jump dorm
-ScriptError: could not find label 'dorm'.
->>>>>>> 1129567efea5c9e499f409d005d83be5cc2526ee
+  File "game/seb.rpy", line 843, in script
+    call screen samplescreen
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/seb.rpy", line 224, in render
+    bar_amount = round((self.time / 185.0) * 1024)
+AttributeError: 'SnekEater' object has no attribute 'time'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-<<<<<<< HEAD
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ast.py", line 827, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
-    i.execute_default(start)
-  File "game/seb.rpy", line 274, in execute_default
-    default drawgame = DrawMe()
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/seb.rpy", line 274, in <module>
-    default drawgame = DrawMe()
-  File "game/seb.rpy", line 86, in __init__
-    self.prompt = Image(path_list[self.randindex])
-  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\revertable.py", line 214, in __getitem__
-    rv = list.__getitem__(self, index)
-IndexError: list index out of range
-=======
-  File "game/cal.rpy", line 956, in script
-    jump dorm
-  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\ast.py", line 1705, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\calch\Desktop\stuff\renpy-8.0.3-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'dorm'.
->>>>>>> 1129567efea5c9e499f409d005d83be5cc2526ee
+  File "game/seb.rpy", line 843, in script
+    call screen samplescreen
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ast.py", line 1980, in execute
+    self.call("execute")
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ast.py", line 1959, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\display\core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\display\core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\display\screen.py", line 752, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\basti\Desktop\renpy-8.3.4-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "game/seb.rpy", line 224, in render
+    bar_amount = round((self.time / 185.0) * 1024)
+AttributeError: 'SnekEater' object has no attribute 'time'
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.4.24120703
-DateEboard 1.0
-<<<<<<< HEAD
-Tue Mar  4 23:58:40 2025
-=======
-Tue Mar  4 23:31:53 2025
->>>>>>> 1129567efea5c9e499f409d005d83be5cc2526ee
+Doki Doki Game Development Club 1.0
+Wed Mar  5 00:44:34 2025
