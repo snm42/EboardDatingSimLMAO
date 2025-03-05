@@ -158,7 +158,7 @@ screen countdown:
 label cal:
     $ calDaysPicked +=1
     if calDaysPicked == 1:
-        jump calDay3
+        jump calDay1
     if calDaysPicked == 2:
         jump calDay2
     if calDaysPicked == 3:
