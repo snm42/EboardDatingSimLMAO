@@ -242,7 +242,6 @@ screen tierlist:
         
 
 label seb:
-    
     $ sebDaysPicked += 1
     if sebDaysPicked == 1:
         jump sebDay1
@@ -418,6 +417,7 @@ label posttierlist:
         s "Throw that shit out NOW!"
         s "I mean that with a HUNDRED percent"
         s "with a THOUSAND percent"
+        $ sebMood -= 100
         jump checkDay
     elif sebScore < 5:
         s "Sooo you share [sebScore] opinions with me"
