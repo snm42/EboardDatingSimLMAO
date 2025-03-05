@@ -14,17 +14,26 @@ default day = 0
 # This is where the game starts. Feel free to edit your lines as needed.
 
 label start:
+    scene gitc3
+    camera:
+        perspective True
     "You find yourself walking to GITC 3700, to attend your first IGDA general body meeting!"
     "As a new transfer student, you worry that it'll be hard to find a fun and exciting club that will accept you."
     "Despite this, you muster the courage to step into the large room that lay right in front of you."
 
     # Edit this part to say what y'all want.
     "???" "Hello everybody, welcome to the first meeting of IGDA in the spring semester!"
-    a "My name is Alex and remarkably I'm still  your president."
+    show alex neutral at center
+    a "My name is Alex and remarkably I'm still your president."
     a "Goons. Introduce yourselves."
+    show sebdeadass at right
     s "I am Sebastian."
+    show cal neutral at left
     c "I am Calvin."
+    show yas neutral at right
     y "I am Yaseen."
+    show sam normal at real
+    show sam normal at left
     s "I am Sam."
 
     "You are instantly enamored (platonically) with these absolute buffoons of an eboard council."
