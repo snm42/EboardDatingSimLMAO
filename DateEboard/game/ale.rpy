@@ -43,7 +43,7 @@ label aleDay1:
 label aleDay2:
     scene black
     "Alex wasn't responding to my messages today either. I decided to look for him in all his familiar spaces."
-    show library
+    show lib2
     "After searching for a while with no success, it was late at night and I found myself in the library."
     play music "Kevin MacLeod - J. S. Bach_ Toccata and Fugue in D Minor.mp3"
     show alex dio
