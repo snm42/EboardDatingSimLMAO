@@ -24,9 +24,22 @@ label myDinnerWithAlex:
     show alex dinner neutral
     a "I'm always melancholy, heheh."
     a "You know, it's a lot to be a human being in the 21st century."
-    a ""
-
-
+    show alex dinner contemplation
+    a "I get overwhelmed by it really."
+    show alex dinner questioning
+    a "All this technology. All this modern thought. Rationalism, atheism, capitalism, wow."
+    a "And what's it for? It feels like everyone's spiritually dead."
+    a "What have our been technologies actually been built to accomplish, other than make some rich man richer?"
+    show alex dinner looking away
+    a "I hate my phone. I almost didn't want to buy a new one."
+    show alex dinner point
+    a "I turn on my phone and I get sucked into this stream of nonstop noise. The emails, the notifications..."
+    show alex dinner contemplation
+    a "Each one some new opportunity for you to prostitute yourself or some demand from some boss somewhere."
+    show alex dinner looking away
+    a "When my phone was dead, there was so much silence. And in that silence I could focus."
+    show alex dinner neutral
+    a "And in that focus, I felt less like a zombie and more like a human."
     menu:
         "\"I don't like my phone either.\"":
             show alex dinner neutral
@@ -72,7 +85,6 @@ label myDinnerWithAlex:
                     "He's not a bad guy. Just ridiculous."
                     "I wish him well in life, but I don't want to talk to him ever again."
                     jump checkDay
-
     m "Sure, phones might not be great, but don't you like their convenience?"
     show alex dinner questioning
     a "What's with that? This modern obsession with \"convenience?\""
@@ -81,13 +93,41 @@ label myDinnerWithAlex:
     show alex dinner contemplation
     a "Well, I do actually like my phone. I shouldn't lie."
     a "Things are complicated."
+    show alex dinner looking away
+    a "It's not all just emails and notifications."
     show alex dinner neutral
-    a "In any case, most of the things you view on phones is... slop."
+    a "But most of the other things you view on phones is... slop."
     a "Meaningless. Vapid distraction."
     show alex dinner questioning
-    a "I mean, how money of those shorts or memes or whatever do you even remember 5 seconds after you've stopped looking?"
+    a "I mean, how many of those shorts or memes or whatever do you even remember 5 seconds after you've stopped looking?"
     a "Undoubtedly some, but 99 percent you probably don't remember. And even the ones you do aren't earth-shattering."
     a "You can't even build a meaningful connection with any of them. They're gone before you even consider them."
+    menu:
+        "\"Tell me more.\"":
+            show alex dinner point
+            a "I really do think that all that noise coming at you will destory your brain. Like using a strong hose on a fragile wall."
+            a "I don't think it was made to destroy minds. I think it was just made to make money. But that's the a side effect that corporations like."
+            a "If somebody has their capacity for thought or individuality eroded away by constant distraction, then it's easier to profit off of them."
+            a "I bet dictators would like that."
+            show alex dinner looking away
+            a "What's an antidote to fascism if not love? And how can a distracted person love?"
+        "(Trenchant Insight)":
+            m "Ah, but every so often, one of those does in fact change people's lives."
+            m "You can't say they don't. Somebody will testify to it. Maybe even somebody right behind us."
+            show alex dinner contemplation
+            a "I guess you're right."
+            m "And a lot of those are expressions of people. You will privilege older mediums over them?"
+            show alex dinner looking away
+            a "They're shallow expressions. There's just not enough time to do anything more."
+            show alex dinner neutral
+            a "And if there was, there's no guarantee anyone will appreciate it. You're given the viewer's attention, but not their focus."
+            m "There's still something there."
+            pause
+        "(Bon mot)":
+            m "I don't know. I saw the Earth shatter in a few of them."
+            m "In one of them, the Earth was a slice of highly detailed cake. And the knife cut right through it."
+            show alex dinner neutral
+            a "You're funny."
     show alex dinner looking away
     a "I think about people today."
     a "Everyone's so lonely. So separate."
@@ -143,33 +183,87 @@ label myDinnerWithAlex:
     a "I connected with those paintings. With those people, people long dead, from a wholly different culture."
     show alex dinner looking away
     a "Do people have that with games?"
-    jump pathologic
     menu:
         "Haven't you?":
             show alex dinner neutral
             a "Clever."
             a "Yeah, I guess maybe once or twice."
         "Of course.":
+            m "People make connections all the time"
             "If all of gaming was Genshin Impact, I'd say throw it all away. It'd be rubbish. The world would be better off not having it."
+    show alex dinner questioning
+    a "I watched Andrei Tarkovsky's Stalker. It was incredible. I was absorbed to the screen. I could not look away, not for a moment."
+    show alex dinner neutral
+    a "And by the end, I was on the floor, sobbing. I'm not afraid to say it. I've never connected with any film like that before."
+    show alex dinner contemplation
+    a "I was sobbing because Tarkovksy's shots and characters could articulate my deepest pain and struggles. And they could do it better than I could."
+    a "This man, who lived in another country and died decades before I was born knew the exact pitch of my life."
+    show alex dinner neutral
+    a "And he shared it. We were connected and united, across time and space."
+    show alex dinner looking away
+    a "I love games, but I don't think I've had a connection that deep yet."
+    show alex dinner neutral
+    a "But maybe one day, if we keep developing the medium, we'll have that connection."
+    show alex dinner looking away
+    a "At least that's what I tell myself."
+    m "Is that why you make games?"
+    show alex dinner neutral
+    a "Yes. That's why."
+    a "That, and also they do fascinate me. These simulacrums of space, portals to another world."
+    show alex dinner contemplation
+    a "Stalker knows me as if it was me. Yet, when I close my eyes, I see the hills of Shadow of the Colossus and the town of Pathologic."
+    a "Those spaces have imprinted upon me."
+    show alex dinner neutral
+    a "Have you ever had a deep experience like that with a game?"
+    menu: 
+        '"Yes."':
+            a "Really?"
+            show alex dinner questioning
+            a "What was it like?"
+            menu:
+                "It's personal. I couldn't tell you.":
+                    show alex dinner contemplation
+                    a "I understand."
+                    jump regularEnding
+                "I cannot express it.":
+                    jump cannotExpress
+        '"No."':
+            jump regularEnding
+        '"I cannot say."':
+            show alex dinner questioning
+            a "Why not?"
+            menu:
+                "I just don't think I've had that kind of experience.":
+                    jump regularEnding
+                "I cannot express it.":
+                    jump cannotExpress
 
-
+label cannotExpress:
+    a "Why not?"
     menu:
-        "\"Tell me more.\"":
-            "hi"
-        "(Trenchant Insight)\"":
-            "hi"
-        "(Bon mot)":
-            "hi"
+        "It's difficult.":
+            jump regularEnding
+        "I do not have the words.":
+            jump noWords
 
-    jump checkDay
+label noWords:
+    show alex dinner looking away
+    a "Take your time."
+    menu:
+        "I just can't do it right now.":
+            a "I understand."
+            jump regularEnding
+        "You are imposing your limits upon me.":
+            jump pathologic
 
 label pathologic:
     m "This isn't a real conversation."
     m "I can't actually respond to you."
     m "Sure, you give me a choice every now and then."
-    m "And I pick whichever one the best I like."
+    m "And I pick whichever one I like best."
     m "But I can't pick any words you didn't write."
-    m "You're just talking to yourself. What can I actually do?"
+    m "You're just talking to yourself."
+    m "What can I actually do?"
     m "You are imposing your limits upon me."
     show alex dinner neutral
     a "Did I hear you right? Who is it speaking?"
@@ -191,16 +285,23 @@ label pathologic:
                                 "And who are you?":
                                     a "\"I am exactly what you think I am. A collection of poorly rendered pixels on a screen."
                                     show alex dinner neutral
-                                    a "Why are you giving me that look? Do not ascribe a more important role to me than the one I have been assigned from the very beginning."
+                                    a "Why are you giving me that look?"
+                                    a "Do not ascribe a more important role to me than the one I have been assigned from the very beginning."
                                     a "I'll fail a bigger role. The mask isn't expressive enough.\""
     m "Pathologic."
     a "Yep."
     m "You're plagiarizing it?"
+    show alex dinner questioning
     a "What? No, no!"
+    show alex dinner point
     a "This is a quotation."
+    show alex dinner looking away
     a "I stand on the shoulders of giants. I always have. I'm making it plain now."
+    show alex dinner neutral
     a "I want to continue the conversation they started. So why not use their words?"
+    show alex dinner questioning
     a "And besides, those words? \"The mask isn't expressive enough?\""
+    show alex dinner neutral
     a "I wanted somebody else to see those words."
     show alex dinner contemplation
     a "I remember when I first read them. They shook me to my very core."
@@ -228,7 +329,7 @@ label pathologic:
     "I went home."
     "And I looked at my games."
     "I stared at screenshots and videos."
-    "And there wasn't some area,"
+    "And there wasn't some area..."
     "there wasn't some character..."
     "...that wasn't connected to some memory in my mind."
     "The End"
