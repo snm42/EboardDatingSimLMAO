@@ -256,6 +256,27 @@ label noWords:
         "You are imposing your limits upon me.":
             jump pathologic
 
+label regularEnding:
+    m "Aren't you going to eat more of your food?"
+    show alex dinner contemplation
+    a "I don't think think that's possible."
+    m "So..?"
+    show alex dinner neutral
+    a "Well, I think that's it."
+    m "That's it?"
+    show alex dinner point
+    a "What else need there be?"
+    m "I guess I just expected more."
+    show alex dinner neutral
+    a "If you want more, maybe we should talk again."
+    m "This was an odd experience."
+    show alex dinner looking away
+    a "Haters will say the whole thing is just yapping. But I think there's something there."
+    m "Bye."
+    show alex dinner neutral
+    a "Bye-bye."
+    jump checkDay
+
 label pathologic:
     m "This isn't a real conversation."
     m "I can't actually respond to you."
@@ -322,7 +343,7 @@ label pathologic:
     m "You barely ate your food."
     show alex dinner contemplation
     a "I have appetite issues."
-    m "Goodbye Alex."
+    p "Goodbye Alex."
     show alex dinner neutral
     a "Goodbye."
     scene black
