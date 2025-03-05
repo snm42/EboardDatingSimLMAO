@@ -910,7 +910,7 @@ screen input_screen():
 label calDay3:
     c "po-em"
     show screen input_screen
-    scene ckb
+    scene alley
     c "wirte poem"
     c "[poem]"
     c "did that work"
