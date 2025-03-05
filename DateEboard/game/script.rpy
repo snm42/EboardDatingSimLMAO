@@ -72,6 +72,8 @@ label checkDay:
 
 
 label pickSomeoneDay1:
+    "Today is Wednesday."
+    "I think Yaseen has a midterm to get to today."
     menu:
         "Who should I hit up today?"
         "Calvin":
@@ -86,13 +88,11 @@ label pickSomeoneDay1:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label pickSomeoneDay2:
+    "Today is Thursday."
+    "I don't think Sam or Sebastian are free today."
     menu:
         "Who should I hit up today?"
         "Calvin":
@@ -101,13 +101,14 @@ label pickSomeoneDay2:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
+        "Yaseen":
+            "I decide to find Yaseen."
+            jump yas
     return
 
 label pickSomeoneDay3:
+    "Today is Friday."
+    "I think Sebastian and Calvin went home for the weekend."
     menu:
         "Who should I hit up today?"
         "Sam":
@@ -119,13 +120,11 @@ label pickSomeoneDay3:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label pickSomeoneDay4:
+    "Today is Monday."
+    "I don't think Calvin and Yaseen are present to talk."
     menu:
         "Who should I hit up today?"
         "Sam":
@@ -137,13 +136,11 @@ label pickSomeoneDay4:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label pickSomeoneDay5:
+    "Today is Tuesday."
+    "I don't think Sam's available to talk today."
     menu:
         "Who should I hit up today?"
         "Calvin":
@@ -158,14 +155,16 @@ label pickSomeoneDay5:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label finalDay:
-    # This will go through each member and sequentially show your respective endings. I'll fix the ordering later.
-    jump testEnding
+    m "Finally, it's been a whole week of getting to know the eboard."
+    "..."
+    m "These sure are some of the eboard members of all time."
+    "."
+    ".."
+    "..."
+    m "Wait, is this the bad ending where I don't see anyone's story to their finish?"
 
+    "The End"
     return
