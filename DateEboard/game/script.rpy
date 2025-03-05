@@ -86,10 +86,6 @@ label pickSomeoneDay1:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label pickSomeoneDay2:
@@ -101,10 +97,9 @@ label pickSomeoneDay2:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
+        "Yaseen":
+            "I decide to find Yaseen."
+            jump yas
     return
 
 label pickSomeoneDay3:
@@ -119,10 +114,6 @@ label pickSomeoneDay3:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label pickSomeoneDay4:
@@ -137,10 +128,6 @@ label pickSomeoneDay4:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label pickSomeoneDay5:
@@ -158,14 +145,25 @@ label pickSomeoneDay5:
         "Alex":
             "I decide to visit Alex."
             jump ale
-        "Test":
-            "I decide to test the code."
-            jump test
-
     return
 
 label finalDay:
-    # This will go through each member and sequentially show your respective endings. I'll fix the ordering later.
-    jump testEnding
-
+    "Finally, it's been a whole week of getting to know the eboard."
+    menu:
+        "Who should I spend my final day with?"
+        "Calvin":
+            "I decide to DM Calvin."
+            jump cal
+        "Sebastian":
+            "I decide to call up Sebastian."
+            jump seb
+        "Yaseen":
+            "I decide to find Yaseen."
+            jump yas
+        "Alex":
+            "I decide to visit Alex."
+            jump ale
+        "Sam":
+            "I decide to see Sam."
+            jump sam
     return

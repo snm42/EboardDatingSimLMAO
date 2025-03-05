@@ -7,6 +7,14 @@ transform real:
     center
     zoom 0.3
 
+image sec attack:
+    "images/samsprite/sec gun1.png"
+    pause 0.2
+    "images/samsprite/sec gun2.png"
+    pause 0.1
+    "images/samsprite/sec gun3.png"
+    pause 2.0
+
 label sam:
     if not diningHall:
         "..."
@@ -443,7 +451,7 @@ label samDay2:
 
 label samDay3:
     play music "Kevin MacLeod - Rollin at 5 - 210 - full.mp3"
-    scene gds
+    scene gds3
     "..."
 
     "???" "Today's the day!"
@@ -502,12 +510,15 @@ label samDay3:
     
     m "Look out!"
     m "It's a public safety officer!"
-
+    
+    show sec neutral at center
     show sam shocked at real
     j "Oh shit!"
 
     show sam normal at real
+    show sam normal at right
     "You see Sam break free from the officer's grasp and back away."
+    show sec neutral at left
 
     "Officer" "We've been tracking your moves ever since you drafted up that attack plan."
 
@@ -524,6 +535,7 @@ label samDay3:
 
     "Officer" "Unfortunately, I don't make the rules."
 
+    show sec gun3
     "The officer takes out... a gun?"
     "There's no way that they are actually allowed to use that."
 
@@ -542,6 +554,7 @@ label samDay3:
         "Is this guy for real?":
             "What an idiot."
     
+    show sec neutral
     "Officer" "Hmm..."
     "Officer" "Why not?"
 
@@ -551,34 +564,60 @@ label samDay3:
 
 label samDay3Death:
     show sam rock at real
+    show sam at right
+    show sec rock at left
     "Sam and Officer" "Rock..."
     show sam up at real
+    show sam at right
+    show sec up at left
     "..."
     show sam rock at real
+    show sam at right
+    show sec rock at left
     "Sam and Officer" "Paper..."
     show sam up at real
+    show sam at right
+    show sec up at left
     "..."
     show sam rock at real
+    show sam at right
+    show sec rock at left
     "Sam and Officer" "Scissors..."
     show sam up at real
+    show sam at right
+    show sec up at left
     "..."
     "Sam and Officer" "Shoot!"
     if shoo == 'R':
         show sam rock at real
+        show sam at right
+        show sec paper at left
     elif shoo == 'P':
         show sam paper at real
+        show sam at right
+        show sec scissors at left
     else:
         show sam scissors at real
+        show sam at right
+        show sec rock at left
+    
     # Cue gun
+    pause 0.05
+    show sec attack
+    pause 0.05
+    play sound "gun.mp3"
+    
+    hide sam
     "You see Sam sprawled out on the ground, bleeding out pretty severely."
 
+    hide sec
     m "Oh shoot, I thought you would have had him in the bag."
     m "My b."
     m "I shoulda picked a different option."
 
-    j "Oh well."
-    j "It's just seems that I was the weaker one this time."
-    j "It's a shame that I won't be able to see the day that the dining hall becomes edible."
+    j "Bro are you blind he literally just started shooting"
+    j "Whatever..."
+    j "It seems like I've met my end"
     j "..."
 
     "He looks at you, but his gaze is unfocused."
@@ -592,8 +631,6 @@ label samDay3Death:
     m "No cool final words."
     m "..."
     m "womp womp"
-    
-    hide sam
 
     jump checkDay
 
@@ -608,7 +645,11 @@ label samEnding:
     return
 
 label rockPaperScissors:
+    "Officer" "Let's take this to Tiernan so that we don't have any witnesses."
+    scene tierw
     show sam rock at real
+    show sam at right
+    show sec rock at left
     j "Quick, what should I pick?"
 
     m "Uhh..."
