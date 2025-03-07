@@ -1086,6 +1086,37 @@ label stage:
         c "this place must be traumatizing for you, hehe."
         show calb up
         c "congratulations on finally finding me."
+        if wrongdeath <= 3:
+            c "i still can't believe you made it through that."
+            show calb up
+            c "i gotta congratulate you again."
+        elif perfectquiz:
+            c "brings me back to when you perfected my quiz."
+            c "36 whole questions and you got them all right."
+            c "truly GOATed you are."
+        else:
+            show calb neutral mad
+            c "i sure hope you've studied more since then."
+            c "i expect better from you."
+
+        show calb neutral happy
+        
+        if perfectHW:
+            c "there's no way you completed that HW perfectly without cheating."
+            c "or maybe it wasn't your first time seeing it, hehe."
+            show calb up
+            c "either way, great job."
+            c "wouldn't have made it without ya."
+        elif hwscore >= 8:
+            c "i'm also impressed you managed to get that ChemE HW right."
+            c "pretty insane, especially if you ain't a ChemE major."
+            show calb up
+            c "congratulations on that as well."
+        else:
+            show calb neutral mad
+            c "you also need to study ChemE more."
+            c "i don't care if it's not your major, learn it."
+            c "it comes into handy more than you'd expect."
         c "i'll see ya round."
         jump finale
     else:
@@ -3162,7 +3193,7 @@ label finale:
     c "the ChemE HW is based on real exams and HW i have taken."
     c "there is a 1 percent chance to find me at every location."
     c "at each location, there is unique dialogue for finding me and hitting pity."
-    c "and there is a special dialogue you get to see if you find me on your first try."
+    c "and there is a special dialogue at this finale you get to see if you find me on your first try."
     c "oh, and 1 more thing."
     if perfect:
         c "you have achieved the true ending."
