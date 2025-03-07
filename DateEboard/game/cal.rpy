@@ -662,7 +662,7 @@ label cal22:
         show calb mic 
         show screen countdown
         if yasDaysPicked >= 1:
-            if random.randint(1,64) == 1:
+            if random.randint(1,36) == 1:
                 show seen at right
                 c "don't mind him."
                 c "FOCUS!"
