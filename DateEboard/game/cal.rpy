@@ -920,7 +920,7 @@ label cal22:
 
 
 define pulls = 0
-define gacha = 200
+define gacha = 1
 
 define winner = False
 
@@ -982,6 +982,7 @@ label calDay3:
 
 
 label stairs:
+    $ pulls += 1
     scene laurelstair
     m "let's check if he just hid in the stairs."
     if gacha == random.randint(1,100):
@@ -1003,10 +1004,10 @@ label stairs:
     else:
         m "damn he isn't here."
         m "what a stupid choice i made."
-        $ pulls += 1
         jump dorm
 
 label laundry:
+    $ pulls += 1 
     scene laundry
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1035,10 +1036,10 @@ label laundry:
         m "he isn't here."
         m "not doing laundry on free laundry week?"
         m "guess he has better things to do."
-        $ pulls += 1
         jump dorm
 
 label stage:
+    $ pulls += 1 
     scene stage
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1092,7 +1093,6 @@ label stage:
         m "i never want to come back here ever again."
         m "i'm really glad he isn't here."
         scene laurelin
-        $ pulls += 1
         jump dorm
 
 define co =False
@@ -1133,6 +1133,7 @@ label laurelout:
             jump between
 
 label co:
+    $ pulls += 1
     scene computercenter
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1151,10 +1152,10 @@ label co:
     else:
         m "damn he isn't here."
         m "what a stupid choice i made."
-        $ pulls += 1
         jump laurel
 
 label ls:
+    $ pulls += 1
     scene lifescience
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1174,10 +1175,10 @@ label ls:
     else:
         m "damn he isn't here."
         m "what a stupid choice i made."
-        $ pulls += 1
         jump laurel
     
 label oak:
+    $ pulls += 1
     scene oak
     m "alright your hiding days are over."
     if gacha == random.randint(1,100):
@@ -1199,10 +1200,10 @@ label oak:
         m "fuck he isn't here."
         m "oh right...he doesn't have friends that live in Oak."
         m "i'm so stupid for trying to look here."
-        $ pulls += 1
         jump laurel
 
 label police:
+    $ pulls += 1
     scene police
     m "he better not be reporting me as a stalker or something."
     if gacha == random.randint(1,100):
@@ -1227,7 +1228,6 @@ label police:
         m "why would he even go here..."
         m "why did i check this spot?"
         m "i'm so dumb."
-        $ pulls += 1
         jump laurel
 
 label oldpdeck:
@@ -1273,6 +1273,7 @@ label oldpdeck:
             jump laurel
 
 label of1:
+    $ pulls += 1
     scene parkold1
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1296,10 +1297,10 @@ label of1:
     else:
         m "damn he isn't here."
         m "what a stupid choice i made."
-        $ pulls += 1
         jump opdeck
 
 label of2:
+    $ pulls += 1
     scene parkold2
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1319,10 +1320,10 @@ label of2:
     else:
         m "no way he isn't here."
         m "god damn it i really don't want to search this whole thing."
-        $ pulls += 1
         jump opdeck
 
 label of3:
+    $ pulls += 1
     scene parkold3
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1341,10 +1342,10 @@ label of3:
     else:
         m "aw man he ain't here."
         m "guess he must've went higher or lower than this floor."
-        $ pulls += 1
         jump opdeck
 
 label of4:
+    $ pulls += 1
     scene parkold4
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1364,10 +1365,10 @@ label of4:
     else:
         m "i knew floor 4 would be a bust."
         m "should've trusted my gut."
-        $ pulls += 1
         jump opdeck
 
 label of5:
+    $ pulls += 1
     scene parkold5
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1395,10 +1396,11 @@ label of5:
     else:
         m "what?? not even on his favourite numbered floor?"
         m "guess he knew i'd check here."
-        $ pulls += 1
+
         jump opdeck
 
 label of6:
+    $ pulls += 1
     scene parkold6
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1418,10 +1420,11 @@ label of6:
     else:
         m "floor 6 is so generic, no wonder he ain't here"
         m "maybe i should stop looking at the parking deck."
-        $ pulls += 1
+
         jump opdeck
 
 label of7:
+    $ pulls += 1
     scene parkold7
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1442,10 +1445,11 @@ label of7:
     else:
         m "man even with the luck of 7 he's not here."
         m "maybe there is a better number somewhere else."
-        $ pulls += 1
+
         jump opdeck
 
 label of8:
+    $ pulls += 1
     scene parkold8
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1468,10 +1472,11 @@ label of8:
         m "not even floor 8???"   
         m "he takes pictures here all the time!!!"
         m "ugh, time to check somewhere else."
-        $ pulls += 1
+
         jump opdeck
 
 label pcmall:
+    $ pulls += 1
     scene pcmall1
     m "why the hell is this hallway so long??"
     m "i guess he isn't here."
@@ -1501,7 +1506,7 @@ label pcmall:
     else:
         m "no printing for him today i guess."
         m "let's try elsewhere."
-        $ pulls += 1
+
         jump laurelout
 
 default ckb = False
@@ -1553,6 +1558,7 @@ label ckb:
             jump between
 
 label bot:
+    $ pulls += 1
     scene ckb1
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1567,10 +1573,11 @@ label bot:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump ckb
 
 label bot1:
+    $ pulls += 1
     scene ckb2
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1585,10 +1592,11 @@ label bot1:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump ckb
         
 label fmh:
+    $ pulls += 1
     scene fmh
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1603,10 +1611,11 @@ label fmh:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump between
 
 label books:
+    $ pulls += 1
     scene bookstore
     m "must be getting an IGDAzon package."
     scene folant
@@ -1623,10 +1632,11 @@ label books:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump between
 
 label camp:
+    $ pulls += 1
     scene campbell
     m "what even is in here..."
     m "maybe he is just on the outside somewhere."
@@ -1643,10 +1653,11 @@ label camp:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump between
 
 label al:
+    $ pulls += 1
     scene alley
     m "what a weird alley."
     m "calvin definitely would love to be here."
@@ -1663,7 +1674,7 @@ label al:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump between
 
 label wecout:
@@ -1694,7 +1705,7 @@ define gym = False
 
 label wec:
     scene chase
-    m "where to check.[pulls]"
+    m "where to check."
     menu wecin:
         "Fencing" if not fence:
             $ fence = True
@@ -1722,6 +1733,7 @@ label wec:
             jump wecout
 
 label fence:
+    $ pulls += 1
     scene fencing
     if gacha == random.randint(1,100):
         if pulls == 0:
@@ -1736,10 +1748,11 @@ label fence:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump wecin
 
 label pool:
+    $ pulls += 1
     scene pool
     m "aw pool closed."
     m "maybe he sad too."
@@ -1756,10 +1769,11 @@ label pool:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump wecin
 
 label sto:
+    $ pulls += 1
     scene storage
     m "where the hell"
     if gacha == random.randint(1,100):
@@ -1775,10 +1789,11 @@ label sto:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump wecin
         
 label tra:
+    $ pulls += 1
     scene track
     m "ain't no way he exercising"
     if gacha == random.randint(1,100):
@@ -1794,10 +1809,11 @@ label tra:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump wecin
 
 label bas:
+    $ pulls += 1
     scene basketball
     m "ain't no way he like basketball"
     if gacha == random.randint(1,100):
@@ -1814,10 +1830,11 @@ label bas:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump wecin
 
 label res:
+    $ pulls += 1
     scene gdshosp
     m "i ain't allowed in here prolly..."
     m "and he ain't either wtf."
@@ -1838,10 +1855,11 @@ label res:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump wecin
 
 label gym:
+    $ pulls += 1
     scene gym
     m "ain't no way he workin out"
     if gacha == random.randint(1,100):
@@ -1862,7 +1880,7 @@ label gym:
         "Lily" "hi im Lily!"
         m "what in ze phoq"
         "Lily" "wreah!"
-        $ pulls += 1
+
         jump wecin
 
 define tf1 = False
@@ -1892,6 +1910,7 @@ label tier:
             jump wecout
 
 label tf1:
+    $ pulls += 1
     scene aiche
     m "surely."
     if gacha == random.randint(1,100):
@@ -1907,10 +1926,11 @@ label tf1:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump tierins
 
 label tf2:
+    $ pulls += 1
     scene tier2
     m "surely."
     if gacha == random.randint(1,100):
@@ -1926,10 +1946,11 @@ label tf2:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump tierins
 
 label tf3:
+    $ pulls += 1
     scene tier3
     m "surely."
     if gacha == random.randint(1,100):
@@ -1945,10 +1966,11 @@ label tf3:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump tierins
 
 label tf4:
+    $ pulls += 1
     scene tier4
     m "surely."
     if gacha == random.randint(1,100):
@@ -1964,7 +1986,7 @@ label tf4:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump tierins
 
 define tkup = False
@@ -1984,6 +2006,7 @@ label kup:
             jump wecout
 
 label tkup:
+    $ pulls += 1
     scene kupftopins
     m "class time?"
     if gacha == random.randint(1,100):
@@ -2000,10 +2023,11 @@ label tkup:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump kupf
 
 label bkup:
+    $ pulls += 1
     scene kupfbotins
     m "class time?"
     if gacha == random.randint(1,100):
@@ -2020,7 +2044,7 @@ label bkup:
         jump finale
     else:
         m "not here."
-        $ pulls += 1
+
         jump kupf
 
 define hin = False
@@ -2065,6 +2089,7 @@ label honor:
             jump wecout
 
 label mapl:
+    $ pulls += 1
     scene mapleout
     m "fancy ass dorm bro gaddam."
     if gacha == random.randint(1,100):
@@ -2081,10 +2106,11 @@ label mapl:
         jump finale
     else:
         m "nuh-uh."
-        $ pulls += 1
+
         jump honorf
 
 label hin:
+    $ pulls += 1
     scene honorins
     m "where tf is he"
     m "gotte keep goin"
@@ -2103,10 +2129,11 @@ label hin:
         jump finale
     else:
         m "not here, obviously."
-        $ pulls += 1
+
         jump honorf
 
 label gigi:
+    $ pulls += 1
     scene gigi
     m "mmm hungry."
     if gacha == random.randint(1,100):
@@ -2123,10 +2150,11 @@ label gigi:
         jump finale
     else:
         m "surpisngly not here."
-        $ pulls += 1
+
         jump honorf
             
 label vm:
+    $ pulls += 1
     scene vm
     m "fuckin hate this overpriced place."
     scene vminside
@@ -2144,10 +2172,11 @@ label vm:
         jump finale
     else:
         m "thank god he ain't in here. i'd be disappointed."
-        $ pulls += 1
+
         jump honorf
 
 label sb: 
+    $ pulls += 1
     scene smashburger
     m "actually still owned by GDs."
     m "shittier than real Smashburger."
@@ -2166,9 +2195,10 @@ label sb:
         jump finale
     else:
         m "not here, he ain't smashin borgirs."
-        $ pulls += 1
+
         jump honorf
 label gym2: 
+    $ pulls += 1
     scene gym2
     m "he doesn;t even have access here."
     if gacha == random.randint(1,100):
@@ -2185,10 +2215,11 @@ label gym2:
         jump finale
     else:
         m "not here, lol."
-        $ pulls += 1
+
         jump honorf
 
 label ven: 
+    $ pulls += 1
     scene venture
     m "he ain't a fockin entree pren ew er"
     if gacha == random.randint(1,100):
@@ -2205,7 +2236,7 @@ label ven:
         jump finale
     else:
         m "yeah no shit he aint here."
-        $ pulls += 1
+
         jump honorf
 
 define red = False
@@ -2239,6 +2270,7 @@ label CC:
 
 
 label red:
+    $ pulls += 1
     scene redwood
     m "he fuckin hates this hall."
     m "and he ain't a freshamn no more."
@@ -2256,10 +2288,11 @@ label red:
         jump finale
     else:
         m "not here, unsurprisingly."
-        $ pulls += 1
+
         jump ccc
 
 label cyp:
+    $ pulls += 1
     scene cypress
     m "his first hall."
     m "he has good memories here."
@@ -2277,10 +2310,11 @@ label cyp:
         jump finale
     else:
         m "he ain't here."
-        $ pulls += 1
+
         jump ccc
 
 label ten:
+    $ pulls += 1
     scene tennis
     m "he don;t event play tennis."
     m "i don't think he can go in here."
@@ -2298,7 +2332,7 @@ label ten:
         jump finale
     else:
         m "he ain't here, duh."
-        $ pulls += 1
+
         jump ccc
 
 
@@ -2351,6 +2385,7 @@ label gitin:
             jump GITC
 
 label gf1:
+    $ pulls += 1
     scene gitc1
     m "where."
     if gacha == random.randint(1,100):
@@ -2367,10 +2402,11 @@ label gf1:
         jump finale
     else:
         m "no here."
-        $ pulls += 1
+
         jump gitfuck
 
 label gf2:
+    $ pulls += 1
     scene gitc2
     m "where?"
     if gacha == random.randint(1,100):
@@ -2387,10 +2423,11 @@ label gf2:
         jump finale
     else:
         m "no here."
-        $ pulls += 1
+
         jump gitfuck
 
 label gf3:
+    $ pulls += 1
     scene gitc3
     m "where!"
     if gacha == random.randint(1,100):
@@ -2407,10 +2444,11 @@ label gf3:
         jump finale
     else:
         m "no here!"
-        $ pulls += 1
+
         jump gitfuck
 
 label gf4:
+    $ pulls += 1
     scene gitc4
     m "where$"
     if gacha == random.randint(1,100):
@@ -2427,10 +2465,11 @@ label gf4:
         jump finale
     else:
         m "no here!"
-        $ pulls += 1
+
         jump gitfuck
 
 label gf5:
+    $ pulls += 1
     scene gitc4
     m "where"
     if gacha == random.randint(1,100):
@@ -2447,7 +2486,7 @@ label gf5:
         jump finale
     else:
         m "no here!"
-        $ pulls += 1
+
         jump gitfuck
 
 label mak:
@@ -2467,6 +2506,7 @@ label mak:
             jump GITC
         
 label mf1:
+    $ pulls += 1
     scene maker1
     m "where are ya?"
     if gacha == random.randint(1,100):
@@ -2483,10 +2523,11 @@ label mf1:
         jump finale
     else:
         m "nope."
-        $ pulls += 1
+
         jump mik
 
 label mf2:
+    $ pulls += 1
     scene maker3d 
     m "where are ya!"
     if gacha == random.randint(1,100):
@@ -2503,10 +2544,11 @@ label mf2:
         jump finale
     else:
         m "nope!"
-        $ pulls += 1
+
         jump mik
 
 label mf3:
+    $ pulls += 1
     scene maker2
     m "where are ya!?"
     if gacha == random.randint(1,100):
@@ -2523,10 +2565,11 @@ label mf3:
         jump finale
     else:
         m "nope!!"
-        $ pulls += 1
+
         jump mik
 
 label mie:
+    $ pulls += 1
     scene meche
     m "prolly not here."
     if gacha == random.randint(1,100):
@@ -2543,7 +2586,7 @@ label mie:
         jump finale
     else:
         m "nuh uh."
-        $ pulls += 1
+
         jump gitcc
 
 define lf1 = False
@@ -2573,6 +2616,7 @@ label lib:
             jump CC
 
 label lf1:
+    $ pulls += 1
     scene lib0
     m "silence time."
     if gacha == random.randint(1,100):
@@ -2589,10 +2633,11 @@ label lf1:
         jump finale
     else:
         m "no calvin."
-        $ pulls += 1
+
         jump libab
 
 label lf2:
+    $ pulls += 1
     scene lib1
     m "printing time."
     if gacha == random.randint(1,100):
@@ -2609,10 +2654,10 @@ label lf2:
         jump finale
     else:
         m "no calvini."
-        $ pulls += 1
         jump libab
 
 label lf3:
+    $ pulls += 1
     scene lib2
     m "group time."
     if gacha == random.randint(1,100):
@@ -2629,10 +2674,11 @@ label lf3:
         jump finale
     else:
         m "no calvini."
-        $ pulls += 1
+        
         jump libab
 
 label lf4:
+    $ pulls += 1
     scene lib3
     m "loud place."
     if gacha == random.randint(1,100):
@@ -2649,7 +2695,7 @@ label lf4:
         jump finale
     else:
         m "no calipers."
-        $ pulls += 1
+        
         jump libab
 
 define nf1=False
@@ -2691,6 +2737,7 @@ label npd:
         "Leave":
             jump CC
 label nf1:
+    $ pulls += 1
     scene parknew1
     m "staff parking?"
     if gacha == random.randint(1,100):
@@ -2707,10 +2754,11 @@ label nf1:
         jump finale
     else:
         m "no clavin!"
-        $ pulls += 1
+        
         jump npdd
 
 label nf2:
+    $ pulls += 1
     scene parknew2
     m "2 parking 2 furious?"
     if gacha == random.randint(1,100):
@@ -2727,9 +2775,10 @@ label nf2:
         jump finale
     else:
         m "no claviner!"
-        $ pulls += 1
+        
         jump npdd
 label nf3:
+    $ pulls += 1
     scene parknew3
     m "trifecta of parking floors!"
     if gacha == random.randint(1,100):
@@ -2746,10 +2795,11 @@ label nf3:
         jump finale
     else:
         m "no korbin!"
-        $ pulls += 1
+        
         jump npdd
 
 label nf4:
+    $ pulls += 1
     scene parknew4
     m "parking 4 me! "
     if gacha == random.randint(1,100):
@@ -2766,10 +2816,11 @@ label nf4:
         jump finale
     else:
         m "not here!"
-        $ pulls += 1
+        
         jump npdd
 
 label nf5:
+    $ pulls += 1
     scene parknew5
     m "5 is his favorite number. remember that."
     if gacha == random.randint(1,100):
@@ -2786,10 +2837,11 @@ label nf5:
         jump finale
     else:
         m "not here!(!@&#^(!@))"
-        $ pulls += 1
+        
         jump npdd
 
 label nf6:
+    $ pulls += 1
     scene parknew6
     m "too 6y for dis deck"
     if gacha == random.randint(1,100):
@@ -2806,10 +2858,11 @@ label nf6:
         jump finale
     else:
         m "here he is not."
-        $ pulls += 1
+        
         jump npdd
 
 label nf7:
+    $ pulls += 1
     scene parknew7
     m "7 like the 11?"
     if gacha == random.randint(1,100):
@@ -2826,7 +2879,7 @@ label nf7:
         jump finale
     else:
         m "here he ain't"
-        $ pulls += 1
+        
         jump npdd
 
 define gds = False
@@ -2859,6 +2912,7 @@ label ccin:
             jump CC
 
 label ra:
+    $ pulls += 1
     scene randol
     m "good ol IGDAzon."
     if gacha == random.randint(1,100):
@@ -2875,7 +2929,7 @@ label ra:
         jump finale
     else:
         m "no calipers, not unbox therapy."
-        $ pulls += 1
+        
         jump ccop
 
 label fcheck:
@@ -2896,6 +2950,7 @@ label fcheck:
         "Go Back":
             jump ccin
 label gds:
+    $ pulls += 1
     scene gds3
     m "godly dining services."
     if gacha == random.randint(1,100):
@@ -2913,10 +2968,11 @@ label gds:
         jump finale
     else:
         m "no calipers, not hungry man."
-        $ pulls += 1
+        
         jump ccop
     
 label cs:
+    $ pulls += 1
     scene cstore
     m "1 billion celsius please."
     if gacha == random.randint(1,100):
@@ -2933,10 +2989,11 @@ label cs:
         jump finale
     else:
         m "no more caffiene for cal."
-        $ pulls += 1
+        
         jump ccop
 
 label cf2:
+    $ pulls += 1
     scene camp2
     m "study time?"
     if gacha == random.randint(1,100):
@@ -2953,9 +3010,10 @@ label cf2:
         jump finale
     else:
         m "ain't here."
-        $ pulls += 1
+        
         jump fc
 label cf3:
+    $ pulls += 1
     scene camp3
     m "kareoke night?"
     if gacha == random.randint(1,100):
@@ -2972,9 +3030,10 @@ label cf3:
         jump finale
     else:
         m "baka mi-dammit he ain't here."
-        $ pulls += 1
+        
         jump fc
 label cf4:
+    $ pulls += 1
     scene camp4
     m "what's even up here"
     if gacha == random.randint(1,100):
@@ -2991,10 +3050,11 @@ label cf4:
         jump finale
     else:
         m "ain't here?!@?#!?@#?21"
-        $ pulls += 1
+        
         jump fc
 
 label ba:
+    $ pulls += 1
     scene office2
     m "am i allowed in here?"
     if gacha == random.randint(1,100):
@@ -3012,7 +3072,7 @@ label ba:
         jump finale
     else:
         m "i ain't supposed to be here."
-        $ pulls += 1
+        
         jump fc
 
 define fen = False
@@ -3033,6 +3093,7 @@ label njit:
 
 
 label fen:
+    $ pulls += 1
     scene fenster
     m "tall ass building dafuq?"
     if gacha == random.randint(1,100):
@@ -3050,10 +3111,11 @@ label fen:
     else:
         m "fenster more like fent lmao."
         m "he ain't here."
-        $ pulls += 1
+        
         jump nfuck
 
 label cul:
+    $ pulls += 1
     scene cullimore
     m "ew libral arts"
     if gacha == random.randint(1,100):
@@ -3070,7 +3132,7 @@ label cul:
         jump finale
     else:
         m "not here :\["
-        $ pulls += 1
+        
         jump nfuck
 
 label finale:
