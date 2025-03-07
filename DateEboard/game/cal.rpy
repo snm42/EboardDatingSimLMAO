@@ -960,6 +960,16 @@ label calDay3:
     m "man what the fuck."
     m "guess i gotta get started."
 
+    show calb neutral happy
+
+    c "oh, and special thanks to Max for reporting that this day was broken on launch."
+    c "you're a real one!"
+
+    hide calb 
+
+    m "who the hell is Max?"
+    m "whatever."
+
     scene laurelin
 
     m "where to check first..."
