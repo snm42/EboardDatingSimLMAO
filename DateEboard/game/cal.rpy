@@ -943,7 +943,7 @@ default numEnd = 74
 
 
 label calDay3:
-    if kicked2:
+    if kicked2 or kicked:
         "Calvin just sends you a gif that says 'DONT SAY THAT' with a dummy getting it's neck ripped out."
         "...i should probably stay away from him for my own safety."
         jump checkDay
@@ -3179,6 +3179,8 @@ label cul:
 label finale:
     scene black with fade
     show calb neutral
+    if kicked or kicked2:
+        $ perfect = False
     c "well."
     c "that's it."
     c "that's the whole route."
